@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assemblies>
+  <assembly name="System.EnterpriseServices" version="2.0.5.0">
+    <attributes>
+      <attribute name="System.Diagnostics.DebuggableAttribute">
+        <properties>
+          <property name="IsJITTrackingEnabled" value="EnableEditAndContinue, IgnoreSymbolStoreSequencePoints, DisableOptimizations, Default" />
+          <property name="IsJITOptimizerDisabled" value="EnableEditAndContinue, IgnoreSymbolStoreSequencePoints, DisableOptimizations, Default" />
+          <property name="DebuggingFlags" value="EnableEditAndContinue, IgnoreSymbolStoreSequencePoints, DisableOptimizations, Default" />
+        </properties>
+      </attribute>
+      <attribute name="System.Reflection.AssemblyCompanyAttribute">
+        <properties>
+          <property name="Company" value="" />
+        </properties>
+      </attribute>
+      <attribute name="System.Reflection.AssemblyConfigurationAttribute">
+        <properties>
+          <property name="Configuration" value="" />
+        </properties>
+      </attribute>
+      <attribute name="System.Reflection.AssemblyCopyrightAttribute">
+        <properties>
+          <property name="Copyright" value="" />
+        </properties>
+      </attribute>
+      <attribute name="System.Reflection.AssemblyDescriptionAttribute">
+        <properties>
+          <property name="Description" value="" />
+        </properties>
+      </attribute>
+      <attribute name="System.Reflection.AssemblyFileVersionAttribute">
+        <properties>
+          <property name="Version" value="2.0.5" />
+        </properties>
+      </attribute>
+      <attribute name="System.Reflection.AssemblyProductAttribute">
+        <properties>
+          <property name="Product" value="" />
+        </properties>
+      </attribute>
+      <attribute name="System.Reflection.AssemblyTitleAttribute">
+        <properties>
+          <property name="Title" value="System.EnterpriseServices" />
+        </properties>
+      </attribute>
+      <attribute name="System.Reflection.AssemblyTrademarkAttribute">
+        <properties>
+          <property name="Trademark" value="" />
+        </properties>
+      </attribute>
+      <attribute name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute">
+        <properties>
+          <property name="CompilationRelaxations" value="8" />
+        </properties>
+      </attribute>
+      <attribute name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute">
+        <properties>
+          <property name="WrapNonExceptionThrows" value="True" />
+        </properties>
+      </attribute>
+      <attribute name="System.Runtime.InteropServices.ComVisibleAttribute">
+        <properties>
+          <property name="Value" value="False" />
+        </properties>
+      </attribute>
+      <attribute name="System.Runtime.Versioning.TargetFrameworkAttribute">
+        <properties>
+          <property name="FrameworkDisplayName" value="" />
+          <property name="FrameworkName" value=".NETFramework,Version=v7.1" />
+        </properties>
+      </attribute>
+    </attributes>
+    <namespaces />
+  </assembly>
+</assemblies>

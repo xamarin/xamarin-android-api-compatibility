@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assemblies>
+  <assembly name="System.Net.Http.WinHttpHandler" version="2.0.5.0">
+    <attributes>
+      <attribute name="System.CLSCompliantAttribute">
+        <properties>
+          <property name="IsCompliant" value="True" />
+        </properties>
+      </attribute>
+      <attribute name="System.Diagnostics.DebuggableAttribute">
+        <properties>
+          <property name="IsJITTrackingEnabled" value="IgnoreSymbolStoreSequencePoints" />
+          <property name="IsJITOptimizerDisabled" value="IgnoreSymbolStoreSequencePoints" />
+          <property name="DebuggingFlags" value="IgnoreSymbolStoreSequencePoints" />
+        </properties>
+      </attribute>
+      <attribute name="System.Reflection.AssemblyCompanyAttribute">
+        <properties>
+          <property name="Company" value="Mono development team" />
+        </properties>
+      </attribute>
+      <attribute name="System.Reflection.AssemblyCopyrightAttribute">
+        <properties>
+          <property name="Copyright" value="(c) Various Mono authors" />
+        </properties>
+      </attribute>
+      <attribute name="System.Reflection.AssemblyDefaultAliasAttribute">
+        <properties>
+          <property name="DefaultAlias" value="System.Net.Http.WinHttpHandler.dll" />
+        </properties>
+      </attribute>
+      <attribute name="System.Reflection.AssemblyDelaySignAttribute">
+        <properties>
+          <property name="DelaySign" value="True" />
+        </properties>
+      </attribute>
+      <attribute name="System.Reflection.AssemblyDescriptionAttribute">
+        <properties>
+          <property name="Description" value="System.Net.Http.WinHttpHandler.dll" />
+        </properties>
+      </attribute>
+      <attribute name="System.Reflection.AssemblyFileVersionAttribute">
+        <properties>
+          <property name="Version" value="4.0.50524.0" />
+        </properties>
+      </attribute>
+      <attribute name="System.Reflection.AssemblyInformationalVersionAttribute">
+        <properties>
+          <property name="InformationalVersion" value="4.0.50524.0" />
+        </properties>
+      </attribute>
+      <attribute name="System.Reflection.AssemblyKeyFileAttribute">
+        <properties>
+          <property name="KeyFile" value="../msfinal.pub" />
+        </properties>
+      </attribute>
+      <attribute name="System.Reflection.AssemblyProductAttribute">
+        <properties>
+          <property name="Product" value="Mono Common Language Infrastructure" />
+        </properties>
+      </attribute>
+      <attribute name="System.Reflection.AssemblyTitleAttribute">
+        <properties>
+          <property name="Title" value="System.Net.Http.WinHttpHandler.dll" />
+        </properties>
+      </attribute>
+      <attribute name="System.Resources.NeutralResourcesLanguageAttribute">
+        <properties>
+          <property name="CultureName" value="en-US" />
+        </properties>
+      </attribute>
+      <attribute name="System.Resources.SatelliteContractVersionAttribute">
+        <properties>
+          <property name="Version" value="2.0.5.0" />
+        </properties>
+      </attribute>
+      <attribute name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute">
+        <properties>
+          <property name="CompilationRelaxations" value="8" />
+        </properties>
+      </attribute>
+      <attribute name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute">
+        <properties>
+          <property name="WrapNonExceptionThrows" value="True" />
+        </properties>
+      </attribute>
+      <attribute name="System.Runtime.InteropServices.ComVisibleAttribute">
+        <properties>
+          <property name="Value" value="False" />
+        </properties>
+      </attribute>
+      <attribute name="System.Security.SecurityCriticalAttribute" />
+    </attributes>
+    <namespaces>
+      <namespace name="System.Net.Http">
+        <classes>
+          <class name="CookieUsePolicy" type="enum" base="System.Enum" sealed="true" serializable="true" charset="Ansi" layout="Auto" enumtype="System.Int32">
+            <interfaces>
+              <interface name="System.IComparable" />
+              <interface name="System.IConvertible" />
+              <interface name="System.IFormattable" />
+            </interfaces>
+            <fields>
+              <field name="IgnoreCookies" attrib="32854" fieldtype="System.Net.Http.CookieUsePolicy" value="0" />
+              <field name="UseInternalCookieStoreOnly" attrib="32854" fieldtype="System.Net.Http.CookieUsePolicy" value="1" />
+              <field name="UseSpecifiedCookieContainer" attrib="32854" fieldtype="System.Net.Http.CookieUsePolicy" value="2" />
+            </fields>
+          </class>
+          <class name="WinHttpHandler" type="class" base="System.Net.Http.HttpMessageHandler" charset="Ansi" layout="Auto">
+            <interfaces>
+              <interface name="System.IDisposable" />
+            </interfaces>
+            <constructors>
+              <constructor name=".ctor()" attrib="6278">
+                <parameters />
+              </constructor>
+            </constructors>
+            <properties>
+              <property name="AutomaticDecompression" attrib="0" ptype="System.Net.DecompressionMethods">
+                <methods>
+                  <method name="get_AutomaticDecompression()" attrib="2182" returntype="System.Net.DecompressionMethods">
+                    <parameters />
+                  </method>
+                  <method name="set_AutomaticDecompression(System.Net.DecompressionMethods)" attrib="2182" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="System.Net.DecompressionMethods" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+              <property name="AutomaticRedirection" attrib="0" ptype="System.Boolean">
+                <methods>
+                  <method name="get_AutomaticRedirection()" attrib="2182" returntype="System.Boolean">
+                    <parameters />
+                  </method>
+                  <method name="set_AutomaticRedirection(System.Boolean)" attrib="2182" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="System.Boolean" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+              <property name="CheckCertificateRevocationList" attrib="0" ptype="System.Boolean">
+                <methods>
+                  <method name="get_CheckCertificateRevocationList()" attrib="2182" returntype="System.Boolean">
+                    <parameters />
+                  </method>
+                  <method name="set_CheckCertificateRevocationList(System.Boolean)" attrib="2182" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="System.Boolean" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+              <property name="ClientCertificateOption" attrib="0" ptype="System.Net.Http.ClientCertificateOption">
+                <methods>
+                  <method name="get_ClientCertificateOption()" attrib="2182" returntype="System.Net.Http.ClientCertificateOption">
+                    <parameters />
+                  </method>
+                  <method name="set_ClientCertificateOption(System.Net.Http.ClientCertificateOption)" attrib="2182" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="System.Net.Http.ClientCertificateOption" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+              <property name="ClientCertificates" attrib="0" ptype="System.Security.Cryptography.X509Certificates.X509Certificate2Collection">
+                <methods>
+                  <method name="get_ClientCertificates()" attrib="2182" returntype="System.Security.Cryptography.X509Certificates.X509Certificate2Collection">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="CookieContainer" attrib="0" ptype="System.Net.CookieContainer">
+                <methods>
+                  <method name="get_CookieContainer()" attrib="2182" returntype="System.Net.CookieContainer">
+                    <parameters />
+                  </method>
+                  <method name="set_CookieContainer(System.Net.CookieContainer)" attrib="2182" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="System.Net.CookieContainer" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+              <property name="CookieUsePolicy" attrib="0" ptype="System.Net.Http.CookieUsePolicy">
+                <methods>
+                  <method name="get_CookieUsePolicy()" attrib="2182" returntype="System.Net.Http.CookieUsePolicy">
+                    <parameters />
+                  </method>
+                  <method name="set_CookieUsePolicy(System.Net.Http.CookieUsePolicy)" attrib="2182" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="System.Net.Http.CookieUsePolicy" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+              <property name="DefaultProxyCredentials" attrib="0" ptype="System.Net.ICredentials">
+                <methods>
+                  <method name="get_DefaultProxyCredentials()" attrib="2182" returntype="System.Net.ICredentials">
+                    <parameters />
+                  </method>
+                  <method name="set_DefaultProxyCredentials(System.Net.ICredentials)" attrib="2182" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="System.Net.ICredentials" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+              <property name="MaxAutomaticRedirections" attrib="0" ptype="System.Int32">
+                <methods>
+                  <method name="get_MaxAutomaticRedirections()" attrib="2182" returntype="System.Int32">
+                    <parameters />
+                  </method>
+                  <method name="set_MaxAutomaticRedirections(System.Int32)" attrib="2182" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="System.Int32" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+              <property name="MaxConnectionsPerServer" attrib="0" ptype="System.Int32">
+                <methods>
+                  <method name="get_MaxConnectionsPerServer()" attrib="2182" returntype="System.Int32">
+                    <parameters />
+                  </method>
+                  <method name="set_MaxConnectionsPerServer(System.Int32)" attrib="2182" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="System.Int32" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+              <property name="MaxResponseDrainSize" attrib="0" ptype="System.Int32">
+                <methods>
+                  <method name="get_MaxResponseDrainSize()" attrib="2182" returntype="System.Int32">
+                    <parameters />
+                  </method>
+                  <method name="set_MaxResponseDrainSize(System.Int32)" attrib="2182" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="System.Int32" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+              <property name="MaxResponseHeadersLength" attrib="0" ptype="System.Int32">
+                <methods>
+                  <method name="get_MaxResponseHeadersLength()" attrib="2182" returntype="System.Int32">
+                    <parameters />
+                  </method>
+                  <method name="set_MaxResponseHeadersLength(System.Int32)" attrib="2182" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="System.Int32" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+              <property name="PreAuthenticate" attrib="0" ptype="System.Boolean">
+                <methods>
+                  <method name="get_PreAuthenticate()" attrib="2182" returntype="System.Boolean">
+                    <parameters />
+                  </method>
+                  <method name="set_PreAuthenticate(System.Boolean)" attrib="2182" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="System.Boolean" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+              <property name="Properties" attrib="0" ptype="System.Collections.Generic.IDictionary`2[System.String,System.Object]">
+                <methods>
+                  <method name="get_Properties()" attrib="2182" returntype="System.Collections.Generic.IDictionary`2[System.String,System.Object]">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="Proxy" attrib="0" ptype="System.Net.IWebProxy">
+                <methods>
+                  <method name="get_Proxy()" attrib="2182" returntype="System.Net.IWebProxy">
+                    <parameters />
+                  </method>
+                  <method name="set_Proxy(System.Net.IWebProxy)" attrib="2182" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="System.Net.IWebProxy" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+              <property name="ReceiveDataTimeout" attrib="0" ptype="System.TimeSpan">
+                <methods>
+                  <method name="get_ReceiveDataTimeout()" attrib="2182" returntype="System.TimeSpan">
+                    <parameters />
+                  </method>
+                  <method name="set_ReceiveDataTimeout(System.TimeSpan)" attrib="2182" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="System.TimeSpan" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+              <property name="ReceiveHeadersTimeout" attrib="0" ptype="System.TimeSpan">
+                <methods>
+                  <method name="get_ReceiveHeadersTimeout()" attrib="2182" returntype="System.TimeSpan">
+                    <parameters />
+                  </method>
+                  <method name="set_ReceiveHeadersTimeout(System.TimeSpan)" attrib="2182" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="System.TimeSpan" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+              <property name="SendTimeout" attrib="0" ptype="System.TimeSpan">
+                <methods>
+                  <method name="get_SendTimeout()" attrib="2182" returntype="System.TimeSpan">
+                    <parameters />
+                  </method>
+                  <method name="set_SendTimeout(System.TimeSpan)" attrib="2182" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="System.TimeSpan" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+              <property name="ServerCertificateValidationCallback" attrib="0" ptype="System.Func`5[System.Net.Http.HttpRequestMessage,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors,System.Boolean]">
+                <methods>
+                  <method name="get_ServerCertificateValidationCallback()" attrib="2182" returntype="System.Func`5[System.Net.Http.HttpRequestMessage,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors,System.Boolean]">
+                    <parameters />
+                  </method>
+                  <method name="set_ServerCertificateValidationCallback(System.Func`5[System.Net.Http.HttpRequestMessage,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors,System.Boolean])" attrib="2182" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="System.Func`5[System.Net.Http.HttpRequestMessage,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors,System.Boolean]" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+              <property name="ServerCredentials" attrib="0" ptype="System.Net.ICredentials">
+                <methods>
+                  <method name="get_ServerCredentials()" attrib="2182" returntype="System.Net.ICredentials">
+                    <parameters />
+                  </method>
+                  <method name="set_ServerCredentials(System.Net.ICredentials)" attrib="2182" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="System.Net.ICredentials" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+              <property name="SslProtocols" attrib="0" ptype="System.Security.Authentication.SslProtocols">
+                <methods>
+                  <method name="get_SslProtocols()" attrib="2182" returntype="System.Security.Authentication.SslProtocols">
+                    <parameters />
+                  </method>
+                  <method name="set_SslProtocols(System.Security.Authentication.SslProtocols)" attrib="2182" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="System.Security.Authentication.SslProtocols" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+              <property name="WindowsProxyUsePolicy" attrib="0" ptype="System.Net.Http.WindowsProxyUsePolicy">
+                <methods>
+                  <method name="get_WindowsProxyUsePolicy()" attrib="2182" returntype="System.Net.Http.WindowsProxyUsePolicy">
+                    <parameters />
+                  </method>
+                  <method name="set_WindowsProxyUsePolicy(System.Net.Http.WindowsProxyUsePolicy)" attrib="2182" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="System.Net.Http.WindowsProxyUsePolicy" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+            </properties>
+            <methods>
+              <method name="Dispose(System.Boolean)" attrib="196" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="disposing" position="0" attrib="0" type="System.Boolean" />
+                </parameters>
+              </method>
+              <method name="SendAsync(System.Net.Http.HttpRequestMessage, System.Threading.CancellationToken)" attrib="196" virtual="true" is-override="true" returntype="System.Threading.Tasks.Task`1[System.Net.Http.HttpResponseMessage]">
+                <parameters>
+                  <parameter name="request" position="0" attrib="0" type="System.Net.Http.HttpRequestMessage" />
+                  <parameter name="cancellationToken" position="1" attrib="0" type="System.Threading.CancellationToken" />
+                </parameters>
+              </method>
+            </methods>
+          </class>
+          <class name="WindowsProxyUsePolicy" type="enum" base="System.Enum" sealed="true" serializable="true" charset="Ansi" layout="Auto" enumtype="System.Int32">
+            <interfaces>
+              <interface name="System.IComparable" />
+              <interface name="System.IConvertible" />
+              <interface name="System.IFormattable" />
+            </interfaces>
+            <fields>
+              <field name="DoNotUseProxy" attrib="32854" fieldtype="System.Net.Http.WindowsProxyUsePolicy" value="0" />
+              <field name="UseCustomProxy" attrib="32854" fieldtype="System.Net.Http.WindowsProxyUsePolicy" value="3" />
+              <field name="UseWinHttpProxy" attrib="32854" fieldtype="System.Net.Http.WindowsProxyUsePolicy" value="1" />
+              <field name="UseWinInetProxy" attrib="32854" fieldtype="System.Net.Http.WindowsProxyUsePolicy" value="2" />
+            </fields>
+          </class>
+        </classes>
+      </namespace>
+    </namespaces>
+  </assembly>
+</assemblies>

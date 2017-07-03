@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assemblies>
+  <assembly name="Mono.Android.Export" version="1.0.6393.23711">
+    <attributes>
+      <attribute name="System.Diagnostics.DebuggableAttribute">
+        <properties>
+          <property name="IsJITTrackingEnabled" value="EnableEditAndContinue, IgnoreSymbolStoreSequencePoints, DisableOptimizations, Default" />
+          <property name="IsJITOptimizerDisabled" value="EnableEditAndContinue, IgnoreSymbolStoreSequencePoints, DisableOptimizations, Default" />
+          <property name="DebuggingFlags" value="EnableEditAndContinue, IgnoreSymbolStoreSequencePoints, DisableOptimizations, Default" />
+        </properties>
+      </attribute>
+      <attribute name="System.Reflection.AssemblyCompanyAttribute">
+        <properties>
+          <property name="Company" value="Xamarin Inc." />
+        </properties>
+      </attribute>
+      <attribute name="System.Reflection.AssemblyConfigurationAttribute">
+        <properties>
+          <property name="Configuration" value="" />
+        </properties>
+      </attribute>
+      <attribute name="System.Reflection.AssemblyCopyrightAttribute">
+        <properties>
+          <property name="Copyright" value="Xamarin Inc." />
+        </properties>
+      </attribute>
+      <attribute name="System.Reflection.AssemblyDescriptionAttribute">
+        <properties>
+          <property name="Description" value="" />
+        </properties>
+      </attribute>
+      <attribute name="System.Reflection.AssemblyProductAttribute">
+        <properties>
+          <property name="Product" value="" />
+        </properties>
+      </attribute>
+      <attribute name="System.Reflection.AssemblyTitleAttribute">
+        <properties>
+          <property name="Title" value="Mono.Android.Export" />
+        </properties>
+      </attribute>
+      <attribute name="System.Reflection.AssemblyTrademarkAttribute">
+        <properties>
+          <property name="Trademark" value="Xamarin" />
+        </properties>
+      </attribute>
+      <attribute name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute">
+        <properties>
+          <property name="CompilationRelaxations" value="8" />
+        </properties>
+      </attribute>
+      <attribute name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute">
+        <properties>
+          <property name="WrapNonExceptionThrows" value="True" />
+        </properties>
+      </attribute>
+      <attribute name="System.Runtime.Versioning.TargetFrameworkAttribute">
+        <properties>
+          <property name="FrameworkDisplayName" value="" />
+          <property name="FrameworkName" value="MonoAndroid,Version=v7.1" />
+        </properties>
+      </attribute>
+    </attributes>
+    <namespaces />
+  </assembly>
+</assemblies>
