@@ -78,12 +78,12 @@ define BUILD_API_INFO
 	mkdir -p $(1)
 	for file in $(CORE_ASSEMBLIES); do \
 		$(MONO_API_INFO) $(MONO_API_INFO_LIB_DIRS) \
-			$(2)/v1.0/$$file.dll > $(1)/$$file.xml & \
+			$(2)/v1.0/$$file.dll -o=$(1)/$$file.xml & \
 	done ; \
 	wait
 	for file in $(TFV_ASSEMBLIES) ; do \
 		$(MONO_API_INFO) $(MONO_API_INFO_LIB_DIRS) \
-			$(2)/$(LAST_STABLE_FRAMEWORK)/$$file.dll > $(1)/$$file.xml & \
+			$(2)/$(LAST_STABLE_FRAMEWORK)/$$file.dll -o=$(1)/$$file.xml & \
 	done ; \
 	wait
 endef
@@ -111,7 +111,7 @@ check: check-inter-api-level
 			continue; \
 		fi; \
 		mkdir -p "inter-apis/$$f" || true; \
-		$(MONO_API_INFO) $(MONO_API_INFO_LIB_DIRS) "$(XA_FRAMEWORK_DIR)/$$f/Mono.Android.dll" > "inter-apis/$$f/Mono.Android.xml" ; \
+		$(MONO_API_INFO) $(MONO_API_INFO_LIB_DIRS) "$(XA_FRAMEWORK_DIR)/$$f/Mono.Android.dll" -o="inter-apis/$$f/Mono.Android.xml" ; \
 	done
 
 check-inter-api-level: -create-inter-api-infos
