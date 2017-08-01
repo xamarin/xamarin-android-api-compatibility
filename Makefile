@@ -92,9 +92,9 @@ check: check-inter-api-level
 	$(call BUILD_API_INFO,temp,$(XA_FRAMEWORK_DIR))
 	failed=0 ; \
 	for file in $(CORE_ASSEMBLIES) $(TFV_ASSEMBLIES) ; do \
-		if $(MONO_API_HTML) $(REFERENCE_DIR)/$$file.xml temp/$$file.xml | grep '>Removed' > /dev/null 2>&1 ; then \
+		if $(MONO_API_HTML) $(REFERENCE_DIR)/$$file.xml temp/$$file.xml --ignore-changes-parameter-names | grep '>Removed' > /dev/null 2>&1 ; then \
 			echo "ABI BREAK IN: $$file.dll" ; \
-			$(MONO_API_HTML) $(REFERENCE_DIR)/$$file.xml temp/$$file.xml ; \
+			$(MONO_API_HTML) $(REFERENCE_DIR)/$$file.xml temp/$$file.xml  --ignore-changes-parameter-names; \
 			failed=1; \
 		fi ; \
 	done ; \
@@ -128,7 +128,7 @@ check-inter-api-level: -create-inter-api-infos
 		echo "# reading extras from: $$extras_in"; \
 		extra=`cat $$extras_in 2>/dev/null`; \
 		out=`mktemp interdiff-XXXXXX.html` ; \
-		command="$(MONO_API_HTML) "$$prev" "$$cur" --ignore-changes-parameter-names --ignore-changes-virtual --ignore-changes-property-setters $$extra"; \
+		command="$(MONO_API_HTML) \"$$prev\" \"$$cur\" --ignore-changes-parameter-names --ignore-changes-virtual --ignore-changes-property-setters $$extra"; \
 		echo $$command; \
 		eval $$command > "$$out" 2>&1; \
 		if grep '>Removed' $$out > /dev/null 2>&1 ; then \
