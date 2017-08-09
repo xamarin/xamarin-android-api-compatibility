@@ -4259,16 +4259,6 @@
                   <parameter name="settings" position="2" attrib="4112" type="Mono.Security.Interface.MonoTlsSettings" optional="true" defaultValue="NULL" />
                 </parameters>
               </method>
-              <method name="GetDefaultProvider()" attrib="150" static="true" returntype="Mono.Security.Interface.MonoTlsProvider">
-                <attributes>
-                  <attribute name="System.ObsoleteAttribute">
-                    <properties>
-                      <property name="Message" value="Use GetProvider() instead." />
-                    </properties>
-                  </attribute>
-                </attributes>
-                <parameters />
-              </method>
               <method name="GetMonoSslStream(System.Net.Security.SslStream)" attrib="150" static="true" returntype="Mono.Security.Interface.IMonoSslStream">
                 <parameters>
                   <parameter name="stream" position="0" attrib="0" type="System.Net.Security.SslStream" />
@@ -4293,18 +4283,6 @@
               <method name="IsProviderSupported(System.String)" attrib="150" static="true" returntype="System.Boolean">
                 <parameters>
                   <parameter name="provider" position="0" attrib="0" type="System.String" />
-                </parameters>
-              </method>
-              <method name="SetDefaultProvider(System.String)" attrib="150" static="true" returntype="System.Void">
-                <attributes>
-                  <attribute name="System.ObsoleteAttribute">
-                    <properties>
-                      <property name="Message" value="Use Initialize(string provider) instead." />
-                    </properties>
-                  </attribute>
-                </attributes>
-                <parameters>
-                  <parameter name="name" position="0" attrib="0" type="System.String" />
                 </parameters>
               </method>
             </methods>
