@@ -92,7 +92,7 @@ check: check-inter-api-level
 	$(call BUILD_API_INFO,temp,$(XA_FRAMEWORK_DIR))
 	failed=0 ; \
 	for file in $(CORE_ASSEMBLIES) $(TFV_ASSEMBLIES) ; do \
-		if $(MONO_API_HTML) $(REFERENCE_DIR)/$$file.xml temp/$$file.xml --ignore-changes-parameter-names --ignore-nonbreaking | grep '>Removed' > /dev/null 2>&1 ; then \
+		if $(MONO_API_HTML) $(REFERENCE_DIR)/$$file.xml temp/$$file.xml --ignore-changes-parameter-names --ignore-nonbreaking | grep '\<data-is-breaking\>' > /dev/null 2>&1 ; then \
 			echo "ABI BREAK IN: $$file.dll" ; \
 			$(MONO_API_HTML) $(REFERENCE_DIR)/$$file.xml temp/$$file.xml  --ignore-changes-parameter-names --ignore-nonbreaking; \
 			failed=1; \
@@ -131,7 +131,7 @@ check-inter-api-level: -create-inter-api-infos
 		command="$(MONO_API_HTML) \"$$prev\" \"$$cur\" --ignore-changes-parameter-names --ignore-changes-virtual --ignore-changes-property-setters --ignore-nonbreaking $$extra"; \
 		echo $$command; \
 		eval $$command > "$$out" 2>&1; \
-		if grep '>Removed' $$out > /dev/null 2>&1 ; then \
+		if grep '\<data-is-breaking\>' $$out > /dev/null 2>&1 ; then \
 			echo "<h1>### API BREAK BETWEEN $${_frameworks[$$prev_framework]} and $${_frameworks[$$i]}</h1>" ; \
 			cat $$out; \
 			failed=1; \
