@@ -53,7 +53,7 @@ against the reference API description. It accepts the following optional
 
 For example, to check a local Xamarin.Android build against the reference APIs:
 
-	make check XA_FRAMEWORK_DIR=/path/to/xamarin-android/bin/Debug/lib/xbuild-frameworks/MonoAndroid
+	make check XA_FRAMEWORK_DIR=/path/to/xamarin-android/bin/Debug/lib/xamarin.android/xbuild-frameworks/MonoAndroid
 
 <a name="update" />
 
@@ -62,6 +62,6 @@ For example, to check a local Xamarin.Android build against the reference APIs:
 Use the `make update` target to update the reference API description against
 the set of Xamarin.Android assemblies located in `$(XA_FRAMEWORK_DIR)`:
 
-	make update XA_FRAMEWORK_DIR=/path/to/xamarin-android/bin/Debug/lib/xbuild-frameworks/MonoAndroid
+	make update XA_FRAMEWORK_DIR=/path/to/xamarin-android/bin/Debug/lib/xamarin.android/xbuild-frameworks/MonoAndroid
 
 
