@@ -67,7 +67,7 @@
       <attribute name="System.Runtime.Versioning.TargetFrameworkAttribute">
         <properties>
           <property name="FrameworkDisplayName" value="" />
-          <property name="FrameworkName" value=".NETFramework,Version=v7.1" />
+          <property name="FrameworkName" value="MonoAndroid,Version=v8.0" />
         </properties>
       </attribute>
     </attributes>

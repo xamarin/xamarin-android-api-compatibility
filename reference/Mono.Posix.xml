@@ -24,11 +24,6 @@
           <property name="Description" value="Unix Integration Classes" />
         </properties>
       </attribute>
-      <attribute name="System.Reflection.AssemblyKeyFileAttribute">
-        <properties>
-          <property name="KeyFile" value="../mono.pub" />
-        </properties>
-      </attribute>
       <attribute name="System.Reflection.AssemblyTitleAttribute">
         <properties>
           <property name="Title" value="Mono.Posix.dll" />
@@ -52,7 +47,7 @@
       <attribute name="System.Runtime.Versioning.TargetFrameworkAttribute">
         <properties>
           <property name="FrameworkDisplayName" value="" />
-          <property name="FrameworkName" value="MonoAndroid,Version=v7.1" />
+          <property name="FrameworkName" value="MonoAndroid,Version=v8.0" />
         </properties>
       </attribute>
     </attributes>
@@ -1033,6 +1028,14 @@
               <method name="GetBytes(System.String)" attrib="198" virtual="true" is-override="true" returntype="System.Byte[]">
                 <parameters>
                   <parameter name="s" position="0" attrib="0" type="System.String" />
+                </parameters>
+              </method>
+              <method name="GetBytes(System.Char*, System.Int32, System.Byte*, System.Int32)" attrib="198" virtual="true" is-override="true" returntype="System.Int32">
+                <parameters>
+                  <parameter name="chars" position="0" attrib="0" type="System.Char*" />
+                  <parameter name="charCount" position="1" attrib="0" type="System.Int32" />
+                  <parameter name="bytes" position="2" attrib="0" type="System.Byte*" />
+                  <parameter name="byteCount" position="3" attrib="0" type="System.Int32" />
                 </parameters>
               </method>
               <method name="GetBytes(System.Char[], System.Int32, System.Int32, System.Byte[], System.Int32)" attrib="198" virtual="true" is-override="true" returntype="System.Int32">

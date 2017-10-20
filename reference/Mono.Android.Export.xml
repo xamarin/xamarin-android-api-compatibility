@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <assemblies>
-  <assembly name="Mono.Android.Export" version="1.0.6393.23711">
+  <assembly name="Mono.Android.Export" version="1.0.6501.34852">
     <attributes>
       <attribute name="System.Diagnostics.DebuggableAttribute">
         <properties>
@@ -57,7 +57,7 @@
       <attribute name="System.Runtime.Versioning.TargetFrameworkAttribute">
         <properties>
           <property name="FrameworkDisplayName" value="" />
-          <property name="FrameworkName" value="MonoAndroid,Version=v7.1" />
+          <property name="FrameworkName" value="MonoAndroid,Version=v8.0" />
         </properties>
       </attribute>
     </attributes>

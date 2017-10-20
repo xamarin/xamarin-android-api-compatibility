@@ -82,7 +82,7 @@
       <attribute name="System.Runtime.Versioning.TargetFrameworkAttribute">
         <properties>
           <property name="FrameworkDisplayName" value="" />
-          <property name="FrameworkName" value="MonoAndroid,Version=v7.1" />
+          <property name="FrameworkName" value="MonoAndroid,Version=v8.0" />
         </properties>
       </attribute>
     </attributes>
@@ -12744,6 +12744,18 @@
               </constructor>
             </constructors>
             <properties>
+              <property name="Filter" attrib="0" ptype="NUnit.Framework.Api.ITestFilter">
+                <methods>
+                  <method name="get_Filter()" attrib="2180" returntype="NUnit.Framework.Api.ITestFilter">
+                    <parameters />
+                  </method>
+                  <method name="set_Filter(NUnit.Framework.Api.ITestFilter)" attrib="2180" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="NUnit.Framework.Api.ITestFilter" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
               <property name="GCAfterEachFixture" attrib="0" ptype="System.Boolean">
                 <methods>
                   <method name="get_GCAfterEachFixture()" attrib="2180" returntype="System.Boolean">
@@ -12777,6 +12789,9 @@
               <method name="OnResume()" attrib="196" virtual="true" is-override="true" returntype="System.Void">
                 <parameters />
               </method>
+              <method name="UpdateFilter()" attrib="452" virtual="true" returntype="System.Void">
+                <parameters />
+              </method>
             </methods>
           </class>
           <class name="TestSuiteInstrumentation" type="class" base="Android.App.Instrumentation" abstract="true" charset="Ansi" layout="Auto">
@@ -12794,6 +12809,18 @@
               </constructor>
             </constructors>
             <properties>
+              <property name="Filter" attrib="0" ptype="NUnit.Framework.Api.ITestFilter">
+                <methods>
+                  <method name="get_Filter()" attrib="2180" returntype="NUnit.Framework.Api.ITestFilter">
+                    <parameters />
+                  </method>
+                  <method name="set_Filter(NUnit.Framework.Api.ITestFilter)" attrib="2180" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="NUnit.Framework.Api.ITestFilter" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
               <property name="GCAfterEachFixture" attrib="0" ptype="System.Boolean">
                 <methods>
                   <method name="get_GCAfterEachFixture()" attrib="2180" returntype="System.Boolean">
@@ -12828,6 +12855,9 @@
                 </parameters>
               </method>
               <method name="OnStart()" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters />
+              </method>
+              <method name="UpdateFilter()" attrib="452" virtual="true" returntype="System.Void">
                 <parameters />
               </method>
             </methods>
