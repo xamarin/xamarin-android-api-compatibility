@@ -1,0 +1,2 @@
+-r 'Java.Lang.Reflect.Constructor.InterfaceConsts'
+-r 'Java.Lang.Reflect.Method.InterfaceConsts'
