@@ -115,7 +115,7 @@ check: check-inter-api-level
 	done
 
 check-inter-api-level: -create-inter-api-infos
-	@failed=0; \
+	failed=0; \
 	_frameworks=($(STABLE_FRAMEWORKS)) ; \
 	for (( i = 1; i < $${#_frameworks[@]}; i++ )) ; do \
 		if [ ! -f "$(XA_FRAMEWORK_DIR)/$${_frameworks[$$i]}" ] ; then \
