@@ -118,7 +118,8 @@ check-inter-api-level: -create-inter-api-infos
 	failed=0; \
 	_frameworks=($(STABLE_FRAMEWORKS)) ; \
 	for (( i = 1; i < $${#_frameworks[@]}; i++ )) ; do \
-		if [ ! -f "$(XA_FRAMEWORK_DIR)/$${_frameworks[$$i]}" ] ; then \
+		if [ ! -d "$(XA_FRAMEWORK_DIR)/$${_frameworks[$$i]}" ] ; then \
+			echo "# Framework directory '$(XA_FRAMEWORK_DIR)/$${_frameworks[$$i]}' doesn't exist. Skipping..."; \
 			continue ; \
 		fi; \
 		prev_framework=$$(expr $$i - 1); \
