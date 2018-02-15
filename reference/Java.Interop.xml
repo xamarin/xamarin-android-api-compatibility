@@ -4,9 +4,9 @@
     <attributes>
       <attribute name="System.Diagnostics.DebuggableAttribute">
         <properties>
-          <property name="IsJITTrackingEnabled" value="EnableEditAndContinue, IgnoreSymbolStoreSequencePoints, DisableOptimizations, Default" />
-          <property name="IsJITOptimizerDisabled" value="EnableEditAndContinue, IgnoreSymbolStoreSequencePoints, DisableOptimizations, Default" />
-          <property name="DebuggingFlags" value="EnableEditAndContinue, IgnoreSymbolStoreSequencePoints, DisableOptimizations, Default" />
+          <property name="IsJITTrackingEnabled" value="IgnoreSymbolStoreSequencePoints" />
+          <property name="IsJITOptimizerDisabled" value="IgnoreSymbolStoreSequencePoints" />
+          <property name="DebuggingFlags" value="IgnoreSymbolStoreSequencePoints" />
         </properties>
       </attribute>
       <attribute name="System.Reflection.AssemblyCompanyAttribute">
@@ -49,9 +49,15 @@
           <property name="CompilationRelaxations" value="8" />
         </properties>
       </attribute>
+      <attribute name="System.Runtime.CompilerServices.ExtensionAttribute" />
       <attribute name="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
         <properties>
           <property name="AssemblyName" value="Java.Interop.GenericMarshaler, PublicKey=0024000004800000940000000602000000240000525341310004000011000000438ac2a5acfbf16cbd2b2b47a62762f273df9cb2795ceccdf77d10bf508e69e7a362ea7a45455bbf3ac955e1f2e2814f144e5d817efc4c6502cc012df310783348304e3ae38573c6d658c234025821fda87a0be8a0d504df564e2c93b2b878925f42503e9d54dfef9f9586d9e6f38a305769587b1de01f6c0410328b2c9733db" />
+        </properties>
+      </attribute>
+      <attribute name="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+        <properties>
+          <property name="AssemblyName" value="Java.Interop-Tests, PublicKey=0024000004800000940000000602000000240000525341310004000011000000438ac2a5acfbf16cbd2b2b47a62762f273df9cb2795ceccdf77d10bf508e69e7a362ea7a45455bbf3ac955e1f2e2814f144e5d817efc4c6502cc012df310783348304e3ae38573c6d658c234025821fda87a0be8a0d504df564e2c93b2b878925f42503e9d54dfef9f9586d9e6f38a305769587b1de01f6c0410328b2c9733db" />
         </properties>
       </attribute>
       <attribute name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute">
@@ -132,6 +138,1099 @@
                 <parameters />
               </method>
             </methods>
+          </class>
+          <class name="JavaArray`1" type="class" base="Java.Interop.JavaObject" abstract="true" charset="Ansi" layout="Auto">
+            <attributes>
+              <attribute name="System.Reflection.DefaultMemberAttribute">
+                <properties>
+                  <property name="MemberName" value="Item" />
+                </properties>
+              </attribute>
+            </attributes>
+            <interfaces>
+              <interface name="Java.Interop.IJavaPeerable" />
+              <interface name="System.Collections.Generic.ICollection`1[T]" />
+              <interface name="System.Collections.Generic.IEnumerable`1[T]" />
+              <interface name="System.Collections.Generic.IList`1[T]" />
+              <interface name="System.Collections.ICollection" />
+              <interface name="System.Collections.IEnumerable" />
+              <interface name="System.Collections.IList" />
+              <interface name="System.IDisposable" />
+            </interfaces>
+            <generic-parameters>
+              <generic-parameter name="T" attributes="0" />
+            </generic-parameters>
+            <properties>
+              <property name="IsReadOnly" attrib="0" ptype="System.Boolean">
+                <methods>
+                  <method name="get_IsReadOnly()" attrib="2534" virtual="true" returntype="System.Boolean">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="Item" attrib="0" ptype="T" params="System.Int32">
+                <methods>
+                  <method name="get_Item(System.Int32)" attrib="3526" abstract="true" virtual="true" returntype="T">
+                    <parameters>
+                      <parameter name="index" position="0" attrib="0" type="System.Int32" />
+                    </parameters>
+                  </method>
+                  <method name="set_Item(System.Int32, T)" attrib="3526" abstract="true" virtual="true" returntype="System.Void">
+                    <parameters>
+                      <parameter name="index" position="0" attrib="0" type="System.Int32" />
+                      <parameter name="value" position="1" attrib="0" type="T" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+              <property name="Length" attrib="0" ptype="System.Int32">
+                <methods>
+                  <method name="get_Length()" attrib="2182" returntype="System.Int32">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+            </properties>
+            <methods>
+              <method name="Clear()" attrib="1478" abstract="true" virtual="true" returntype="System.Void">
+                <parameters />
+              </method>
+              <method name="Contains(T)" attrib="454" virtual="true" returntype="System.Boolean">
+                <parameters>
+                  <parameter name="item" position="0" attrib="0" type="T" />
+                </parameters>
+              </method>
+              <method name="CopyTo(T[], System.Int32)" attrib="1478" abstract="true" virtual="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="array" position="0" attrib="0" type="T[]" />
+                  <parameter name="arrayIndex" position="1" attrib="0" type="System.Int32" />
+                </parameters>
+              </method>
+              <method name="GetEnumerator()" attrib="454" virtual="true" returntype="System.Collections.Generic.IEnumerator`1[T]">
+                <attributes>
+                  <attribute name="System.Runtime.CompilerServices.IteratorStateMachineAttribute" />
+                </attributes>
+                <parameters />
+              </method>
+              <method name="IndexOf(T)" attrib="1478" abstract="true" virtual="true" returntype="System.Int32">
+                <parameters>
+                  <parameter name="item" position="0" attrib="0" type="T" />
+                </parameters>
+              </method>
+              <method name="ToArray()" attrib="134" returntype="T[]">
+                <parameters />
+              </method>
+            </methods>
+          </class>
+          <class name="JavaBooleanArray" type="class" base="Java.Interop.JavaPrimitiveArray`1[System.Boolean]" sealed="true" charset="Ansi" layout="Auto">
+            <attributes>
+              <attribute name="Java.Interop.JniTypeSignatureAttribute">
+                <properties>
+                  <property name="ArrayRank" value="1" />
+                  <property name="IsKeyword" value="True" />
+                </properties>
+              </attribute>
+            </attributes>
+            <interfaces>
+              <interface name="Java.Interop.IJavaPeerable" />
+              <interface name="System.Collections.Generic.ICollection`1[T]" />
+              <interface name="System.Collections.Generic.IEnumerable`1[T]" />
+              <interface name="System.Collections.Generic.IList`1[T]" />
+              <interface name="System.Collections.ICollection" />
+              <interface name="System.Collections.IEnumerable" />
+              <interface name="System.Collections.IList" />
+              <interface name="System.IDisposable" />
+            </interfaces>
+            <constructors>
+              <constructor name=".ctor(System.Collections.Generic.IEnumerable`1[System.Boolean])" attrib="6278">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="System.Collections.Generic.IEnumerable`1[System.Boolean]" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(System.Collections.Generic.IList`1[System.Boolean])" attrib="6278">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="System.Collections.Generic.IList`1[System.Boolean]" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(System.Int32)" attrib="6278">
+                <parameters>
+                  <parameter name="length" position="0" attrib="0" type="System.Int32" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(Java.Interop.JniObjectReference&amp;, Java.Interop.JniObjectReferenceOptions)" attrib="6278">
+                <parameters>
+                  <parameter name="handle" position="0" attrib="0" type="Java.Interop.JniObjectReference" direction="ref" />
+                  <parameter name="options" position="1" attrib="0" type="Java.Interop.JniObjectReferenceOptions" />
+                </parameters>
+              </constructor>
+            </constructors>
+            <methods>
+              <method name="Clear()" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters />
+              </method>
+              <method name="CopyFrom(System.Boolean[], System.Int32, System.Int32, System.Int32)" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="sourceArray" position="0" attrib="0" type="System.Boolean[]" />
+                  <parameter name="sourceIndex" position="1" attrib="0" type="System.Int32" />
+                  <parameter name="destinationIndex" position="2" attrib="0" type="System.Int32" />
+                  <parameter name="length" position="3" attrib="0" type="System.Int32" />
+                </parameters>
+              </method>
+              <method name="CopyTo(System.Int32, System.Boolean[], System.Int32, System.Int32)" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="sourceIndex" position="0" attrib="0" type="System.Int32" />
+                  <parameter name="destinationArray" position="1" attrib="0" type="System.Boolean[]" />
+                  <parameter name="destinationIndex" position="2" attrib="0" type="System.Int32" />
+                  <parameter name="length" position="3" attrib="0" type="System.Int32" />
+                </parameters>
+              </method>
+              <method name="CreateElements()" attrib="196" virtual="true" is-override="true" returntype="Java.Interop.JniArrayElements">
+                <parameters />
+              </method>
+              <method name="GetElements()" attrib="134" returntype="Java.Interop.JniBooleanArrayElements">
+                <parameters />
+              </method>
+              <method name="IndexOf(System.Boolean)" attrib="198" virtual="true" is-override="true" returntype="System.Int32">
+                <parameters>
+                  <parameter name="item" position="0" attrib="0" type="System.Boolean" />
+                </parameters>
+              </method>
+            </methods>
+          </class>
+          <class name="JavaCharArray" type="class" base="Java.Interop.JavaPrimitiveArray`1[System.Char]" sealed="true" charset="Ansi" layout="Auto">
+            <attributes>
+              <attribute name="Java.Interop.JniTypeSignatureAttribute">
+                <properties>
+                  <property name="ArrayRank" value="1" />
+                  <property name="IsKeyword" value="True" />
+                </properties>
+              </attribute>
+            </attributes>
+            <interfaces>
+              <interface name="Java.Interop.IJavaPeerable" />
+              <interface name="System.Collections.Generic.ICollection`1[T]" />
+              <interface name="System.Collections.Generic.IEnumerable`1[T]" />
+              <interface name="System.Collections.Generic.IList`1[T]" />
+              <interface name="System.Collections.ICollection" />
+              <interface name="System.Collections.IEnumerable" />
+              <interface name="System.Collections.IList" />
+              <interface name="System.IDisposable" />
+            </interfaces>
+            <constructors>
+              <constructor name=".ctor(System.Collections.Generic.IEnumerable`1[System.Char])" attrib="6278">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="System.Collections.Generic.IEnumerable`1[System.Char]" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(System.Collections.Generic.IList`1[System.Char])" attrib="6278">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="System.Collections.Generic.IList`1[System.Char]" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(System.Int32)" attrib="6278">
+                <parameters>
+                  <parameter name="length" position="0" attrib="0" type="System.Int32" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(Java.Interop.JniObjectReference&amp;, Java.Interop.JniObjectReferenceOptions)" attrib="6278">
+                <parameters>
+                  <parameter name="handle" position="0" attrib="0" type="Java.Interop.JniObjectReference" direction="ref" />
+                  <parameter name="options" position="1" attrib="0" type="Java.Interop.JniObjectReferenceOptions" />
+                </parameters>
+              </constructor>
+            </constructors>
+            <methods>
+              <method name="Clear()" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters />
+              </method>
+              <method name="CopyFrom(System.Char[], System.Int32, System.Int32, System.Int32)" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="sourceArray" position="0" attrib="0" type="System.Char[]" />
+                  <parameter name="sourceIndex" position="1" attrib="0" type="System.Int32" />
+                  <parameter name="destinationIndex" position="2" attrib="0" type="System.Int32" />
+                  <parameter name="length" position="3" attrib="0" type="System.Int32" />
+                </parameters>
+              </method>
+              <method name="CopyTo(System.Int32, System.Char[], System.Int32, System.Int32)" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="sourceIndex" position="0" attrib="0" type="System.Int32" />
+                  <parameter name="destinationArray" position="1" attrib="0" type="System.Char[]" />
+                  <parameter name="destinationIndex" position="2" attrib="0" type="System.Int32" />
+                  <parameter name="length" position="3" attrib="0" type="System.Int32" />
+                </parameters>
+              </method>
+              <method name="CreateElements()" attrib="196" virtual="true" is-override="true" returntype="Java.Interop.JniArrayElements">
+                <parameters />
+              </method>
+              <method name="GetElements()" attrib="134" returntype="Java.Interop.JniCharArrayElements">
+                <parameters />
+              </method>
+              <method name="IndexOf(System.Char)" attrib="198" virtual="true" is-override="true" returntype="System.Int32">
+                <parameters>
+                  <parameter name="item" position="0" attrib="0" type="System.Char" />
+                </parameters>
+              </method>
+            </methods>
+          </class>
+          <class name="JavaDoubleArray" type="class" base="Java.Interop.JavaPrimitiveArray`1[System.Double]" sealed="true" charset="Ansi" layout="Auto">
+            <attributes>
+              <attribute name="Java.Interop.JniTypeSignatureAttribute">
+                <properties>
+                  <property name="ArrayRank" value="1" />
+                  <property name="IsKeyword" value="True" />
+                </properties>
+              </attribute>
+            </attributes>
+            <interfaces>
+              <interface name="Java.Interop.IJavaPeerable" />
+              <interface name="System.Collections.Generic.ICollection`1[T]" />
+              <interface name="System.Collections.Generic.IEnumerable`1[T]" />
+              <interface name="System.Collections.Generic.IList`1[T]" />
+              <interface name="System.Collections.ICollection" />
+              <interface name="System.Collections.IEnumerable" />
+              <interface name="System.Collections.IList" />
+              <interface name="System.IDisposable" />
+            </interfaces>
+            <constructors>
+              <constructor name=".ctor(System.Collections.Generic.IEnumerable`1[System.Double])" attrib="6278">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="System.Collections.Generic.IEnumerable`1[System.Double]" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(System.Collections.Generic.IList`1[System.Double])" attrib="6278">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="System.Collections.Generic.IList`1[System.Double]" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(System.Int32)" attrib="6278">
+                <parameters>
+                  <parameter name="length" position="0" attrib="0" type="System.Int32" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(Java.Interop.JniObjectReference&amp;, Java.Interop.JniObjectReferenceOptions)" attrib="6278">
+                <parameters>
+                  <parameter name="handle" position="0" attrib="0" type="Java.Interop.JniObjectReference" direction="ref" />
+                  <parameter name="options" position="1" attrib="0" type="Java.Interop.JniObjectReferenceOptions" />
+                </parameters>
+              </constructor>
+            </constructors>
+            <methods>
+              <method name="Clear()" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters />
+              </method>
+              <method name="CopyFrom(System.Double[], System.Int32, System.Int32, System.Int32)" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="sourceArray" position="0" attrib="0" type="System.Double[]" />
+                  <parameter name="sourceIndex" position="1" attrib="0" type="System.Int32" />
+                  <parameter name="destinationIndex" position="2" attrib="0" type="System.Int32" />
+                  <parameter name="length" position="3" attrib="0" type="System.Int32" />
+                </parameters>
+              </method>
+              <method name="CopyTo(System.Int32, System.Double[], System.Int32, System.Int32)" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="sourceIndex" position="0" attrib="0" type="System.Int32" />
+                  <parameter name="destinationArray" position="1" attrib="0" type="System.Double[]" />
+                  <parameter name="destinationIndex" position="2" attrib="0" type="System.Int32" />
+                  <parameter name="length" position="3" attrib="0" type="System.Int32" />
+                </parameters>
+              </method>
+              <method name="CreateElements()" attrib="196" virtual="true" is-override="true" returntype="Java.Interop.JniArrayElements">
+                <parameters />
+              </method>
+              <method name="GetElements()" attrib="134" returntype="Java.Interop.JniDoubleArrayElements">
+                <parameters />
+              </method>
+              <method name="IndexOf(System.Double)" attrib="198" virtual="true" is-override="true" returntype="System.Int32">
+                <parameters>
+                  <parameter name="item" position="0" attrib="0" type="System.Double" />
+                </parameters>
+              </method>
+            </methods>
+          </class>
+          <class name="JavaException" type="class" base="System.Exception" charset="Ansi" layout="Auto">
+            <attributes>
+              <attribute name="Java.Interop.JniTypeSignatureAttribute" />
+            </attributes>
+            <interfaces>
+              <interface name="Java.Interop.IJavaPeerable" />
+              <interface name="System.IDisposable" />
+              <interface name="System.Runtime.Serialization.ISerializable" />
+            </interfaces>
+            <fields>
+              <field name="InvalidJniObjectReference" attrib="52" fieldtype="Java.Interop.JniObjectReference*" />
+            </fields>
+            <constructors>
+              <constructor name=".ctor()" attrib="6278">
+                <parameters />
+              </constructor>
+              <constructor name=".ctor(System.String)" attrib="6278">
+                <parameters>
+                  <parameter name="message" position="0" attrib="0" type="System.String" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(Java.Interop.JniObjectReference&amp;, Java.Interop.JniObjectReferenceOptions)" attrib="6278">
+                <parameters>
+                  <parameter name="reference" position="0" attrib="0" type="Java.Interop.JniObjectReference" direction="ref" />
+                  <parameter name="transfer" position="1" attrib="0" type="Java.Interop.JniObjectReferenceOptions" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(System.String, System.Exception)" attrib="6278">
+                <parameters>
+                  <parameter name="message" position="0" attrib="0" type="System.String" />
+                  <parameter name="innerException" position="1" attrib="0" type="System.Exception" />
+                </parameters>
+              </constructor>
+            </constructors>
+            <properties>
+              <property name="JavaStackTrace" attrib="0" ptype="System.String">
+                <methods>
+                  <method name="get_JavaStackTrace()" attrib="2182" returntype="System.String">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="JniIdentityHashCode" attrib="0" ptype="System.Int32">
+                <methods>
+                  <method name="get_JniIdentityHashCode()" attrib="2534" virtual="true" returntype="System.Int32">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="JniManagedPeerState" attrib="0" ptype="Java.Interop.JniManagedPeerStates">
+                <methods>
+                  <method name="get_JniManagedPeerState()" attrib="2534" virtual="true" returntype="Java.Interop.JniManagedPeerStates">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="JniPeerMembers" attrib="0" ptype="Java.Interop.JniPeerMembers">
+                <methods>
+                  <method name="get_JniPeerMembers()" attrib="2502" virtual="true" returntype="Java.Interop.JniPeerMembers">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="PeerReference" attrib="0" ptype="Java.Interop.JniObjectReference">
+                <methods>
+                  <method name="get_PeerReference()" attrib="2534" virtual="true" returntype="Java.Interop.JniObjectReference">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="StackTrace" attrib="0" ptype="System.String">
+                <methods>
+                  <method name="get_StackTrace()" attrib="2246" virtual="true" is-override="true" returntype="System.String">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+            </properties>
+            <methods>
+              <method name="Construct(Java.Interop.JniObjectReference&amp;, Java.Interop.JniObjectReferenceOptions)" attrib="132" returntype="System.Void">
+                <parameters>
+                  <parameter name="reference" position="0" attrib="0" type="Java.Interop.JniObjectReference" direction="ref" />
+                  <parameter name="options" position="1" attrib="0" type="Java.Interop.JniObjectReferenceOptions" />
+                </parameters>
+              </method>
+              <method name="Dispose()" attrib="486" virtual="true" returntype="System.Void">
+                <parameters />
+              </method>
+              <method name="Dispose(System.Boolean)" attrib="452" virtual="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="disposing" position="0" attrib="0" type="System.Boolean" />
+                </parameters>
+              </method>
+              <method name="DisposeUnlessReferenced()" attrib="486" virtual="true" returntype="System.Void">
+                <parameters />
+              </method>
+              <method name="Equals(System.Object)" attrib="198" virtual="true" is-override="true" returntype="System.Boolean">
+                <parameters>
+                  <parameter name="obj" position="0" attrib="0" type="System.Object" />
+                </parameters>
+              </method>
+              <method name="GetHashCode()" attrib="198" virtual="true" is-override="true" returntype="System.Int32">
+                <parameters />
+              </method>
+              <method name="SetPeerReference(Java.Interop.JniObjectReference&amp;, Java.Interop.JniObjectReferenceOptions)" attrib="132" returntype="System.Void">
+                <parameters>
+                  <parameter name="reference" position="0" attrib="0" type="Java.Interop.JniObjectReference" direction="ref" />
+                  <parameter name="options" position="1" attrib="0" type="Java.Interop.JniObjectReferenceOptions" />
+                </parameters>
+              </method>
+              <method name="UnregisterFromRuntime()" attrib="486" virtual="true" returntype="System.Void">
+                <parameters />
+              </method>
+              <method name="~JavaException()" attrib="196" virtual="true" returntype="System.Void">
+                <parameters />
+              </method>
+            </methods>
+          </class>
+          <class name="JavaInt16Array" type="class" base="Java.Interop.JavaPrimitiveArray`1[System.Int16]" sealed="true" charset="Ansi" layout="Auto">
+            <attributes>
+              <attribute name="Java.Interop.JniTypeSignatureAttribute">
+                <properties>
+                  <property name="ArrayRank" value="1" />
+                  <property name="IsKeyword" value="True" />
+                </properties>
+              </attribute>
+            </attributes>
+            <interfaces>
+              <interface name="Java.Interop.IJavaPeerable" />
+              <interface name="System.Collections.Generic.ICollection`1[T]" />
+              <interface name="System.Collections.Generic.IEnumerable`1[T]" />
+              <interface name="System.Collections.Generic.IList`1[T]" />
+              <interface name="System.Collections.ICollection" />
+              <interface name="System.Collections.IEnumerable" />
+              <interface name="System.Collections.IList" />
+              <interface name="System.IDisposable" />
+            </interfaces>
+            <constructors>
+              <constructor name=".ctor(System.Collections.Generic.IEnumerable`1[System.Int16])" attrib="6278">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="System.Collections.Generic.IEnumerable`1[System.Int16]" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(System.Collections.Generic.IList`1[System.Int16])" attrib="6278">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="System.Collections.Generic.IList`1[System.Int16]" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(System.Int32)" attrib="6278">
+                <parameters>
+                  <parameter name="length" position="0" attrib="0" type="System.Int32" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(Java.Interop.JniObjectReference&amp;, Java.Interop.JniObjectReferenceOptions)" attrib="6278">
+                <parameters>
+                  <parameter name="handle" position="0" attrib="0" type="Java.Interop.JniObjectReference" direction="ref" />
+                  <parameter name="options" position="1" attrib="0" type="Java.Interop.JniObjectReferenceOptions" />
+                </parameters>
+              </constructor>
+            </constructors>
+            <methods>
+              <method name="Clear()" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters />
+              </method>
+              <method name="CopyFrom(System.Int16[], System.Int32, System.Int32, System.Int32)" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="sourceArray" position="0" attrib="0" type="System.Int16[]" />
+                  <parameter name="sourceIndex" position="1" attrib="0" type="System.Int32" />
+                  <parameter name="destinationIndex" position="2" attrib="0" type="System.Int32" />
+                  <parameter name="length" position="3" attrib="0" type="System.Int32" />
+                </parameters>
+              </method>
+              <method name="CopyTo(System.Int32, System.Int16[], System.Int32, System.Int32)" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="sourceIndex" position="0" attrib="0" type="System.Int32" />
+                  <parameter name="destinationArray" position="1" attrib="0" type="System.Int16[]" />
+                  <parameter name="destinationIndex" position="2" attrib="0" type="System.Int32" />
+                  <parameter name="length" position="3" attrib="0" type="System.Int32" />
+                </parameters>
+              </method>
+              <method name="CreateElements()" attrib="196" virtual="true" is-override="true" returntype="Java.Interop.JniArrayElements">
+                <parameters />
+              </method>
+              <method name="GetElements()" attrib="134" returntype="Java.Interop.JniInt16ArrayElements">
+                <parameters />
+              </method>
+              <method name="IndexOf(System.Int16)" attrib="198" virtual="true" is-override="true" returntype="System.Int32">
+                <parameters>
+                  <parameter name="item" position="0" attrib="0" type="System.Int16" />
+                </parameters>
+              </method>
+            </methods>
+          </class>
+          <class name="JavaInt32Array" type="class" base="Java.Interop.JavaPrimitiveArray`1[System.Int32]" sealed="true" charset="Ansi" layout="Auto">
+            <attributes>
+              <attribute name="Java.Interop.JniTypeSignatureAttribute">
+                <properties>
+                  <property name="ArrayRank" value="1" />
+                  <property name="IsKeyword" value="True" />
+                </properties>
+              </attribute>
+            </attributes>
+            <interfaces>
+              <interface name="Java.Interop.IJavaPeerable" />
+              <interface name="System.Collections.Generic.ICollection`1[T]" />
+              <interface name="System.Collections.Generic.IEnumerable`1[T]" />
+              <interface name="System.Collections.Generic.IList`1[T]" />
+              <interface name="System.Collections.ICollection" />
+              <interface name="System.Collections.IEnumerable" />
+              <interface name="System.Collections.IList" />
+              <interface name="System.IDisposable" />
+            </interfaces>
+            <constructors>
+              <constructor name=".ctor(System.Collections.Generic.IEnumerable`1[System.Int32])" attrib="6278">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="System.Collections.Generic.IEnumerable`1[System.Int32]" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(System.Collections.Generic.IList`1[System.Int32])" attrib="6278">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="System.Collections.Generic.IList`1[System.Int32]" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(System.Int32)" attrib="6278">
+                <parameters>
+                  <parameter name="length" position="0" attrib="0" type="System.Int32" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(Java.Interop.JniObjectReference&amp;, Java.Interop.JniObjectReferenceOptions)" attrib="6278">
+                <parameters>
+                  <parameter name="handle" position="0" attrib="0" type="Java.Interop.JniObjectReference" direction="ref" />
+                  <parameter name="options" position="1" attrib="0" type="Java.Interop.JniObjectReferenceOptions" />
+                </parameters>
+              </constructor>
+            </constructors>
+            <methods>
+              <method name="Clear()" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters />
+              </method>
+              <method name="CopyFrom(System.Int32[], System.Int32, System.Int32, System.Int32)" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="sourceArray" position="0" attrib="0" type="System.Int32[]" />
+                  <parameter name="sourceIndex" position="1" attrib="0" type="System.Int32" />
+                  <parameter name="destinationIndex" position="2" attrib="0" type="System.Int32" />
+                  <parameter name="length" position="3" attrib="0" type="System.Int32" />
+                </parameters>
+              </method>
+              <method name="CopyTo(System.Int32, System.Int32[], System.Int32, System.Int32)" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="sourceIndex" position="0" attrib="0" type="System.Int32" />
+                  <parameter name="destinationArray" position="1" attrib="0" type="System.Int32[]" />
+                  <parameter name="destinationIndex" position="2" attrib="0" type="System.Int32" />
+                  <parameter name="length" position="3" attrib="0" type="System.Int32" />
+                </parameters>
+              </method>
+              <method name="CreateElements()" attrib="196" virtual="true" is-override="true" returntype="Java.Interop.JniArrayElements">
+                <parameters />
+              </method>
+              <method name="GetElements()" attrib="134" returntype="Java.Interop.JniInt32ArrayElements">
+                <parameters />
+              </method>
+              <method name="IndexOf(System.Int32)" attrib="198" virtual="true" is-override="true" returntype="System.Int32">
+                <parameters>
+                  <parameter name="item" position="0" attrib="0" type="System.Int32" />
+                </parameters>
+              </method>
+            </methods>
+          </class>
+          <class name="JavaInt64Array" type="class" base="Java.Interop.JavaPrimitiveArray`1[System.Int64]" sealed="true" charset="Ansi" layout="Auto">
+            <attributes>
+              <attribute name="Java.Interop.JniTypeSignatureAttribute">
+                <properties>
+                  <property name="ArrayRank" value="1" />
+                  <property name="IsKeyword" value="True" />
+                </properties>
+              </attribute>
+            </attributes>
+            <interfaces>
+              <interface name="Java.Interop.IJavaPeerable" />
+              <interface name="System.Collections.Generic.ICollection`1[T]" />
+              <interface name="System.Collections.Generic.IEnumerable`1[T]" />
+              <interface name="System.Collections.Generic.IList`1[T]" />
+              <interface name="System.Collections.ICollection" />
+              <interface name="System.Collections.IEnumerable" />
+              <interface name="System.Collections.IList" />
+              <interface name="System.IDisposable" />
+            </interfaces>
+            <constructors>
+              <constructor name=".ctor(System.Collections.Generic.IEnumerable`1[System.Int64])" attrib="6278">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="System.Collections.Generic.IEnumerable`1[System.Int64]" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(System.Collections.Generic.IList`1[System.Int64])" attrib="6278">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="System.Collections.Generic.IList`1[System.Int64]" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(System.Int32)" attrib="6278">
+                <parameters>
+                  <parameter name="length" position="0" attrib="0" type="System.Int32" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(Java.Interop.JniObjectReference&amp;, Java.Interop.JniObjectReferenceOptions)" attrib="6278">
+                <parameters>
+                  <parameter name="handle" position="0" attrib="0" type="Java.Interop.JniObjectReference" direction="ref" />
+                  <parameter name="options" position="1" attrib="0" type="Java.Interop.JniObjectReferenceOptions" />
+                </parameters>
+              </constructor>
+            </constructors>
+            <methods>
+              <method name="Clear()" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters />
+              </method>
+              <method name="CopyFrom(System.Int64[], System.Int32, System.Int32, System.Int32)" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="sourceArray" position="0" attrib="0" type="System.Int64[]" />
+                  <parameter name="sourceIndex" position="1" attrib="0" type="System.Int32" />
+                  <parameter name="destinationIndex" position="2" attrib="0" type="System.Int32" />
+                  <parameter name="length" position="3" attrib="0" type="System.Int32" />
+                </parameters>
+              </method>
+              <method name="CopyTo(System.Int32, System.Int64[], System.Int32, System.Int32)" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="sourceIndex" position="0" attrib="0" type="System.Int32" />
+                  <parameter name="destinationArray" position="1" attrib="0" type="System.Int64[]" />
+                  <parameter name="destinationIndex" position="2" attrib="0" type="System.Int32" />
+                  <parameter name="length" position="3" attrib="0" type="System.Int32" />
+                </parameters>
+              </method>
+              <method name="CreateElements()" attrib="196" virtual="true" is-override="true" returntype="Java.Interop.JniArrayElements">
+                <parameters />
+              </method>
+              <method name="GetElements()" attrib="134" returntype="Java.Interop.JniInt64ArrayElements">
+                <parameters />
+              </method>
+              <method name="IndexOf(System.Int64)" attrib="198" virtual="true" is-override="true" returntype="System.Int32">
+                <parameters>
+                  <parameter name="item" position="0" attrib="0" type="System.Int64" />
+                </parameters>
+              </method>
+            </methods>
+          </class>
+          <class name="JavaObject" type="class" base="System.Object" charset="Ansi" layout="Auto">
+            <attributes>
+              <attribute name="Java.Interop.JniTypeSignatureAttribute" />
+            </attributes>
+            <interfaces>
+              <interface name="Java.Interop.IJavaPeerable" />
+              <interface name="System.IDisposable" />
+            </interfaces>
+            <fields>
+              <field name="InvalidJniObjectReference" attrib="52" fieldtype="Java.Interop.JniObjectReference*" />
+            </fields>
+            <constructors>
+              <constructor name=".ctor()" attrib="6278">
+                <parameters />
+              </constructor>
+              <constructor name=".ctor(Java.Interop.JniObjectReference&amp;, Java.Interop.JniObjectReferenceOptions)" attrib="6278">
+                <parameters>
+                  <parameter name="reference" position="0" attrib="0" type="Java.Interop.JniObjectReference" direction="ref" />
+                  <parameter name="options" position="1" attrib="0" type="Java.Interop.JniObjectReferenceOptions" />
+                </parameters>
+              </constructor>
+            </constructors>
+            <properties>
+              <property name="JniIdentityHashCode" attrib="0" ptype="System.Int32">
+                <methods>
+                  <method name="get_JniIdentityHashCode()" attrib="2534" virtual="true" returntype="System.Int32">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="JniManagedPeerState" attrib="0" ptype="Java.Interop.JniManagedPeerStates">
+                <methods>
+                  <method name="get_JniManagedPeerState()" attrib="2534" virtual="true" returntype="Java.Interop.JniManagedPeerStates">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="JniPeerMembers" attrib="0" ptype="Java.Interop.JniPeerMembers">
+                <methods>
+                  <method name="get_JniPeerMembers()" attrib="2502" virtual="true" returntype="Java.Interop.JniPeerMembers">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="PeerReference" attrib="0" ptype="Java.Interop.JniObjectReference">
+                <methods>
+                  <method name="get_PeerReference()" attrib="2534" virtual="true" returntype="Java.Interop.JniObjectReference">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+            </properties>
+            <methods>
+              <method name="Construct(Java.Interop.JniObjectReference&amp;, Java.Interop.JniObjectReferenceOptions)" attrib="132" returntype="System.Void">
+                <parameters>
+                  <parameter name="reference" position="0" attrib="0" type="Java.Interop.JniObjectReference" direction="ref" />
+                  <parameter name="options" position="1" attrib="0" type="Java.Interop.JniObjectReferenceOptions" />
+                </parameters>
+              </method>
+              <method name="Dispose()" attrib="486" virtual="true" returntype="System.Void">
+                <parameters />
+              </method>
+              <method name="Dispose(System.Boolean)" attrib="452" virtual="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="disposing" position="0" attrib="0" type="System.Boolean" />
+                </parameters>
+              </method>
+              <method name="DisposeUnlessReferenced()" attrib="486" virtual="true" returntype="System.Void">
+                <parameters />
+              </method>
+              <method name="Equals(System.Object)" attrib="198" virtual="true" is-override="true" returntype="System.Boolean">
+                <parameters>
+                  <parameter name="obj" position="0" attrib="0" type="System.Object" />
+                </parameters>
+              </method>
+              <method name="GetHashCode()" attrib="198" virtual="true" is-override="true" returntype="System.Int32">
+                <parameters />
+              </method>
+              <method name="SetPeerReference(Java.Interop.JniObjectReference&amp;, Java.Interop.JniObjectReferenceOptions)" attrib="132" returntype="System.Void">
+                <parameters>
+                  <parameter name="reference" position="0" attrib="0" type="Java.Interop.JniObjectReference" direction="ref" />
+                  <parameter name="options" position="1" attrib="0" type="Java.Interop.JniObjectReferenceOptions" />
+                </parameters>
+              </method>
+              <method name="ToString()" attrib="198" virtual="true" is-override="true" returntype="System.String">
+                <parameters />
+              </method>
+              <method name="UnregisterFromRuntime()" attrib="486" virtual="true" returntype="System.Void">
+                <parameters />
+              </method>
+              <method name="~JavaObject()" attrib="196" virtual="true" returntype="System.Void">
+                <parameters />
+              </method>
+            </methods>
+          </class>
+          <class name="JavaObjectArray`1" type="class" base="Java.Interop.JavaArray`1[T]" charset="Ansi" layout="Auto">
+            <attributes>
+              <attribute name="System.Reflection.DefaultMemberAttribute">
+                <properties>
+                  <property name="MemberName" value="Item" />
+                </properties>
+              </attribute>
+            </attributes>
+            <interfaces>
+              <interface name="Java.Interop.IJavaPeerable" />
+              <interface name="System.Collections.Generic.ICollection`1[T]" />
+              <interface name="System.Collections.Generic.IEnumerable`1[T]" />
+              <interface name="System.Collections.Generic.IList`1[T]" />
+              <interface name="System.Collections.ICollection" />
+              <interface name="System.Collections.IEnumerable" />
+              <interface name="System.Collections.IList" />
+              <interface name="System.IDisposable" />
+            </interfaces>
+            <generic-parameters>
+              <generic-parameter name="T" attributes="0" />
+            </generic-parameters>
+            <constructors>
+              <constructor name=".ctor(System.Collections.Generic.IEnumerable`1[T])" attrib="6278">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="System.Collections.Generic.IEnumerable`1[T]" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(System.Collections.Generic.IList`1[T])" attrib="6278">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="System.Collections.Generic.IList`1[T]" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(System.Int32)" attrib="6278">
+                <parameters>
+                  <parameter name="length" position="0" attrib="0" type="System.Int32" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(Java.Interop.JniObjectReference&amp;, Java.Interop.JniObjectReferenceOptions)" attrib="6278">
+                <parameters>
+                  <parameter name="handle" position="0" attrib="0" type="Java.Interop.JniObjectReference" direction="ref" />
+                  <parameter name="transfer" position="1" attrib="0" type="Java.Interop.JniObjectReferenceOptions" />
+                </parameters>
+              </constructor>
+            </constructors>
+            <properties>
+              <property name="Item" attrib="0" ptype="T" params="System.Int32">
+                <methods>
+                  <method name="get_Item(System.Int32)" attrib="2246" virtual="true" is-override="true" returntype="T">
+                    <parameters>
+                      <parameter name="index" position="0" attrib="0" type="System.Int32" />
+                    </parameters>
+                  </method>
+                  <method name="set_Item(System.Int32, T)" attrib="2246" virtual="true" is-override="true" returntype="System.Void">
+                    <parameters>
+                      <parameter name="index" position="0" attrib="0" type="System.Int32" />
+                      <parameter name="value" position="1" attrib="0" type="T" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+            </properties>
+            <methods>
+              <method name="Clear()" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters />
+              </method>
+              <method name="CopyTo(T[], System.Int32)" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="array" position="0" attrib="0" type="T[]" />
+                  <parameter name="arrayIndex" position="1" attrib="0" type="System.Int32" />
+                </parameters>
+              </method>
+              <method name="GetEnumerator()" attrib="198" virtual="true" is-override="true" returntype="System.Collections.Generic.IEnumerator`1[T]">
+                <attributes>
+                  <attribute name="System.Runtime.CompilerServices.IteratorStateMachineAttribute" />
+                </attributes>
+                <parameters />
+              </method>
+              <method name="IndexOf(T)" attrib="198" virtual="true" is-override="true" returntype="System.Int32">
+                <parameters>
+                  <parameter name="item" position="0" attrib="0" type="T" />
+                </parameters>
+              </method>
+            </methods>
+          </class>
+          <class name="JavaPeerableExtensions" type="class" base="System.Object" sealed="true" abstract="true" charset="Ansi" layout="Auto">
+            <attributes>
+              <attribute name="System.Runtime.CompilerServices.ExtensionAttribute" />
+            </attributes>
+            <methods>
+              <method name="GetJniTypeName(Java.Interop.IJavaPeerable)" attrib="150" static="true" returntype="System.String">
+                <attributes>
+                  <attribute name="System.Runtime.CompilerServices.ExtensionAttribute" />
+                </attributes>
+                <parameters>
+                  <parameter name="self" position="0" attrib="0" type="Java.Interop.IJavaPeerable" direction="this" />
+                </parameters>
+              </method>
+            </methods>
+          </class>
+          <class name="JavaPrimitiveArray`1" type="class" base="Java.Interop.JavaArray`1[T]" abstract="true" charset="Ansi" layout="Auto">
+            <attributes>
+              <attribute name="System.Reflection.DefaultMemberAttribute">
+                <properties>
+                  <property name="MemberName" value="Item" />
+                </properties>
+              </attribute>
+            </attributes>
+            <interfaces>
+              <interface name="Java.Interop.IJavaPeerable" />
+              <interface name="System.Collections.Generic.ICollection`1[T]" />
+              <interface name="System.Collections.Generic.IEnumerable`1[T]" />
+              <interface name="System.Collections.Generic.IList`1[T]" />
+              <interface name="System.Collections.ICollection" />
+              <interface name="System.Collections.IEnumerable" />
+              <interface name="System.Collections.IList" />
+              <interface name="System.IDisposable" />
+            </interfaces>
+            <generic-parameters>
+              <generic-parameter name="T" attributes="0" />
+            </generic-parameters>
+            <properties>
+              <property name="Item" attrib="0" ptype="T" params="System.Int32">
+                <methods>
+                  <method name="get_Item(System.Int32)" attrib="2246" virtual="true" is-override="true" returntype="T">
+                    <parameters>
+                      <parameter name="index" position="0" attrib="0" type="System.Int32" />
+                    </parameters>
+                  </method>
+                  <method name="set_Item(System.Int32, T)" attrib="2246" virtual="true" is-override="true" returntype="System.Void">
+                    <parameters>
+                      <parameter name="index" position="0" attrib="0" type="System.Int32" />
+                      <parameter name="value" position="1" attrib="0" type="T" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+            </properties>
+            <methods>
+              <method name="CopyFrom(T[], System.Int32, System.Int32, System.Int32)" attrib="1478" abstract="true" virtual="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="sourceArray" position="0" attrib="0" type="T[]" />
+                  <parameter name="sourceIndex" position="1" attrib="0" type="System.Int32" />
+                  <parameter name="destinationIndex" position="2" attrib="0" type="System.Int32" />
+                  <parameter name="length" position="3" attrib="0" type="System.Int32" />
+                </parameters>
+              </method>
+              <method name="CopyTo(T[], System.Int32)" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="array" position="0" attrib="0" type="T[]" />
+                  <parameter name="arrayIndex" position="1" attrib="0" type="System.Int32" />
+                </parameters>
+              </method>
+              <method name="CopyTo(System.Int32, T[], System.Int32, System.Int32)" attrib="1478" abstract="true" virtual="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="sourceIndex" position="0" attrib="0" type="System.Int32" />
+                  <parameter name="destinationArray" position="1" attrib="0" type="T[]" />
+                  <parameter name="destinationIndex" position="2" attrib="0" type="System.Int32" />
+                  <parameter name="length" position="3" attrib="0" type="System.Int32" />
+                </parameters>
+              </method>
+              <method name="CreateElements()" attrib="1476" abstract="true" virtual="true" returntype="Java.Interop.JniArrayElements">
+                <parameters />
+              </method>
+              <method name="GetElements()" attrib="134" returntype="Java.Interop.JniArrayElements">
+                <parameters />
+              </method>
+            </methods>
+          </class>
+          <class name="JavaSByteArray" type="class" base="Java.Interop.JavaPrimitiveArray`1[System.SByte]" sealed="true" charset="Ansi" layout="Auto">
+            <attributes>
+              <attribute name="Java.Interop.JniTypeSignatureAttribute">
+                <properties>
+                  <property name="ArrayRank" value="1" />
+                  <property name="IsKeyword" value="True" />
+                </properties>
+              </attribute>
+            </attributes>
+            <interfaces>
+              <interface name="Java.Interop.IJavaPeerable" />
+              <interface name="System.Collections.Generic.ICollection`1[T]" />
+              <interface name="System.Collections.Generic.IEnumerable`1[T]" />
+              <interface name="System.Collections.Generic.IList`1[T]" />
+              <interface name="System.Collections.ICollection" />
+              <interface name="System.Collections.IEnumerable" />
+              <interface name="System.Collections.IList" />
+              <interface name="System.IDisposable" />
+            </interfaces>
+            <constructors>
+              <constructor name=".ctor(System.Collections.Generic.IEnumerable`1[System.SByte])" attrib="6278">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="System.Collections.Generic.IEnumerable`1[System.SByte]" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(System.Collections.Generic.IList`1[System.SByte])" attrib="6278">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="System.Collections.Generic.IList`1[System.SByte]" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(System.Int32)" attrib="6278">
+                <parameters>
+                  <parameter name="length" position="0" attrib="0" type="System.Int32" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(Java.Interop.JniObjectReference&amp;, Java.Interop.JniObjectReferenceOptions)" attrib="6278">
+                <parameters>
+                  <parameter name="handle" position="0" attrib="0" type="Java.Interop.JniObjectReference" direction="ref" />
+                  <parameter name="options" position="1" attrib="0" type="Java.Interop.JniObjectReferenceOptions" />
+                </parameters>
+              </constructor>
+            </constructors>
+            <methods>
+              <method name="Clear()" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters />
+              </method>
+              <method name="CopyFrom(System.SByte[], System.Int32, System.Int32, System.Int32)" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="sourceArray" position="0" attrib="0" type="System.SByte[]" />
+                  <parameter name="sourceIndex" position="1" attrib="0" type="System.Int32" />
+                  <parameter name="destinationIndex" position="2" attrib="0" type="System.Int32" />
+                  <parameter name="length" position="3" attrib="0" type="System.Int32" />
+                </parameters>
+              </method>
+              <method name="CopyTo(System.Int32, System.SByte[], System.Int32, System.Int32)" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="sourceIndex" position="0" attrib="0" type="System.Int32" />
+                  <parameter name="destinationArray" position="1" attrib="0" type="System.SByte[]" />
+                  <parameter name="destinationIndex" position="2" attrib="0" type="System.Int32" />
+                  <parameter name="length" position="3" attrib="0" type="System.Int32" />
+                </parameters>
+              </method>
+              <method name="CreateElements()" attrib="196" virtual="true" is-override="true" returntype="Java.Interop.JniArrayElements">
+                <parameters />
+              </method>
+              <method name="GetElements()" attrib="134" returntype="Java.Interop.JniSByteArrayElements">
+                <parameters />
+              </method>
+              <method name="IndexOf(System.SByte)" attrib="198" virtual="true" is-override="true" returntype="System.Int32">
+                <parameters>
+                  <parameter name="item" position="0" attrib="0" type="System.SByte" />
+                </parameters>
+              </method>
+            </methods>
+          </class>
+          <class name="JavaSingleArray" type="class" base="Java.Interop.JavaPrimitiveArray`1[System.Single]" sealed="true" charset="Ansi" layout="Auto">
+            <attributes>
+              <attribute name="Java.Interop.JniTypeSignatureAttribute">
+                <properties>
+                  <property name="ArrayRank" value="1" />
+                  <property name="IsKeyword" value="True" />
+                </properties>
+              </attribute>
+            </attributes>
+            <interfaces>
+              <interface name="Java.Interop.IJavaPeerable" />
+              <interface name="System.Collections.Generic.ICollection`1[T]" />
+              <interface name="System.Collections.Generic.IEnumerable`1[T]" />
+              <interface name="System.Collections.Generic.IList`1[T]" />
+              <interface name="System.Collections.ICollection" />
+              <interface name="System.Collections.IEnumerable" />
+              <interface name="System.Collections.IList" />
+              <interface name="System.IDisposable" />
+            </interfaces>
+            <constructors>
+              <constructor name=".ctor(System.Collections.Generic.IEnumerable`1[System.Single])" attrib="6278">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="System.Collections.Generic.IEnumerable`1[System.Single]" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(System.Collections.Generic.IList`1[System.Single])" attrib="6278">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="System.Collections.Generic.IList`1[System.Single]" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(System.Int32)" attrib="6278">
+                <parameters>
+                  <parameter name="length" position="0" attrib="0" type="System.Int32" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(Java.Interop.JniObjectReference&amp;, Java.Interop.JniObjectReferenceOptions)" attrib="6278">
+                <parameters>
+                  <parameter name="handle" position="0" attrib="0" type="Java.Interop.JniObjectReference" direction="ref" />
+                  <parameter name="options" position="1" attrib="0" type="Java.Interop.JniObjectReferenceOptions" />
+                </parameters>
+              </constructor>
+            </constructors>
+            <methods>
+              <method name="Clear()" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters />
+              </method>
+              <method name="CopyFrom(System.Single[], System.Int32, System.Int32, System.Int32)" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="sourceArray" position="0" attrib="0" type="System.Single[]" />
+                  <parameter name="sourceIndex" position="1" attrib="0" type="System.Int32" />
+                  <parameter name="destinationIndex" position="2" attrib="0" type="System.Int32" />
+                  <parameter name="length" position="3" attrib="0" type="System.Int32" />
+                </parameters>
+              </method>
+              <method name="CopyTo(System.Int32, System.Single[], System.Int32, System.Int32)" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="sourceIndex" position="0" attrib="0" type="System.Int32" />
+                  <parameter name="destinationArray" position="1" attrib="0" type="System.Single[]" />
+                  <parameter name="destinationIndex" position="2" attrib="0" type="System.Int32" />
+                  <parameter name="length" position="3" attrib="0" type="System.Int32" />
+                </parameters>
+              </method>
+              <method name="CreateElements()" attrib="196" virtual="true" is-override="true" returntype="Java.Interop.JniArrayElements">
+                <parameters />
+              </method>
+              <method name="GetElements()" attrib="134" returntype="Java.Interop.JniSingleArrayElements">
+                <parameters />
+              </method>
+              <method name="IndexOf(System.Single)" attrib="198" virtual="true" is-override="true" returntype="System.Int32">
+                <parameters>
+                  <parameter name="item" position="0" attrib="0" type="System.Single" />
+                </parameters>
+              </method>
+            </methods>
+          </class>
+          <class name="JniAddNativeMethodRegistrationAttribute" type="class" base="System.Attribute" sealed="true" charset="Ansi" layout="Auto">
+            <attributes>
+              <attribute name="System.AttributeUsageAttribute">
+                <properties>
+                  <property name="ValidOn" value="Method" />
+                </properties>
+              </attribute>
+            </attributes>
+            <constructors>
+              <constructor name=".ctor()" attrib="6278">
+                <parameters />
+              </constructor>
+            </constructors>
           </class>
           <class name="JniArgumentValue" type="struct" base="System.ValueType" sealed="true" charset="Ansi" layout="Explicit">
             <interfaces>
@@ -221,6 +1320,156 @@
                 <parameters>
                   <parameter name="lhs" position="0" attrib="0" type="Java.Interop.JniArgumentValue" />
                   <parameter name="rhs" position="1" attrib="0" type="Java.Interop.JniArgumentValue" />
+                </parameters>
+              </method>
+            </methods>
+          </class>
+          <class name="JniArrayElements" type="class" base="System.Object" abstract="true" charset="Ansi" layout="Auto">
+            <interfaces>
+              <interface name="System.IDisposable" />
+            </interfaces>
+            <properties>
+              <property name="Elements" attrib="0" ptype="System.IntPtr">
+                <methods>
+                  <method name="get_Elements()" attrib="2182" returntype="System.IntPtr">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="Size" attrib="0" ptype="System.Int32">
+                <methods>
+                  <method name="get_Size()" attrib="2182" returntype="System.Int32">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+            </properties>
+            <methods>
+              <method name="CopyToJava()" attrib="134" returntype="System.Void">
+                <parameters />
+              </method>
+              <method name="Dispose()" attrib="486" virtual="true" returntype="System.Void">
+                <parameters />
+              </method>
+              <method name="Release(Java.Interop.JniReleaseArrayElementsMode)" attrib="134" returntype="System.Void">
+                <parameters>
+                  <parameter name="releaseMode" position="0" attrib="0" type="Java.Interop.JniReleaseArrayElementsMode" />
+                </parameters>
+              </method>
+              <method name="Synchronize(Java.Interop.JniReleaseArrayElementsMode)" attrib="1476" abstract="true" virtual="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="releaseMode" position="0" attrib="0" type="Java.Interop.JniReleaseArrayElementsMode" />
+                </parameters>
+              </method>
+            </methods>
+          </class>
+          <class name="JniBooleanArrayElements" type="class" base="Java.Interop.JniArrayElements" sealed="true" charset="Ansi" layout="Auto">
+            <attributes>
+              <attribute name="System.Reflection.DefaultMemberAttribute">
+                <properties>
+                  <property name="MemberName" value="Item" />
+                </properties>
+              </attribute>
+            </attributes>
+            <interfaces>
+              <interface name="System.IDisposable" />
+            </interfaces>
+            <properties>
+              <property name="Elements" attrib="0" ptype="System.Boolean*">
+                <methods>
+                  <method name="get_Elements()" attrib="2182" returntype="System.Boolean*">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="Item" attrib="0" ptype="System.Boolean&amp;" params="System.Int32">
+                <methods>
+                  <method name="get_Item(System.Int32)" attrib="2182" returntype="System.Boolean&amp;">
+                    <parameters>
+                      <parameter name="index" position="0" attrib="0" type="System.Int32" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+            </properties>
+            <methods>
+              <method name="Synchronize(Java.Interop.JniReleaseArrayElementsMode)" attrib="196" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="releaseMode" position="0" attrib="0" type="Java.Interop.JniReleaseArrayElementsMode" />
+                </parameters>
+              </method>
+            </methods>
+          </class>
+          <class name="JniCharArrayElements" type="class" base="Java.Interop.JniArrayElements" sealed="true" charset="Ansi" layout="Auto">
+            <attributes>
+              <attribute name="System.Reflection.DefaultMemberAttribute">
+                <properties>
+                  <property name="MemberName" value="Item" />
+                </properties>
+              </attribute>
+            </attributes>
+            <interfaces>
+              <interface name="System.IDisposable" />
+            </interfaces>
+            <properties>
+              <property name="Elements" attrib="0" ptype="System.Char*">
+                <methods>
+                  <method name="get_Elements()" attrib="2182" returntype="System.Char*">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="Item" attrib="0" ptype="System.Char&amp;" params="System.Int32">
+                <methods>
+                  <method name="get_Item(System.Int32)" attrib="2182" returntype="System.Char&amp;">
+                    <parameters>
+                      <parameter name="index" position="0" attrib="0" type="System.Int32" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+            </properties>
+            <methods>
+              <method name="Synchronize(Java.Interop.JniReleaseArrayElementsMode)" attrib="196" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="releaseMode" position="0" attrib="0" type="Java.Interop.JniReleaseArrayElementsMode" />
+                </parameters>
+              </method>
+            </methods>
+          </class>
+          <class name="JniDoubleArrayElements" type="class" base="Java.Interop.JniArrayElements" sealed="true" charset="Ansi" layout="Auto">
+            <attributes>
+              <attribute name="System.Reflection.DefaultMemberAttribute">
+                <properties>
+                  <property name="MemberName" value="Item" />
+                </properties>
+              </attribute>
+            </attributes>
+            <interfaces>
+              <interface name="System.IDisposable" />
+            </interfaces>
+            <properties>
+              <property name="Elements" attrib="0" ptype="System.Double*">
+                <methods>
+                  <method name="get_Elements()" attrib="2182" returntype="System.Double*">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="Item" attrib="0" ptype="System.Double&amp;" params="System.Int32">
+                <methods>
+                  <method name="get_Item(System.Int32)" attrib="2182" returntype="System.Double&amp;">
+                    <parameters>
+                      <parameter name="index" position="0" attrib="0" type="System.Int32" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+            </properties>
+            <methods>
+              <method name="Synchronize(Java.Interop.JniReleaseArrayElementsMode)" attrib="196" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="releaseMode" position="0" attrib="0" type="Java.Interop.JniReleaseArrayElementsMode" />
                 </parameters>
               </method>
             </methods>
@@ -600,6 +1849,11 @@
                   <method name="Throw(Java.Interop.JniObjectReference)" attrib="150" static="true" returntype="System.Void">
                     <parameters>
                       <parameter name="toThrow" position="0" attrib="0" type="Java.Interop.JniObjectReference" />
+                    </parameters>
+                  </method>
+                  <method name="Throw(System.Exception)" attrib="150" static="true" returntype="System.Void">
+                    <parameters>
+                      <parameter name="e" position="0" attrib="0" type="System.Exception" />
                     </parameters>
                   </method>
                   <method name="ThrowNew(Java.Interop.JniObjectReference, System.String)" attrib="150" static="true" returntype="System.Void">
@@ -1102,6 +2356,11 @@
                       <parameter name="capacity" position="0" attrib="0" type="System.Int32" />
                     </parameters>
                   </method>
+                  <method name="GetIdentityHashCode(Java.Interop.JniObjectReference)" attrib="150" static="true" returntype="System.Int32">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="Java.Interop.JniObjectReference" />
+                    </parameters>
+                  </method>
                   <method name="GetJavaVM(out System.IntPtr&amp;)" attrib="150" static="true" returntype="System.Void">
                     <parameters>
                       <parameter name="invocationPointer" position="0" attrib="2" type="System.IntPtr" direction="out" />
@@ -1433,6 +2692,11 @@
                       <parameter name="value" position="0" attrib="0" type="Java.Interop.JniObjectReference" />
                     </parameters>
                   </method>
+                  <method name="ToString(System.IntPtr)" attrib="150" static="true" returntype="System.String">
+                    <parameters>
+                      <parameter name="reference" position="0" attrib="0" type="System.IntPtr" />
+                    </parameters>
+                  </method>
                   <method name="ToString(Java.Interop.JniObjectReference&amp;, Java.Interop.JniObjectReferenceOptions)" attrib="150" static="true" returntype="System.String">
                     <parameters>
                       <parameter name="value" position="0" attrib="0" type="Java.Interop.JniObjectReference" direction="ref" />
@@ -1580,6 +2844,117 @@
               </method>
             </methods>
           </class>
+          <class name="JniInt16ArrayElements" type="class" base="Java.Interop.JniArrayElements" sealed="true" charset="Ansi" layout="Auto">
+            <attributes>
+              <attribute name="System.Reflection.DefaultMemberAttribute">
+                <properties>
+                  <property name="MemberName" value="Item" />
+                </properties>
+              </attribute>
+            </attributes>
+            <interfaces>
+              <interface name="System.IDisposable" />
+            </interfaces>
+            <properties>
+              <property name="Elements" attrib="0" ptype="System.Int16*">
+                <methods>
+                  <method name="get_Elements()" attrib="2182" returntype="System.Int16*">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="Item" attrib="0" ptype="System.Int16&amp;" params="System.Int32">
+                <methods>
+                  <method name="get_Item(System.Int32)" attrib="2182" returntype="System.Int16&amp;">
+                    <parameters>
+                      <parameter name="index" position="0" attrib="0" type="System.Int32" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+            </properties>
+            <methods>
+              <method name="Synchronize(Java.Interop.JniReleaseArrayElementsMode)" attrib="196" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="releaseMode" position="0" attrib="0" type="Java.Interop.JniReleaseArrayElementsMode" />
+                </parameters>
+              </method>
+            </methods>
+          </class>
+          <class name="JniInt32ArrayElements" type="class" base="Java.Interop.JniArrayElements" sealed="true" charset="Ansi" layout="Auto">
+            <attributes>
+              <attribute name="System.Reflection.DefaultMemberAttribute">
+                <properties>
+                  <property name="MemberName" value="Item" />
+                </properties>
+              </attribute>
+            </attributes>
+            <interfaces>
+              <interface name="System.IDisposable" />
+            </interfaces>
+            <properties>
+              <property name="Elements" attrib="0" ptype="System.Int32*">
+                <methods>
+                  <method name="get_Elements()" attrib="2182" returntype="System.Int32*">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="Item" attrib="0" ptype="System.Int32&amp;" params="System.Int32">
+                <methods>
+                  <method name="get_Item(System.Int32)" attrib="2182" returntype="System.Int32&amp;">
+                    <parameters>
+                      <parameter name="index" position="0" attrib="0" type="System.Int32" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+            </properties>
+            <methods>
+              <method name="Synchronize(Java.Interop.JniReleaseArrayElementsMode)" attrib="196" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="releaseMode" position="0" attrib="0" type="Java.Interop.JniReleaseArrayElementsMode" />
+                </parameters>
+              </method>
+            </methods>
+          </class>
+          <class name="JniInt64ArrayElements" type="class" base="Java.Interop.JniArrayElements" sealed="true" charset="Ansi" layout="Auto">
+            <attributes>
+              <attribute name="System.Reflection.DefaultMemberAttribute">
+                <properties>
+                  <property name="MemberName" value="Item" />
+                </properties>
+              </attribute>
+            </attributes>
+            <interfaces>
+              <interface name="System.IDisposable" />
+            </interfaces>
+            <properties>
+              <property name="Elements" attrib="0" ptype="System.Int64*">
+                <methods>
+                  <method name="get_Elements()" attrib="2182" returntype="System.Int64*">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="Item" attrib="0" ptype="System.Int64&amp;" params="System.Int32">
+                <methods>
+                  <method name="get_Item(System.Int32)" attrib="2182" returntype="System.Int64&amp;">
+                    <parameters>
+                      <parameter name="index" position="0" attrib="0" type="System.Int32" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+            </properties>
+            <methods>
+              <method name="Synchronize(Java.Interop.JniReleaseArrayElementsMode)" attrib="196" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="releaseMode" position="0" attrib="0" type="Java.Interop.JniReleaseArrayElementsMode" />
+                </parameters>
+              </method>
+            </methods>
+          </class>
           <class name="JniManagedPeerStates" type="enum" base="System.Enum" sealed="true" serializable="true" charset="Ansi" layout="Auto" enumtype="System.Int32">
             <attributes>
               <attribute name="System.FlagsAttribute" />
@@ -1594,6 +2969,16 @@
               <field name="None" attrib="32854" fieldtype="Java.Interop.JniManagedPeerStates" value="0" />
               <field name="Replaceable" attrib="32854" fieldtype="Java.Interop.JniManagedPeerStates" value="2" />
             </fields>
+          </class>
+          <class name="JniMarshal" type="class" base="System.Object" sealed="true" abstract="true" charset="Ansi" layout="Auto">
+            <methods>
+              <method name="RecursiveEquals(System.Object, System.Object)" attrib="150" static="true" returntype="System.Boolean">
+                <parameters>
+                  <parameter name="objA" position="0" attrib="0" type="System.Object" />
+                  <parameter name="objB" position="1" attrib="0" type="System.Object" />
+                </parameters>
+              </method>
+            </methods>
           </class>
           <class name="JniMethodInfo" type="class" base="System.Object" sealed="true" charset="Ansi" layout="Auto">
             <constructors>
@@ -1669,6 +3054,42 @@
                 </parameters>
               </constructor>
             </constructors>
+          </class>
+          <class name="JniNativeMethodRegistrationArguments" type="struct" base="System.ValueType" sealed="true" charset="Ansi" layout="Sequential">
+            <constructors>
+              <constructor name=".ctor(System.Collections.Generic.ICollection`1[Java.Interop.JniNativeMethodRegistration], System.String)" attrib="6278">
+                <parameters>
+                  <parameter name="registrations" position="0" attrib="0" type="System.Collections.Generic.ICollection`1[Java.Interop.JniNativeMethodRegistration]" />
+                  <parameter name="methods" position="1" attrib="0" type="System.String" />
+                </parameters>
+              </constructor>
+            </constructors>
+            <properties>
+              <property name="Methods" attrib="0" ptype="System.String">
+                <methods>
+                  <method name="get_Methods()" attrib="2182" returntype="System.String">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="Registrations" attrib="0" ptype="System.Collections.Generic.ICollection`1[Java.Interop.JniNativeMethodRegistration]">
+                <methods>
+                  <method name="get_Registrations()" attrib="2182" returntype="System.Collections.Generic.ICollection`1[Java.Interop.JniNativeMethodRegistration]">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+            </properties>
+            <methods>
+              <method name="AddRegistrations(System.Collections.Generic.IEnumerable`1[Java.Interop.JniNativeMethodRegistration])" attrib="134" returntype="System.Void">
+                <parameters>
+                  <parameter name="registrations" position="0" attrib="0" type="System.Collections.Generic.IEnumerable`1[Java.Interop.JniNativeMethodRegistration]" />
+                </parameters>
+              </method>
+            </methods>
           </class>
           <class name="JniObjectReference" type="struct" base="System.ValueType" sealed="true" charset="Ansi" layout="Sequential">
             <interfaces>
@@ -2479,6 +3900,13 @@
                   </method>
                 </methods>
               </property>
+              <property name="MarshalMemberBuilder" attrib="0" ptype="Java.Interop.JniRuntime+JniMarshalMemberBuilder">
+                <methods>
+                  <method name="get_MarshalMemberBuilder()" attrib="2182" returntype="Java.Interop.JniRuntime+JniMarshalMemberBuilder">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
               <property name="ObjectReferenceManager" attrib="0" ptype="Java.Interop.JniRuntime+JniObjectReferenceManager">
                 <methods>
                   <method name="get_ObjectReferenceManager()" attrib="2182" returntype="Java.Interop.JniRuntime+JniObjectReferenceManager">
@@ -2492,6 +3920,16 @@
               <property name="TypeManager" attrib="0" ptype="Java.Interop.JniRuntime+JniTypeManager">
                 <methods>
                   <method name="get_TypeManager()" attrib="2182" returntype="Java.Interop.JniRuntime+JniTypeManager">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="ValueManager" attrib="0" ptype="Java.Interop.JniRuntime+JniValueManager">
+                <methods>
+                  <method name="get_ValueManager()" attrib="2182" returntype="Java.Interop.JniRuntime+JniValueManager">
                     <attributes>
                       <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
                     </attributes>
@@ -2694,6 +4132,24 @@
                       </method>
                     </methods>
                   </property>
+                  <property name="MarshalMemberBuilder" attrib="0" ptype="Java.Interop.JniRuntime+JniMarshalMemberBuilder">
+                    <methods>
+                      <method name="get_MarshalMemberBuilder()" attrib="2182" returntype="Java.Interop.JniRuntime+JniMarshalMemberBuilder">
+                        <attributes>
+                          <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                        </attributes>
+                        <parameters />
+                      </method>
+                      <method name="set_MarshalMemberBuilder(Java.Interop.JniRuntime+JniMarshalMemberBuilder)" attrib="2182" returntype="System.Void">
+                        <attributes>
+                          <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                        </attributes>
+                        <parameters>
+                          <parameter name="value" position="0" attrib="0" type="Java.Interop.JniRuntime+JniMarshalMemberBuilder" />
+                        </parameters>
+                      </method>
+                    </methods>
+                  </property>
                   <property name="NewObjectRequired" attrib="0" ptype="System.Boolean">
                     <methods>
                       <method name="get_NewObjectRequired()" attrib="2182" returntype="System.Boolean">
@@ -2766,7 +4222,102 @@
                       </method>
                     </methods>
                   </property>
+                  <property name="ValueManager" attrib="0" ptype="Java.Interop.JniRuntime+JniValueManager">
+                    <methods>
+                      <method name="get_ValueManager()" attrib="2182" returntype="Java.Interop.JniRuntime+JniValueManager">
+                        <attributes>
+                          <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                        </attributes>
+                        <parameters />
+                      </method>
+                      <method name="set_ValueManager(Java.Interop.JniRuntime+JniValueManager)" attrib="2182" returntype="System.Void">
+                        <attributes>
+                          <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                        </attributes>
+                        <parameters>
+                          <parameter name="value" position="0" attrib="0" type="Java.Interop.JniRuntime+JniValueManager" />
+                        </parameters>
+                      </method>
+                    </methods>
+                  </property>
                 </properties>
+              </class>
+              <class name="JniMarshalMemberBuilder" type="class" base="System.Object" abstract="true" charset="Ansi" layout="Auto">
+                <interfaces>
+                  <interface name="System.IDisposable" />
+                </interfaces>
+                <constructors>
+                  <constructor name=".ctor()" attrib="6276">
+                    <parameters />
+                  </constructor>
+                </constructors>
+                <properties>
+                  <property name="Runtime" attrib="0" ptype="Java.Interop.JniRuntime">
+                    <methods>
+                      <method name="get_Runtime()" attrib="2182" returntype="Java.Interop.JniRuntime">
+                        <attributes>
+                          <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                        </attributes>
+                        <parameters />
+                      </method>
+                    </methods>
+                  </property>
+                </properties>
+                <methods>
+                  <method name="CreateConstructActivationPeerExpression(System.Reflection.ConstructorInfo)" attrib="1478" abstract="true" virtual="true" returntype="System.Linq.Expressions.Expression`1[System.Func`4[System.Reflection.ConstructorInfo,Java.Interop.JniObjectReference,System.Object[],System.Object]]">
+                    <parameters>
+                      <parameter name="constructor" position="0" attrib="0" type="System.Reflection.ConstructorInfo" />
+                    </parameters>
+                  </method>
+                  <method name="CreateConstructActivationPeerFunc(System.Reflection.ConstructorInfo)" attrib="134" returntype="System.Func`4[System.Reflection.ConstructorInfo,Java.Interop.JniObjectReference,System.Object[],System.Object]">
+                    <parameters>
+                      <parameter name="constructor" position="0" attrib="0" type="System.Reflection.ConstructorInfo" />
+                    </parameters>
+                  </method>
+                  <method name="CreateMarshalToManagedDelegate(System.Delegate)" attrib="134" returntype="System.Delegate">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="System.Delegate" />
+                    </parameters>
+                  </method>
+                  <method name="CreateMarshalToManagedExpression(System.Reflection.MethodInfo)" attrib="1478" abstract="true" virtual="true" returntype="System.Linq.Expressions.LambdaExpression">
+                    <parameters>
+                      <parameter name="method" position="0" attrib="0" type="System.Reflection.MethodInfo" />
+                    </parameters>
+                  </method>
+                  <method name="Dispose()" attrib="486" virtual="true" returntype="System.Void">
+                    <parameters />
+                  </method>
+                  <method name="Dispose(System.Boolean)" attrib="452" virtual="true" returntype="System.Void">
+                    <parameters>
+                      <parameter name="disposing" position="0" attrib="0" type="System.Boolean" />
+                    </parameters>
+                  </method>
+                  <method name="GetExportedMemberRegistrations(System.Type)" attrib="1478" abstract="true" virtual="true" returntype="System.Collections.Generic.IEnumerable`1[Java.Interop.JniNativeMethodRegistration]">
+                    <parameters>
+                      <parameter name="declaringType" position="0" attrib="0" type="System.Type" />
+                    </parameters>
+                  </method>
+                  <method name="GetJniMethodSignature(System.Reflection.MethodBase)" attrib="134" returntype="System.String">
+                    <parameters>
+                      <parameter name="member" position="0" attrib="0" type="System.Reflection.MethodBase" />
+                    </parameters>
+                  </method>
+                  <method name="GetParameterMarshaler(System.Reflection.ParameterInfo)" attrib="134" returntype="Java.Interop.JniValueMarshaler">
+                    <parameters>
+                      <parameter name="parameter" position="0" attrib="0" type="System.Reflection.ParameterInfo" />
+                    </parameters>
+                  </method>
+                  <method name="IsDirectMethod(System.Reflection.ParameterInfo[])" attrib="134" returntype="System.Boolean">
+                    <parameters>
+                      <parameter name="methodParameters" position="0" attrib="0" type="System.Reflection.ParameterInfo[]" />
+                    </parameters>
+                  </method>
+                  <method name="OnSetRuntime(Java.Interop.JniRuntime)" attrib="454" virtual="true" returntype="System.Void">
+                    <parameters>
+                      <parameter name="runtime" position="0" attrib="0" type="Java.Interop.JniRuntime" />
+                    </parameters>
+                  </method>
+                </methods>
               </class>
               <class name="JniObjectReferenceManager" type="class" base="System.Object" abstract="true" charset="Ansi" layout="Auto">
                 <interfaces>
@@ -2971,7 +4522,277 @@
                   </method>
                 </methods>
               </class>
+              <class name="JniValueManager" type="class" base="System.Object" abstract="true" charset="Ansi" layout="Auto">
+                <interfaces>
+                  <interface name="System.IDisposable" />
+                </interfaces>
+                <constructors>
+                  <constructor name=".ctor()" attrib="6276">
+                    <parameters />
+                  </constructor>
+                </constructors>
+                <properties>
+                  <property name="Runtime" attrib="0" ptype="Java.Interop.JniRuntime">
+                    <methods>
+                      <method name="get_Runtime()" attrib="2182" returntype="Java.Interop.JniRuntime">
+                        <attributes>
+                          <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                        </attributes>
+                        <parameters />
+                      </method>
+                    </methods>
+                  </property>
+                </properties>
+                <methods>
+                  <method name="AddPeer(Java.Interop.IJavaPeerable)" attrib="1478" abstract="true" virtual="true" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="Java.Interop.IJavaPeerable" />
+                    </parameters>
+                  </method>
+                  <method name="CollectPeers()" attrib="1478" abstract="true" virtual="true" returntype="System.Void">
+                    <parameters />
+                  </method>
+                  <method name="ConstructPeer(Java.Interop.IJavaPeerable, Java.Interop.JniObjectReference&amp;, Java.Interop.JniObjectReferenceOptions)" attrib="134" returntype="System.Void">
+                    <parameters>
+                      <parameter name="peer" position="0" attrib="0" type="Java.Interop.IJavaPeerable" />
+                      <parameter name="reference" position="1" attrib="0" type="Java.Interop.JniObjectReference" direction="ref" />
+                      <parameter name="options" position="2" attrib="0" type="Java.Interop.JniObjectReferenceOptions" />
+                    </parameters>
+                  </method>
+                  <method name="CreatePeer(Java.Interop.JniObjectReference&amp;, Java.Interop.JniObjectReferenceOptions, System.Type)" attrib="454" virtual="true" returntype="Java.Interop.IJavaPeerable">
+                    <parameters>
+                      <parameter name="reference" position="0" attrib="0" type="Java.Interop.JniObjectReference" direction="ref" />
+                      <parameter name="transfer" position="1" attrib="0" type="Java.Interop.JniObjectReferenceOptions" />
+                      <parameter name="targetType" position="2" attrib="0" type="System.Type" />
+                    </parameters>
+                  </method>
+                  <method name="CreateValue(Java.Interop.JniObjectReference&amp;, Java.Interop.JniObjectReferenceOptions, System.Type)" attrib="134" returntype="T">
+                    <parameters>
+                      <parameter name="reference" position="0" attrib="0" type="Java.Interop.JniObjectReference" direction="ref" />
+                      <parameter name="options" position="1" attrib="0" type="Java.Interop.JniObjectReferenceOptions" />
+                      <parameter name="targetType" position="2" attrib="4112" type="System.Type" optional="true" defaultValue="NULL" />
+                    </parameters>
+                    <generic-parameters>
+                      <generic-parameter name="T" attributes="0" />
+                    </generic-parameters>
+                  </method>
+                  <method name="CreateValue(Java.Interop.JniObjectReference&amp;, Java.Interop.JniObjectReferenceOptions, System.Type)" attrib="134" returntype="System.Object">
+                    <parameters>
+                      <parameter name="reference" position="0" attrib="0" type="Java.Interop.JniObjectReference" direction="ref" />
+                      <parameter name="options" position="1" attrib="0" type="Java.Interop.JniObjectReferenceOptions" />
+                      <parameter name="targetType" position="2" attrib="4112" type="System.Type" optional="true" defaultValue="NULL" />
+                    </parameters>
+                  </method>
+                  <method name="Dispose()" attrib="486" virtual="true" returntype="System.Void">
+                    <parameters />
+                  </method>
+                  <method name="Dispose(System.Boolean)" attrib="452" virtual="true" returntype="System.Void">
+                    <parameters>
+                      <parameter name="disposing" position="0" attrib="0" type="System.Boolean" />
+                    </parameters>
+                  </method>
+                  <method name="DisposePeer(Java.Interop.IJavaPeerable)" attrib="454" virtual="true" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="Java.Interop.IJavaPeerable" />
+                    </parameters>
+                  </method>
+                  <method name="DisposePeerUnlessReferenced(Java.Interop.IJavaPeerable)" attrib="454" virtual="true" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="Java.Interop.IJavaPeerable" />
+                    </parameters>
+                  </method>
+                  <method name="FinalizePeer(Java.Interop.IJavaPeerable)" attrib="1478" abstract="true" virtual="true" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="Java.Interop.IJavaPeerable" />
+                    </parameters>
+                  </method>
+                  <method name="GetJniIdentityHashCode(Java.Interop.JniObjectReference)" attrib="134" returntype="System.Int32">
+                    <parameters>
+                      <parameter name="reference" position="0" attrib="0" type="Java.Interop.JniObjectReference" />
+                    </parameters>
+                  </method>
+                  <method name="GetSurfacedPeers()" attrib="1478" abstract="true" virtual="true" returntype="System.Collections.Generic.List`1[Java.Interop.JniSurfacedPeerInfo]">
+                    <parameters />
+                  </method>
+                  <method name="GetValue(System.IntPtr)" attrib="134" returntype="T">
+                    <parameters>
+                      <parameter name="handle" position="0" attrib="0" type="System.IntPtr" />
+                    </parameters>
+                    <generic-parameters>
+                      <generic-parameter name="T" attributes="0" />
+                    </generic-parameters>
+                  </method>
+                  <method name="GetValue(Java.Interop.JniObjectReference&amp;, Java.Interop.JniObjectReferenceOptions, System.Type)" attrib="134" returntype="T">
+                    <parameters>
+                      <parameter name="reference" position="0" attrib="0" type="Java.Interop.JniObjectReference" direction="ref" />
+                      <parameter name="options" position="1" attrib="0" type="Java.Interop.JniObjectReferenceOptions" />
+                      <parameter name="targetType" position="2" attrib="4112" type="System.Type" optional="true" defaultValue="NULL" />
+                    </parameters>
+                    <generic-parameters>
+                      <generic-parameter name="T" attributes="0" />
+                    </generic-parameters>
+                  </method>
+                  <method name="GetValue(Java.Interop.JniObjectReference&amp;, Java.Interop.JniObjectReferenceOptions, System.Type)" attrib="134" returntype="System.Object">
+                    <parameters>
+                      <parameter name="reference" position="0" attrib="0" type="Java.Interop.JniObjectReference" direction="ref" />
+                      <parameter name="options" position="1" attrib="0" type="Java.Interop.JniObjectReferenceOptions" />
+                      <parameter name="targetType" position="2" attrib="4112" type="System.Type" optional="true" defaultValue="NULL" />
+                    </parameters>
+                  </method>
+                  <method name="GetValueMarshaler()" attrib="134" returntype="Java.Interop.JniValueMarshaler`1[T]">
+                    <parameters />
+                    <generic-parameters>
+                      <generic-parameter name="T" attributes="0" />
+                    </generic-parameters>
+                  </method>
+                  <method name="GetValueMarshaler(System.Type)" attrib="134" returntype="Java.Interop.JniValueMarshaler">
+                    <parameters>
+                      <parameter name="type" position="0" attrib="0" type="System.Type" />
+                    </parameters>
+                  </method>
+                  <method name="GetValueMarshalerCore(System.Type)" attrib="452" virtual="true" returntype="Java.Interop.JniValueMarshaler">
+                    <parameters>
+                      <parameter name="type" position="0" attrib="0" type="System.Type" />
+                    </parameters>
+                  </method>
+                  <method name="OnSetRuntime(Java.Interop.JniRuntime)" attrib="454" virtual="true" returntype="System.Void">
+                    <parameters>
+                      <parameter name="runtime" position="0" attrib="0" type="Java.Interop.JniRuntime" />
+                    </parameters>
+                  </method>
+                  <method name="PeekPeer(Java.Interop.JniObjectReference)" attrib="1478" abstract="true" virtual="true" returntype="Java.Interop.IJavaPeerable">
+                    <parameters>
+                      <parameter name="reference" position="0" attrib="0" type="Java.Interop.JniObjectReference" />
+                    </parameters>
+                  </method>
+                  <method name="PeekValue(Java.Interop.JniObjectReference)" attrib="134" returntype="System.Object">
+                    <parameters>
+                      <parameter name="reference" position="0" attrib="0" type="Java.Interop.JniObjectReference" />
+                    </parameters>
+                  </method>
+                  <method name="RemovePeer(Java.Interop.IJavaPeerable)" attrib="1478" abstract="true" virtual="true" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="Java.Interop.IJavaPeerable" />
+                    </parameters>
+                  </method>
+                  <method name="TryUnboxPeerObject(Java.Interop.IJavaPeerable, out System.Object&amp;)" attrib="452" virtual="true" returntype="System.Boolean">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="Java.Interop.IJavaPeerable" />
+                      <parameter name="result" position="1" attrib="2" type="System.Object" direction="out" />
+                    </parameters>
+                  </method>
+                  <method name="WaitForGCBridgeProcessing()" attrib="1478" abstract="true" virtual="true" returntype="System.Void">
+                    <parameters />
+                  </method>
+                </methods>
+              </class>
             </classes>
+          </class>
+          <class name="JniSByteArrayElements" type="class" base="Java.Interop.JniArrayElements" sealed="true" charset="Ansi" layout="Auto">
+            <attributes>
+              <attribute name="System.Reflection.DefaultMemberAttribute">
+                <properties>
+                  <property name="MemberName" value="Item" />
+                </properties>
+              </attribute>
+            </attributes>
+            <interfaces>
+              <interface name="System.IDisposable" />
+            </interfaces>
+            <properties>
+              <property name="Elements" attrib="0" ptype="System.SByte*">
+                <methods>
+                  <method name="get_Elements()" attrib="2182" returntype="System.SByte*">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="Item" attrib="0" ptype="System.SByte&amp;" params="System.Int32">
+                <methods>
+                  <method name="get_Item(System.Int32)" attrib="2182" returntype="System.SByte&amp;">
+                    <parameters>
+                      <parameter name="index" position="0" attrib="0" type="System.Int32" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+            </properties>
+            <methods>
+              <method name="Synchronize(Java.Interop.JniReleaseArrayElementsMode)" attrib="196" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="releaseMode" position="0" attrib="0" type="Java.Interop.JniReleaseArrayElementsMode" />
+                </parameters>
+              </method>
+            </methods>
+          </class>
+          <class name="JniSingleArrayElements" type="class" base="Java.Interop.JniArrayElements" sealed="true" charset="Ansi" layout="Auto">
+            <attributes>
+              <attribute name="System.Reflection.DefaultMemberAttribute">
+                <properties>
+                  <property name="MemberName" value="Item" />
+                </properties>
+              </attribute>
+            </attributes>
+            <interfaces>
+              <interface name="System.IDisposable" />
+            </interfaces>
+            <properties>
+              <property name="Elements" attrib="0" ptype="System.Single*">
+                <methods>
+                  <method name="get_Elements()" attrib="2182" returntype="System.Single*">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="Item" attrib="0" ptype="System.Single&amp;" params="System.Int32">
+                <methods>
+                  <method name="get_Item(System.Int32)" attrib="2182" returntype="System.Single&amp;">
+                    <parameters>
+                      <parameter name="index" position="0" attrib="0" type="System.Int32" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+            </properties>
+            <methods>
+              <method name="Synchronize(Java.Interop.JniReleaseArrayElementsMode)" attrib="196" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="releaseMode" position="0" attrib="0" type="Java.Interop.JniReleaseArrayElementsMode" />
+                </parameters>
+              </method>
+            </methods>
+          </class>
+          <class name="JniSurfacedPeerInfo" type="class" base="System.Object" charset="Ansi" layout="Auto">
+            <constructors>
+              <constructor name=".ctor(System.Int32, System.WeakReference`1[Java.Interop.IJavaPeerable])" attrib="6278">
+                <parameters>
+                  <parameter name="jniIdentityHashCode" position="0" attrib="0" type="System.Int32" />
+                  <parameter name="surfacedPeer" position="1" attrib="0" type="System.WeakReference`1[Java.Interop.IJavaPeerable]" />
+                </parameters>
+              </constructor>
+            </constructors>
+            <properties>
+              <property name="JniIdentityHashCode" attrib="0" ptype="System.Int32">
+                <methods>
+                  <method name="get_JniIdentityHashCode()" attrib="2182" returntype="System.Int32">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="SurfacedPeer" attrib="0" ptype="System.WeakReference`1[Java.Interop.IJavaPeerable]">
+                <methods>
+                  <method name="get_SurfacedPeer()" attrib="2182" returntype="System.WeakReference`1[Java.Interop.IJavaPeerable]">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+            </properties>
           </class>
           <class name="JniTransition" type="struct" base="System.ValueType" sealed="true" charset="Ansi" layout="Sequential">
             <interfaces>
@@ -3138,6 +4959,9 @@
                     </attributes>
                   </parameter>
                 </parameters>
+              </method>
+              <method name="RegisterWithRuntime()" attrib="134" returntype="System.Void">
+                <parameters />
               </method>
               <method name="UnregisterNativeMethods()" attrib="134" returntype="System.Void">
                 <parameters />
@@ -3327,6 +5151,280 @@
               </property>
             </properties>
           </class>
+          <class name="JniValueMarshaler" type="class" base="System.Object" abstract="true" charset="Ansi" layout="Auto">
+            <constructors>
+              <constructor name=".ctor()" attrib="6276">
+                <parameters />
+              </constructor>
+            </constructors>
+            <properties>
+              <property name="IsJniValueType" attrib="0" ptype="System.Boolean">
+                <methods>
+                  <method name="get_IsJniValueType()" attrib="2502" virtual="true" returntype="System.Boolean">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="MarshalType" attrib="0" ptype="System.Type">
+                <methods>
+                  <method name="get_MarshalType()" attrib="2502" virtual="true" returntype="System.Type">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+            </properties>
+            <methods>
+              <method name="CreateArgumentState(System.Object, System.Reflection.ParameterAttributes)" attrib="454" virtual="true" returntype="Java.Interop.JniValueMarshalerState">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="System.Object" />
+                  <parameter name="synchronize" position="1" attrib="4112" type="System.Reflection.ParameterAttributes" optional="true" defaultValue="0" />
+                </parameters>
+              </method>
+              <method name="CreateObjectReferenceArgumentState(System.Object, System.Reflection.ParameterAttributes)" attrib="1478" abstract="true" virtual="true" returntype="Java.Interop.JniValueMarshalerState">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="System.Object" />
+                  <parameter name="synchronize" position="1" attrib="4112" type="System.Reflection.ParameterAttributes" optional="true" defaultValue="0" />
+                </parameters>
+              </method>
+              <method name="CreateParameterFromManagedExpression(Java.Interop.Expressions.JniValueMarshalerContext, System.Linq.Expressions.ParameterExpression, System.Reflection.ParameterAttributes)" attrib="454" virtual="true" returntype="System.Linq.Expressions.Expression">
+                <parameters>
+                  <parameter name="context" position="0" attrib="0" type="Java.Interop.Expressions.JniValueMarshalerContext" />
+                  <parameter name="sourceValue" position="1" attrib="0" type="System.Linq.Expressions.ParameterExpression" />
+                  <parameter name="synchronize" position="2" attrib="0" type="System.Reflection.ParameterAttributes" />
+                </parameters>
+              </method>
+              <method name="CreateParameterToManagedExpression(Java.Interop.Expressions.JniValueMarshalerContext, System.Linq.Expressions.ParameterExpression, System.Reflection.ParameterAttributes, System.Type)" attrib="454" virtual="true" returntype="System.Linq.Expressions.Expression">
+                <parameters>
+                  <parameter name="context" position="0" attrib="0" type="Java.Interop.Expressions.JniValueMarshalerContext" />
+                  <parameter name="sourceValue" position="1" attrib="0" type="System.Linq.Expressions.ParameterExpression" />
+                  <parameter name="synchronize" position="2" attrib="4112" type="System.Reflection.ParameterAttributes" optional="true" defaultValue="0" />
+                  <parameter name="targetType" position="3" attrib="4112" type="System.Type" optional="true" defaultValue="NULL" />
+                </parameters>
+              </method>
+              <method name="CreateReturnValueFromManagedExpression(Java.Interop.Expressions.JniValueMarshalerContext, System.Linq.Expressions.ParameterExpression)" attrib="454" virtual="true" returntype="System.Linq.Expressions.Expression">
+                <parameters>
+                  <parameter name="context" position="0" attrib="0" type="Java.Interop.Expressions.JniValueMarshalerContext" />
+                  <parameter name="sourceValue" position="1" attrib="0" type="System.Linq.Expressions.ParameterExpression" />
+                </parameters>
+              </method>
+              <method name="CreateValue(Java.Interop.JniObjectReference&amp;, Java.Interop.JniObjectReferenceOptions, System.Type)" attrib="1478" abstract="true" virtual="true" returntype="System.Object">
+                <parameters>
+                  <parameter name="reference" position="0" attrib="0" type="Java.Interop.JniObjectReference" direction="ref" />
+                  <parameter name="options" position="1" attrib="0" type="Java.Interop.JniObjectReferenceOptions" />
+                  <parameter name="targetType" position="2" attrib="4112" type="System.Type" optional="true" defaultValue="NULL" />
+                </parameters>
+              </method>
+              <method name="DestroyArgumentState(System.Object, Java.Interop.JniValueMarshalerState&amp;, System.Reflection.ParameterAttributes)" attrib="1478" abstract="true" virtual="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="System.Object" />
+                  <parameter name="state" position="1" attrib="0" type="Java.Interop.JniValueMarshalerState" direction="ref" />
+                  <parameter name="synchronize" position="2" attrib="4112" type="System.Reflection.ParameterAttributes" optional="true" defaultValue="0" />
+                </parameters>
+              </method>
+              <method name="DisposeObjectReference(System.Linq.Expressions.Expression)" attrib="148" static="true" returntype="System.Linq.Expressions.Expression">
+                <parameters>
+                  <parameter name="sourceValue" position="0" attrib="0" type="System.Linq.Expressions.Expression" />
+                </parameters>
+              </method>
+              <method name="ReturnObjectReferenceToJni(Java.Interop.Expressions.JniValueMarshalerContext, System.String, System.Linq.Expressions.Expression)" attrib="132" returntype="System.Linq.Expressions.Expression">
+                <parameters>
+                  <parameter name="context" position="0" attrib="0" type="Java.Interop.Expressions.JniValueMarshalerContext" />
+                  <parameter name="namePrefix" position="1" attrib="0" type="System.String" />
+                  <parameter name="sourceValue" position="2" attrib="0" type="System.Linq.Expressions.Expression" />
+                </parameters>
+              </method>
+            </methods>
+          </class>
+          <class name="JniValueMarshalerAttribute" type="class" base="System.Attribute" charset="Ansi" layout="Auto">
+            <attributes>
+              <attribute name="System.AttributeUsageAttribute">
+                <properties>
+                  <property name="AllowMultiple" value="False" />
+                  <property name="ValidOn" value="ReturnValue, Parameter, Interface, Enum, Struct, Class" />
+                </properties>
+              </attribute>
+            </attributes>
+            <constructors>
+              <constructor name=".ctor(System.Type)" attrib="6278">
+                <parameters>
+                  <parameter name="marshalerType" position="0" attrib="0" type="System.Type" />
+                </parameters>
+              </constructor>
+            </constructors>
+            <properties>
+              <property name="MarshalerType" attrib="0" ptype="System.Type">
+                <methods>
+                  <method name="get_MarshalerType()" attrib="2182" returntype="System.Type">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+            </properties>
+          </class>
+          <class name="JniValueMarshalerState" type="struct" base="System.ValueType" sealed="true" charset="Ansi" layout="Sequential">
+            <interfaces>
+              <interface name="System.IEquatable`1[Java.Interop.JniValueMarshalerState]" />
+            </interfaces>
+            <constructors>
+              <constructor name=".ctor(Java.Interop.IJavaPeerable, System.Object)" attrib="6278">
+                <parameters>
+                  <parameter name="peerableValue" position="0" attrib="0" type="Java.Interop.IJavaPeerable" />
+                  <parameter name="extra" position="1" attrib="4112" type="System.Object" optional="true" defaultValue="NULL" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(Java.Interop.JniArgumentValue, System.Object)" attrib="6278">
+                <parameters>
+                  <parameter name="jniArgumentValue" position="0" attrib="0" type="Java.Interop.JniArgumentValue" />
+                  <parameter name="extra" position="1" attrib="4112" type="System.Object" optional="true" defaultValue="NULL" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(Java.Interop.JniObjectReference, System.Object)" attrib="6278">
+                <parameters>
+                  <parameter name="referenceValue" position="0" attrib="0" type="Java.Interop.JniObjectReference" />
+                  <parameter name="extra" position="1" attrib="4112" type="System.Object" optional="true" defaultValue="NULL" />
+                </parameters>
+              </constructor>
+            </constructors>
+            <properties>
+              <property name="Extra" attrib="0" ptype="System.Object">
+                <methods>
+                  <method name="get_Extra()" attrib="2182" returntype="System.Object">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="JniArgumentValue" attrib="0" ptype="Java.Interop.JniArgumentValue">
+                <methods>
+                  <method name="get_JniArgumentValue()" attrib="2182" returntype="Java.Interop.JniArgumentValue">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="PeerableValue" attrib="0" ptype="Java.Interop.IJavaPeerable">
+                <methods>
+                  <method name="get_PeerableValue()" attrib="2182" returntype="Java.Interop.IJavaPeerable">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="ReferenceValue" attrib="0" ptype="Java.Interop.JniObjectReference">
+                <methods>
+                  <method name="get_ReferenceValue()" attrib="2182" returntype="Java.Interop.JniObjectReference">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+            </properties>
+            <methods>
+              <method name="Equals(Java.Interop.JniValueMarshalerState)" attrib="486" virtual="true" returntype="System.Boolean">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="Java.Interop.JniValueMarshalerState" />
+                </parameters>
+              </method>
+              <method name="Equals(System.Object)" attrib="198" virtual="true" is-override="true" returntype="System.Boolean">
+                <parameters>
+                  <parameter name="obj" position="0" attrib="0" type="System.Object" />
+                </parameters>
+              </method>
+              <method name="GetHashCode()" attrib="198" virtual="true" is-override="true" returntype="System.Int32">
+                <parameters />
+              </method>
+              <method name="ToString()" attrib="198" virtual="true" is-override="true" returntype="System.String">
+                <parameters />
+              </method>
+              <method name="op_Equality(Java.Interop.JniValueMarshalerState, Java.Interop.JniValueMarshalerState)" attrib="2198" static="true" returntype="System.Boolean">
+                <parameters>
+                  <parameter name="a" position="0" attrib="0" type="Java.Interop.JniValueMarshalerState" />
+                  <parameter name="b" position="1" attrib="0" type="Java.Interop.JniValueMarshalerState" />
+                </parameters>
+              </method>
+              <method name="op_Inequality(Java.Interop.JniValueMarshalerState, Java.Interop.JniValueMarshalerState)" attrib="2198" static="true" returntype="System.Boolean">
+                <parameters>
+                  <parameter name="a" position="0" attrib="0" type="Java.Interop.JniValueMarshalerState" />
+                  <parameter name="b" position="1" attrib="0" type="Java.Interop.JniValueMarshalerState" />
+                </parameters>
+              </method>
+            </methods>
+          </class>
+          <class name="JniValueMarshaler`1" type="class" base="Java.Interop.JniValueMarshaler" abstract="true" charset="Ansi" layout="Auto">
+            <generic-parameters>
+              <generic-parameter name="T" attributes="0" />
+            </generic-parameters>
+            <constructors>
+              <constructor name=".ctor()" attrib="6276">
+                <parameters />
+              </constructor>
+            </constructors>
+            <methods>
+              <method name="CreateArgumentState(System.Object, System.Reflection.ParameterAttributes)" attrib="198" virtual="true" is-override="true" returntype="Java.Interop.JniValueMarshalerState">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="System.Object" />
+                  <parameter name="synchronize" position="1" attrib="4112" type="System.Reflection.ParameterAttributes" optional="true" defaultValue="0" />
+                </parameters>
+              </method>
+              <method name="CreateGenericArgumentState(T, System.Reflection.ParameterAttributes)" attrib="454" virtual="true" returntype="Java.Interop.JniValueMarshalerState">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="T" />
+                  <parameter name="synchronize" position="1" attrib="4112" type="System.Reflection.ParameterAttributes" optional="true" defaultValue="0" />
+                </parameters>
+              </method>
+              <method name="CreateGenericObjectReferenceArgumentState(T, System.Reflection.ParameterAttributes)" attrib="1478" abstract="true" virtual="true" returntype="Java.Interop.JniValueMarshalerState">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="T" />
+                  <parameter name="synchronize" position="1" attrib="4112" type="System.Reflection.ParameterAttributes" optional="true" defaultValue="0" />
+                </parameters>
+              </method>
+              <method name="CreateGenericValue(Java.Interop.JniObjectReference&amp;, Java.Interop.JniObjectReferenceOptions, System.Type)" attrib="1478" abstract="true" virtual="true" returntype="T">
+                <parameters>
+                  <parameter name="reference" position="0" attrib="0" type="Java.Interop.JniObjectReference" direction="ref" />
+                  <parameter name="options" position="1" attrib="0" type="Java.Interop.JniObjectReferenceOptions" />
+                  <parameter name="targetType" position="2" attrib="4112" type="System.Type" optional="true" defaultValue="NULL" />
+                </parameters>
+              </method>
+              <method name="CreateObjectReferenceArgumentState(System.Object, System.Reflection.ParameterAttributes)" attrib="198" virtual="true" is-override="true" returntype="Java.Interop.JniValueMarshalerState">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="System.Object" />
+                  <parameter name="synchronize" position="1" attrib="4112" type="System.Reflection.ParameterAttributes" optional="true" defaultValue="0" />
+                </parameters>
+              </method>
+              <method name="CreateValue(Java.Interop.JniObjectReference&amp;, Java.Interop.JniObjectReferenceOptions, System.Type)" attrib="198" virtual="true" is-override="true" returntype="System.Object">
+                <parameters>
+                  <parameter name="reference" position="0" attrib="0" type="Java.Interop.JniObjectReference" direction="ref" />
+                  <parameter name="options" position="1" attrib="0" type="Java.Interop.JniObjectReferenceOptions" />
+                  <parameter name="targetType" position="2" attrib="4112" type="System.Type" optional="true" defaultValue="NULL" />
+                </parameters>
+              </method>
+              <method name="DestroyArgumentState(System.Object, Java.Interop.JniValueMarshalerState&amp;, System.Reflection.ParameterAttributes)" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="System.Object" />
+                  <parameter name="state" position="1" attrib="0" type="Java.Interop.JniValueMarshalerState" direction="ref" />
+                  <parameter name="synchronize" position="2" attrib="4112" type="System.Reflection.ParameterAttributes" optional="true" defaultValue="0" />
+                </parameters>
+              </method>
+              <method name="DestroyGenericArgumentState(T, Java.Interop.JniValueMarshalerState&amp;, System.Reflection.ParameterAttributes)" attrib="1478" abstract="true" virtual="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="value" position="0" attrib="0" type="T" />
+                  <parameter name="state" position="1" attrib="0" type="Java.Interop.JniValueMarshalerState" direction="ref" />
+                  <parameter name="synchronize" position="2" attrib="4112" type="System.Reflection.ParameterAttributes" optional="true" defaultValue="0" />
+                </parameters>
+              </method>
+            </methods>
+          </class>
           <class name="JniVersion" type="enum" base="System.Enum" sealed="true" serializable="true" charset="Ansi" layout="Auto" enumtype="System.Int32">
             <interfaces>
               <interface name="System.IComparable" />
@@ -3338,6 +5436,61 @@
               <field name="v1_4" attrib="32854" fieldtype="Java.Interop.JniVersion" value="65540" />
               <field name="v1_6" attrib="32854" fieldtype="Java.Interop.JniVersion" value="65542" />
             </fields>
+          </class>
+        </classes>
+      </namespace>
+      <namespace name="Java.Interop.Expressions">
+        <classes>
+          <class name="JniValueMarshalerContext" type="class" base="System.Object" sealed="true" charset="Ansi" layout="Auto">
+            <constructors>
+              <constructor name=".ctor(System.Linq.Expressions.Expression)" attrib="6278">
+                <parameters>
+                  <parameter name="runtime" position="0" attrib="0" type="System.Linq.Expressions.Expression" />
+                </parameters>
+              </constructor>
+            </constructors>
+            <properties>
+              <property name="CleanupStatements" attrib="0" ptype="System.Collections.ObjectModel.Collection`1[System.Linq.Expressions.Expression]">
+                <methods>
+                  <method name="get_CleanupStatements()" attrib="2182" returntype="System.Collections.ObjectModel.Collection`1[System.Linq.Expressions.Expression]">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="CreationStatements" attrib="0" ptype="System.Collections.ObjectModel.Collection`1[System.Linq.Expressions.Expression]">
+                <methods>
+                  <method name="get_CreationStatements()" attrib="2182" returntype="System.Collections.ObjectModel.Collection`1[System.Linq.Expressions.Expression]">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="LocalVariables" attrib="0" ptype="System.Collections.ObjectModel.KeyedCollection`2[System.String,System.Linq.Expressions.ParameterExpression]">
+                <methods>
+                  <method name="get_LocalVariables()" attrib="2182" returntype="System.Collections.ObjectModel.KeyedCollection`2[System.String,System.Linq.Expressions.ParameterExpression]">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="Runtime" attrib="0" ptype="System.Linq.Expressions.Expression">
+                <methods>
+                  <method name="get_Runtime()" attrib="2182" returntype="System.Linq.Expressions.Expression">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+            </properties>
           </class>
         </classes>
       </namespace>
