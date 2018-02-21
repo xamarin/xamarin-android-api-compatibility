@@ -1,0 +1,1 @@
+-r "^Android.Telecom.RemoteConference: Modified properties: public int ConnectionProperties { get; }"

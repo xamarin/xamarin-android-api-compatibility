@@ -1,2 +1,4 @@
--r 'Java.Lang.Reflect.Constructor.InterfaceConsts'
--r 'Java.Lang.Reflect.Method.InterfaceConsts'
+-r "Java.Lang.Reflect.Constructor: Modified base type: 'Java.Lang.Reflect.AccessibleObject' to 'Java.Lang.Reflect.Executable'"
+-r "Java.Lang.Reflect.Constructor.InterfaceConsts"
+-r "Java.Lang.Reflect.Method: Modified base type: 'Java.Lang.Reflect.AccessibleObject' to 'Java.Lang.Reflect.Executable'"
+-r "Java.Lang.Reflect.Method.InterfaceConsts"

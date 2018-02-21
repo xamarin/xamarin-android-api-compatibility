@@ -1,1 +1,5 @@
--r 'public bool FitsSystemWindows \(\);'
+-r "^Android.Views.View: Removed methods: public bool FitsSystemWindows \(\);"
+-r "Android.OS.Vibrator: Modified properties: public bool HasVibrator { get; }"
+-r "Android.OS.Vibrator: Modified methods: public virtual void Cancel \(\);"
+-r "Android.OS.Vibrator: Modified methods: public virtual void Vibrate \(long\)"
+-r "Android.OS.Vibrator: Modified methods: public virtual void Vibrate \(long\[\], int\)"

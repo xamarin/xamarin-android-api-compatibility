@@ -4,6 +4,8 @@ export OS            := $(shell uname)
 MONO_API_HTML         = mono-api-html
 MONO_API_INFO         = mono-api-info
 
+HTML_OUTPUT_DIR       =
+
 REFERENCE_DIR         = reference
 
 ifeq ($(OS),Darwin)
@@ -94,7 +96,9 @@ check: check-inter-api-level
 	for file in $(CORE_ASSEMBLIES) $(TFV_ASSEMBLIES) ; do \
 		if $(MONO_API_HTML) $(REFERENCE_DIR)/$$file.xml temp/$$file.xml --ignore-changes-parameter-names --ignore-nonbreaking | grep '\<data-is-breaking\>' > /dev/null 2>&1 ; then \
 			echo "ABI BREAK IN: $$file.dll" ; \
-			$(MONO_API_HTML) $(REFERENCE_DIR)/$$file.xml temp/$$file.xml  --ignore-changes-parameter-names --ignore-nonbreaking; \
+			$(MONO_API_HTML) $(REFERENCE_DIR)/$$file.xml temp/$$file.xml  --ignore-changes-parameter-names --ignore-nonbreaking \
+				$(if $(HTML_OUTPUT_DIR),$(HTML_OUTPUT_DIR)/$$file.html); \
+			if [ -n "$(HTML_OUTPUT_DIR)" ] ; then cat "$(HTML_OUTPUT_DIR)/$$file.html" ; fi ; \
 			failed=1; \
 		fi ; \
 	done ; \
@@ -127,7 +131,7 @@ check-inter-api-level: -create-inter-api-infos
 		cur="inter-apis/$${_frameworks[$$i]}/Mono.Android.xml"; \
 		extras_in="inter-api-extra-$${_frameworks[$$prev_framework]}-$${_frameworks[$$i]}.txt" ; \
 		echo "# reading extras from: $$extras_in"; \
-		extra=`cat $$extras_in 2>/dev/null`; \
+		extra=`if [ -f $$extras_in ]; then echo @$$extras_in ; fi`; \
 		out=`mktemp interdiff-XXXXXX.html` ; \
 		command="$(MONO_API_HTML) \"$$prev\" \"$$cur\" --ignore-changes-parameter-names --ignore-changes-virtual --ignore-changes-property-setters --ignore-nonbreaking $$extra"; \
 		echo $$command; \
@@ -135,6 +139,9 @@ check-inter-api-level: -create-inter-api-infos
 		if grep '\<data-is-breaking\>' $$out > /dev/null 2>&1 ; then \
 			echo "<h1>### API BREAK BETWEEN $${_frameworks[$$prev_framework]} and $${_frameworks[$$i]}</h1>" ; \
 			cat $$out; \
+			if [ -n "$(HTML_OUTPUT_DIR)" ]; then \
+				cat $$out > "$(HTML_OUTPUT_DIR)/Mono.Android-inter-$${_frameworks[$$prev_framework]}-$${_frameworks[$$i]}.html" ; \
+			fi; \
 			failed=1; \
 		fi ; \
 		rm $$out; \
