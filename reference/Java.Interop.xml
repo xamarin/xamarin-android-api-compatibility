@@ -4,9 +4,9 @@
     <attributes>
       <attribute name="System.Diagnostics.DebuggableAttribute">
         <properties>
-          <property name="IsJITTrackingEnabled" value="IgnoreSymbolStoreSequencePoints" />
-          <property name="IsJITOptimizerDisabled" value="IgnoreSymbolStoreSequencePoints" />
-          <property name="DebuggingFlags" value="IgnoreSymbolStoreSequencePoints" />
+          <property name="IsJITTrackingEnabled" value="EnableEditAndContinue, IgnoreSymbolStoreSequencePoints, DisableOptimizations, Default" />
+          <property name="IsJITOptimizerDisabled" value="EnableEditAndContinue, IgnoreSymbolStoreSequencePoints, DisableOptimizations, Default" />
+          <property name="DebuggingFlags" value="EnableEditAndContinue, IgnoreSymbolStoreSequencePoints, DisableOptimizations, Default" />
         </properties>
       </attribute>
       <attribute name="System.Reflection.AssemblyCompanyAttribute">
@@ -4520,6 +4520,13 @@
                       <parameter name="methods" position="2" attrib="0" type="System.String" />
                     </parameters>
                   </method>
+                  <method name="TryRegisterNativeMembers(Java.Interop.JniType, System.Type, System.String)" attrib="132" returntype="System.Boolean">
+                    <parameters>
+                      <parameter name="nativeClass" position="0" attrib="0" type="Java.Interop.JniType" />
+                      <parameter name="type" position="1" attrib="0" type="System.Type" />
+                      <parameter name="methods" position="2" attrib="0" type="System.String" />
+                    </parameters>
+                  </method>
                 </methods>
               </class>
               <class name="JniValueManager" type="class" base="System.Object" abstract="true" charset="Ansi" layout="Auto">
@@ -5448,6 +5455,12 @@
                   <parameter name="runtime" position="0" attrib="0" type="System.Linq.Expressions.Expression" />
                 </parameters>
               </constructor>
+              <constructor name=".ctor(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression)" attrib="6278">
+                <parameters>
+                  <parameter name="runtime" position="0" attrib="0" type="System.Linq.Expressions.Expression" />
+                  <parameter name="vm" position="1" attrib="0" type="System.Linq.Expressions.Expression" />
+                </parameters>
+              </constructor>
             </constructors>
             <properties>
               <property name="CleanupStatements" attrib="0" ptype="System.Collections.ObjectModel.Collection`1[System.Linq.Expressions.Expression]">
@@ -5483,6 +5496,16 @@
               <property name="Runtime" attrib="0" ptype="System.Linq.Expressions.Expression">
                 <methods>
                   <method name="get_Runtime()" attrib="2182" returntype="System.Linq.Expressions.Expression">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="ValueManager" attrib="0" ptype="System.Linq.Expressions.Expression">
+                <methods>
+                  <method name="get_ValueManager()" attrib="2182" returntype="System.Linq.Expressions.Expression">
                     <attributes>
                       <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
                     </attributes>
