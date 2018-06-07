@@ -1,0 +1,5 @@
+-r "^Android.Telephony.CellIdentityCdma: Modified base type: 'Java.Lang.Object' to 'Android.Telephony.CellIdentity'"
+-r "^Android.Telephony.CellIdentityGsm: Modified base type: 'Java.Lang.Object' to 'Android.Telephony.CellIdentity'"
+-r "^Android.Telephony.CellIdentityLte: Modified base type: 'Java.Lang.Object' to 'Android.Telephony.CellIdentity'"
+-r "^Android.Telephony.CellIdentityWcdma: Modified base type: 'Java.Lang.Object' to 'Android.Telephony.CellIdentity'"
+
