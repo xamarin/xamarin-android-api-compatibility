@@ -2,4 +2,4 @@
 -r "^Android.Graphics.Drawables.InsetDrawable: Modified base type: 'Android.Graphics.Drawables.Drawable' to 'Android.Graphics.Drawables.DrawableWrapper'"
 -r "^Android.Graphics.Drawables.RotateDrawable: Modified base type: 'Android.Graphics.Drawables.Drawable' to 'Android.Graphics.Drawables.DrawableWrapper'"
 -r "^Android.Graphics.Drawables.ScaleDrawable: Modified base type: 'Android.Graphics.Drawables.Drawable' to 'Android.Graphics.Drawables.DrawableWrapper'"
--r "^Android.App.Notification: Modified properties: public int Icon { get; set; }"
+-r "^Android.App.Notification.Action: Modified properties: public int Icon { get; set; }"
