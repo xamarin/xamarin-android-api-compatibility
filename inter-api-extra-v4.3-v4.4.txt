@@ -1,0 +1,8 @@
+-r "Android.Media.RemoteControlClient.MetadataEditor: Modified base type: 'Java.Lang.Object' to 'Android.Media.MediaMetadataEditor'"
+-r "Android.Views.Surface.OutOfResourcesException: Modified base type: 'Java.Lang.Exception' to 'Java.Lang.RuntimeException'
+-r "Java.Lang.ClassNotFoundException: Modified base type: 'Java.Lang.Exception' to 'Java.Lang.ReflectiveOperationException'"
+-r "Java.Lang.IllegalAccessException: Modified base type: 'Java.Lang.Exception' to 'Java.Lang.ReflectiveOperationException'"
+-r "Java.Lang.InstantiationException: Modified base type: 'Java.Lang.Exception' to 'Java.Lang.ReflectiveOperationException'"
+-r "Java.Lang.NoSuchFieldException: Modified base type: 'Java.Lang.Exception' to 'Java.Lang.ReflectiveOperationException'"
+-r "Java.Lang.NoSuchMethodException: Modified base type: 'Java.Lang.Exception' to 'Java.Lang.ReflectiveOperationException'"
+-r "Java.Lang.Reflect.InvocationTargetException: Modified base type: 'Java.Lang.Exception' to 'Java.Lang.ReflectiveOperationException'"
