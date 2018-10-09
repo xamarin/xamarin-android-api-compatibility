@@ -81,8 +81,8 @@
       </attribute>
       <attribute name="System.Runtime.Versioning.TargetFrameworkAttribute">
         <properties>
-          <property name="FrameworkDisplayName" value="" />
-          <property name="FrameworkName" value="MonoAndroid,Version=v8.0" />
+          <property name="FrameworkDisplayName" value="Xamarin.Android v2.3 Support" />
+          <property name="FrameworkName" value="MonoAndroid,Version=v2.3" />
         </properties>
       </attribute>
     </attributes>
@@ -12776,9 +12776,15 @@
                 </parameters>
               </method>
               <method name="GetExcludedCategories()" attrib="452" virtual="true" returntype="System.Collections.Generic.IEnumerable`1[System.String]">
+                <attributes>
+                  <attribute name="System.Runtime.CompilerServices.IteratorStateMachineAttribute" />
+                </attributes>
                 <parameters />
               </method>
               <method name="GetIncludedCategories()" attrib="452" virtual="true" returntype="System.Collections.Generic.IEnumerable`1[System.String]">
+                <attributes>
+                  <attribute name="System.Runtime.CompilerServices.IteratorStateMachineAttribute" />
+                </attributes>
                 <parameters />
               </method>
               <method name="OnCreate(Android.OS.Bundle)" attrib="196" virtual="true" is-override="true" returntype="System.Void">
@@ -12844,9 +12850,15 @@
                 <parameters />
               </method>
               <method name="GetExcludedCategories()" attrib="452" virtual="true" returntype="System.Collections.Generic.IEnumerable`1[System.String]">
+                <attributes>
+                  <attribute name="System.Runtime.CompilerServices.IteratorStateMachineAttribute" />
+                </attributes>
                 <parameters />
               </method>
               <method name="GetIncludedCategories()" attrib="452" virtual="true" returntype="System.Collections.Generic.IEnumerable`1[System.String]">
+                <attributes>
+                  <attribute name="System.Runtime.CompilerServices.IteratorStateMachineAttribute" />
+                </attributes>
                 <parameters />
               </method>
               <method name="OnCreate(Android.OS.Bundle)" attrib="198" virtual="true" is-override="true" returntype="System.Void">

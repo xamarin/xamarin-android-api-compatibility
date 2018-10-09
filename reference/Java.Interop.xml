@@ -67,8 +67,8 @@
       </attribute>
       <attribute name="System.Runtime.Versioning.TargetFrameworkAttribute">
         <properties>
-          <property name="FrameworkDisplayName" value=".NET Portable Subset" />
-          <property name="FrameworkName" value=".NETPortable,Version=v4.5,Profile=Profile111" />
+          <property name="FrameworkDisplayName" value="Xamarin.Android Base Class Libraries" />
+          <property name="FrameworkName" value="MonoAndroid,Version=v1.0" />
         </properties>
       </attribute>
     </attributes>
@@ -4128,6 +4128,24 @@
                         </attributes>
                         <parameters>
                           <parameter name="value" position="0" attrib="0" type="Java.Interop.JniVersion" />
+                        </parameters>
+                      </method>
+                    </methods>
+                  </property>
+                  <property name="JvmLibraryPath" attrib="0" ptype="System.String">
+                    <methods>
+                      <method name="get_JvmLibraryPath()" attrib="2182" returntype="System.String">
+                        <attributes>
+                          <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                        </attributes>
+                        <parameters />
+                      </method>
+                      <method name="set_JvmLibraryPath(System.String)" attrib="2182" returntype="System.Void">
+                        <attributes>
+                          <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                        </attributes>
+                        <parameters>
+                          <parameter name="value" position="0" attrib="0" type="System.String" />
                         </parameters>
                       </method>
                     </methods>
