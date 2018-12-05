@@ -490,9 +490,6 @@
                   <parameter name="encodedMessage" position="0" attrib="0" type="System.Byte[]" />
                 </parameters>
               </method>
-              <method name="~ContentInfo()" attrib="196" virtual="true" returntype="System.Void">
-                <parameters />
-              </method>
             </methods>
           </class>
           <class name="EnvelopedCms" type="class" base="System.Object" sealed="true" charset="Ansi" layout="Auto">
