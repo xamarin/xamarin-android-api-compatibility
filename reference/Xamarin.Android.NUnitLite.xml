@@ -14,9 +14,9 @@
       </attribute>
       <attribute name="System.Diagnostics.DebuggableAttribute">
         <properties>
-          <property name="IsJITTrackingEnabled" value="EnableEditAndContinue, IgnoreSymbolStoreSequencePoints, DisableOptimizations, Default" />
-          <property name="IsJITOptimizerDisabled" value="EnableEditAndContinue, IgnoreSymbolStoreSequencePoints, DisableOptimizations, Default" />
-          <property name="DebuggingFlags" value="EnableEditAndContinue, IgnoreSymbolStoreSequencePoints, DisableOptimizations, Default" />
+          <property name="IsJITTrackingEnabled" value="IgnoreSymbolStoreSequencePoints" />
+          <property name="IsJITOptimizerDisabled" value="IgnoreSymbolStoreSequencePoints" />
+          <property name="DebuggingFlags" value="IgnoreSymbolStoreSequencePoints" />
         </properties>
       </attribute>
       <attribute name="System.Reflection.AssemblyCompanyAttribute">
@@ -26,7 +26,7 @@
       </attribute>
       <attribute name="System.Reflection.AssemblyConfigurationAttribute">
         <properties>
-          <property name="Configuration" value=".NET 4.5 Debug" />
+          <property name="Configuration" value=".NET 4.5" />
         </properties>
       </attribute>
       <attribute name="System.Reflection.AssemblyCopyrightAttribute">
@@ -81,8 +81,8 @@
       </attribute>
       <attribute name="System.Runtime.Versioning.TargetFrameworkAttribute">
         <properties>
-          <property name="FrameworkDisplayName" value="" />
-          <property name="FrameworkName" value="MonoAndroid,Version=v8.0" />
+          <property name="FrameworkDisplayName" value="Xamarin.Android v4.4 Support" />
+          <property name="FrameworkName" value="MonoAndroid,Version=v4.4" />
         </properties>
       </attribute>
     </attributes>
@@ -12690,7 +12690,15 @@
               </constructor>
             </constructors>
             <classes>
+              <class name="Animation" type="class" base="System.Object" charset="Ansi" layout="Auto" />
+              <class name="Animator" type="class" base="System.Object" charset="Ansi" layout="Auto" />
+              <class name="Array" type="class" base="System.Object" charset="Ansi" layout="Auto" />
               <class name="Attribute" type="class" base="System.Object" charset="Ansi" layout="Auto" />
+              <class name="Boolean" type="class" base="System.Object" charset="Ansi" layout="Auto" />
+              <class name="Color" type="class" base="System.Object" charset="Ansi" layout="Auto" />
+              <class name="Dimension" type="class" base="System.Object" charset="Ansi" layout="Auto" />
+              <class name="Drawable" type="class" base="System.Object" charset="Ansi" layout="Auto" />
+              <class name="Font" type="class" base="System.Object" charset="Ansi" layout="Auto" />
               <class name="Id" type="class" base="System.Object" charset="Ansi" layout="Auto">
                 <fields>
                   <field name="OptionHostName" attrib="22" fieldtype="System.Int32" />
@@ -12713,6 +12721,8 @@
                   <field name="TestSuiteListView" attrib="22" fieldtype="System.Int32" />
                 </fields>
               </class>
+              <class name="Integer" type="class" base="System.Object" charset="Ansi" layout="Auto" />
+              <class name="Interpolator" type="class" base="System.Object" charset="Ansi" layout="Auto" />
               <class name="Layout" type="class" base="System.Object" charset="Ansi" layout="Auto">
                 <fields>
                   <field name="options" attrib="22" fieldtype="System.Int32" />
@@ -12721,6 +12731,15 @@
                   <field name="test_suite" attrib="22" fieldtype="System.Int32" />
                 </fields>
               </class>
+              <class name="Menu" type="class" base="System.Object" charset="Ansi" layout="Auto" />
+              <class name="Mipmap" type="class" base="System.Object" charset="Ansi" layout="Auto" />
+              <class name="Plurals" type="class" base="System.Object" charset="Ansi" layout="Auto" />
+              <class name="Raw" type="class" base="System.Object" charset="Ansi" layout="Auto" />
+              <class name="String" type="class" base="System.Object" charset="Ansi" layout="Auto" />
+              <class name="Style" type="class" base="System.Object" charset="Ansi" layout="Auto" />
+              <class name="Styleable" type="class" base="System.Object" charset="Ansi" layout="Auto" />
+              <class name="Transition" type="class" base="System.Object" charset="Ansi" layout="Auto" />
+              <class name="Xml" type="class" base="System.Object" charset="Ansi" layout="Auto" />
             </classes>
           </class>
           <class name="TestSuiteActivity" type="class" base="Android.App.Activity" charset="Ansi" layout="Auto">
@@ -12735,6 +12754,11 @@
               <interface name="Android.Content.IComponentCallbacks" />
               <interface name="Android.Content.IComponentCallbacks2" />
               <interface name="Android.Runtime.IJavaObject" />
+              <interface name="Android.Views.KeyEvent+ICallback" />
+              <interface name="Android.Views.LayoutInflater+IFactory" />
+              <interface name="Android.Views.LayoutInflater+IFactory2" />
+              <interface name="Android.Views.View+IOnCreateContextMenuListener" />
+              <interface name="Android.Views.Window+ICallback" />
               <interface name="Java.Interop.IJavaPeerable" />
               <interface name="System.IDisposable" />
             </interfaces>
@@ -12776,9 +12800,15 @@
                 </parameters>
               </method>
               <method name="GetExcludedCategories()" attrib="452" virtual="true" returntype="System.Collections.Generic.IEnumerable`1[System.String]">
+                <attributes>
+                  <attribute name="System.Runtime.CompilerServices.IteratorStateMachineAttribute" />
+                </attributes>
                 <parameters />
               </method>
               <method name="GetIncludedCategories()" attrib="452" virtual="true" returntype="System.Collections.Generic.IEnumerable`1[System.String]">
+                <attributes>
+                  <attribute name="System.Runtime.CompilerServices.IteratorStateMachineAttribute" />
+                </attributes>
                 <parameters />
               </method>
               <method name="OnCreate(Android.OS.Bundle)" attrib="196" virtual="true" is-override="true" returntype="System.Void">
@@ -12844,9 +12874,15 @@
                 <parameters />
               </method>
               <method name="GetExcludedCategories()" attrib="452" virtual="true" returntype="System.Collections.Generic.IEnumerable`1[System.String]">
+                <attributes>
+                  <attribute name="System.Runtime.CompilerServices.IteratorStateMachineAttribute" />
+                </attributes>
                 <parameters />
               </method>
               <method name="GetIncludedCategories()" attrib="452" virtual="true" returntype="System.Collections.Generic.IEnumerable`1[System.String]">
+                <attributes>
+                  <attribute name="System.Runtime.CompilerServices.IteratorStateMachineAttribute" />
+                </attributes>
                 <parameters />
               </method>
               <method name="OnCreate(Android.OS.Bundle)" attrib="198" virtual="true" is-override="true" returntype="System.Void">

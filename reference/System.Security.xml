@@ -74,6 +74,7 @@
           <property name="CompilationRelaxations" value="8" />
         </properties>
       </attribute>
+      <attribute name="System.Runtime.CompilerServices.ExtensionAttribute" />
       <attribute name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute">
         <properties>
           <property name="WrapNonExceptionThrows" value="True" />
@@ -114,6 +115,9 @@
               <property name="Values" attrib="0" ptype="System.Security.Cryptography.AsnEncodedDataCollection">
                 <methods>
                   <method name="get_Values()" attrib="2182" returntype="System.Security.Cryptography.AsnEncodedDataCollection">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
                     <parameters />
                   </method>
                 </methods>
@@ -277,9 +281,15 @@
               <property name="KeyLength" attrib="0" ptype="System.Int32">
                 <methods>
                   <method name="get_KeyLength()" attrib="2182" returntype="System.Int32">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
                     <parameters />
                   </method>
                   <method name="set_KeyLength(System.Int32)" attrib="2182" returntype="System.Void">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
                     <parameters>
                       <parameter name="value" position="0" attrib="0" type="System.Int32" />
                     </parameters>
@@ -289,9 +299,15 @@
               <property name="Oid" attrib="0" ptype="System.Security.Cryptography.Oid">
                 <methods>
                   <method name="get_Oid()" attrib="2182" returntype="System.Security.Cryptography.Oid">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
                     <parameters />
                   </method>
                   <method name="set_Oid(System.Security.Cryptography.Oid)" attrib="2182" returntype="System.Void">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
                     <parameters>
                       <parameter name="value" position="0" attrib="0" type="System.Security.Cryptography.Oid" />
                     </parameters>
@@ -301,9 +317,15 @@
               <property name="Parameters" attrib="0" ptype="System.Byte[]">
                 <methods>
                   <method name="get_Parameters()" attrib="2182" returntype="System.Byte[]">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
                     <parameters />
                   </method>
                   <method name="set_Parameters(System.Byte[])" attrib="2182" returntype="System.Void">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
                     <parameters>
                       <parameter name="value" position="0" attrib="0" type="System.Byte[]" />
                     </parameters>
@@ -330,6 +352,9 @@
               <property name="Certificate" attrib="0" ptype="System.Security.Cryptography.X509Certificates.X509Certificate2">
                 <methods>
                   <method name="get_Certificate()" attrib="2182" returntype="System.Security.Cryptography.X509Certificates.X509Certificate2">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
                     <parameters />
                   </method>
                 </methods>
@@ -337,6 +362,9 @@
               <property name="RecipientIdentifierType" attrib="0" ptype="System.Security.Cryptography.Pkcs.SubjectIdentifierType">
                 <methods>
                   <method name="get_RecipientIdentifierType()" attrib="2182" returntype="System.Security.Cryptography.Pkcs.SubjectIdentifierType">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
                     <parameters />
                   </method>
                 </methods>
@@ -453,6 +481,150 @@
               </method>
             </methods>
           </class>
+          <class name="CmsSigner" type="class" base="System.Object" sealed="true" charset="Ansi" layout="Auto">
+            <constructors>
+              <constructor name=".ctor()" attrib="6278">
+                <parameters />
+              </constructor>
+              <constructor name=".ctor(System.Security.Cryptography.CspParameters)" attrib="6278">
+                <parameters>
+                  <parameter name="parameters" position="0" attrib="0" type="System.Security.Cryptography.CspParameters" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(System.Security.Cryptography.Pkcs.SubjectIdentifierType)" attrib="6278">
+                <parameters>
+                  <parameter name="signerIdentifierType" position="0" attrib="0" type="System.Security.Cryptography.Pkcs.SubjectIdentifierType" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)" attrib="6278">
+                <parameters>
+                  <parameter name="certificate" position="0" attrib="0" type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(System.Security.Cryptography.Pkcs.SubjectIdentifierType, System.Security.Cryptography.X509Certificates.X509Certificate2)" attrib="6278">
+                <parameters>
+                  <parameter name="signerIdentifierType" position="0" attrib="0" type="System.Security.Cryptography.Pkcs.SubjectIdentifierType" />
+                  <parameter name="certificate" position="1" attrib="0" type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+                </parameters>
+              </constructor>
+            </constructors>
+            <properties>
+              <property name="Certificate" attrib="0" ptype="System.Security.Cryptography.X509Certificates.X509Certificate2">
+                <methods>
+                  <method name="get_Certificate()" attrib="2182" returntype="System.Security.Cryptography.X509Certificates.X509Certificate2">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                  <method name="set_Certificate(System.Security.Cryptography.X509Certificates.X509Certificate2)" attrib="2182" returntype="System.Void">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+              <property name="Certificates" attrib="0" ptype="System.Security.Cryptography.X509Certificates.X509Certificate2Collection">
+                <methods>
+                  <method name="get_Certificates()" attrib="2182" returntype="System.Security.Cryptography.X509Certificates.X509Certificate2Collection">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="DigestAlgorithm" attrib="0" ptype="System.Security.Cryptography.Oid">
+                <methods>
+                  <method name="get_DigestAlgorithm()" attrib="2182" returntype="System.Security.Cryptography.Oid">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                  <method name="set_DigestAlgorithm(System.Security.Cryptography.Oid)" attrib="2182" returntype="System.Void">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="System.Security.Cryptography.Oid" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+              <property name="IncludeOption" attrib="0" ptype="System.Security.Cryptography.X509Certificates.X509IncludeOption">
+                <methods>
+                  <method name="get_IncludeOption()" attrib="2182" returntype="System.Security.Cryptography.X509Certificates.X509IncludeOption">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                  <method name="set_IncludeOption(System.Security.Cryptography.X509Certificates.X509IncludeOption)" attrib="2182" returntype="System.Void">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="System.Security.Cryptography.X509Certificates.X509IncludeOption" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+              <property name="PrivateKey" attrib="0" ptype="System.Security.Cryptography.AsymmetricAlgorithm">
+                <methods>
+                  <method name="get_PrivateKey()" attrib="2182" returntype="System.Security.Cryptography.AsymmetricAlgorithm">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                  <method name="set_PrivateKey(System.Security.Cryptography.AsymmetricAlgorithm)" attrib="2182" returntype="System.Void">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="System.Security.Cryptography.AsymmetricAlgorithm" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+              <property name="SignedAttributes" attrib="0" ptype="System.Security.Cryptography.CryptographicAttributeObjectCollection">
+                <methods>
+                  <method name="get_SignedAttributes()" attrib="2182" returntype="System.Security.Cryptography.CryptographicAttributeObjectCollection">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="SignerIdentifierType" attrib="0" ptype="System.Security.Cryptography.Pkcs.SubjectIdentifierType">
+                <methods>
+                  <method name="get_SignerIdentifierType()" attrib="2182" returntype="System.Security.Cryptography.Pkcs.SubjectIdentifierType">
+                    <parameters />
+                  </method>
+                  <method name="set_SignerIdentifierType(System.Security.Cryptography.Pkcs.SubjectIdentifierType)" attrib="2182" returntype="System.Void">
+                    <parameters>
+                      <parameter name="value" position="0" attrib="0" type="System.Security.Cryptography.Pkcs.SubjectIdentifierType" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+              <property name="UnsignedAttributes" attrib="0" ptype="System.Security.Cryptography.CryptographicAttributeObjectCollection">
+                <methods>
+                  <method name="get_UnsignedAttributes()" attrib="2182" returntype="System.Security.Cryptography.CryptographicAttributeObjectCollection">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+            </properties>
+          </class>
           <class name="ContentInfo" type="class" base="System.Object" sealed="true" charset="Ansi" layout="Auto">
             <constructors>
               <constructor name=".ctor(System.Byte[])" attrib="6278">
@@ -471,6 +643,9 @@
               <property name="Content" attrib="0" ptype="System.Byte[]">
                 <methods>
                   <method name="get_Content()" attrib="2182" returntype="System.Byte[]">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
                     <parameters />
                   </method>
                 </methods>
@@ -478,6 +653,9 @@
               <property name="ContentType" attrib="0" ptype="System.Security.Cryptography.Oid">
                 <methods>
                   <method name="get_ContentType()" attrib="2182" returntype="System.Security.Cryptography.Oid">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
                     <parameters />
                   </method>
                 </methods>
@@ -485,7 +663,6 @@
             </properties>
             <methods>
               <method name="GetContentType(System.Byte[])" attrib="150" static="true" returntype="System.Security.Cryptography.Oid">
-                <attributes />
                 <parameters>
                   <parameter name="encodedMessage" position="0" attrib="0" type="System.Byte[]" />
                 </parameters>
@@ -526,6 +703,9 @@
               <property name="Certificates" attrib="0" ptype="System.Security.Cryptography.X509Certificates.X509Certificate2Collection">
                 <methods>
                   <method name="get_Certificates()" attrib="2182" returntype="System.Security.Cryptography.X509Certificates.X509Certificate2Collection">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
                     <parameters />
                   </method>
                 </methods>
@@ -533,6 +713,9 @@
               <property name="ContentEncryptionAlgorithm" attrib="0" ptype="System.Security.Cryptography.Pkcs.AlgorithmIdentifier">
                 <methods>
                   <method name="get_ContentEncryptionAlgorithm()" attrib="2182" returntype="System.Security.Cryptography.Pkcs.AlgorithmIdentifier">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
                     <parameters />
                   </method>
                 </methods>
@@ -540,6 +723,9 @@
               <property name="ContentInfo" attrib="0" ptype="System.Security.Cryptography.Pkcs.ContentInfo">
                 <methods>
                   <method name="get_ContentInfo()" attrib="2182" returntype="System.Security.Cryptography.Pkcs.ContentInfo">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
                     <parameters />
                   </method>
                 </methods>
@@ -554,6 +740,9 @@
               <property name="UnprotectedAttributes" attrib="0" ptype="System.Security.Cryptography.CryptographicAttributeObjectCollection">
                 <methods>
                   <method name="get_UnprotectedAttributes()" attrib="2182" returntype="System.Security.Cryptography.CryptographicAttributeObjectCollection">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
                     <parameters />
                   </method>
                 </methods>
@@ -561,6 +750,9 @@
               <property name="Version" attrib="0" ptype="System.Int32">
                 <methods>
                   <method name="get_Version()" attrib="2182" returntype="System.Int32">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
                     <parameters />
                   </method>
                 </methods>
@@ -568,50 +760,41 @@
             </properties>
             <methods>
               <method name="Decode(System.Byte[])" attrib="134" returntype="System.Void">
-                <attributes />
                 <parameters>
                   <parameter name="encodedMessage" position="0" attrib="0" type="System.Byte[]" />
                 </parameters>
               </method>
               <method name="Decrypt()" attrib="134" returntype="System.Void">
-                <attributes />
                 <parameters />
               </method>
               <method name="Decrypt(System.Security.Cryptography.Pkcs.RecipientInfo)" attrib="134" returntype="System.Void">
-                <attributes />
                 <parameters>
                   <parameter name="recipientInfo" position="0" attrib="0" type="System.Security.Cryptography.Pkcs.RecipientInfo" />
                 </parameters>
               </method>
               <method name="Decrypt(System.Security.Cryptography.X509Certificates.X509Certificate2Collection)" attrib="134" returntype="System.Void">
-                <attributes />
                 <parameters>
                   <parameter name="extraStore" position="0" attrib="0" type="System.Security.Cryptography.X509Certificates.X509Certificate2Collection" />
                 </parameters>
               </method>
               <method name="Decrypt(System.Security.Cryptography.Pkcs.RecipientInfo, System.Security.Cryptography.X509Certificates.X509Certificate2Collection)" attrib="134" returntype="System.Void">
-                <attributes />
                 <parameters>
                   <parameter name="recipientInfo" position="0" attrib="0" type="System.Security.Cryptography.Pkcs.RecipientInfo" />
                   <parameter name="extraStore" position="1" attrib="0" type="System.Security.Cryptography.X509Certificates.X509Certificate2Collection" />
                 </parameters>
               </method>
               <method name="Encode()" attrib="134" returntype="System.Byte[]">
-                <attributes />
                 <parameters />
               </method>
               <method name="Encrypt()" attrib="134" returntype="System.Void">
-                <attributes />
                 <parameters />
               </method>
               <method name="Encrypt(System.Security.Cryptography.Pkcs.CmsRecipient)" attrib="134" returntype="System.Void">
-                <attributes />
                 <parameters>
                   <parameter name="recipient" position="0" attrib="0" type="System.Security.Cryptography.Pkcs.CmsRecipient" />
                 </parameters>
               </method>
               <method name="Encrypt(System.Security.Cryptography.Pkcs.CmsRecipientCollection)" attrib="134" returntype="System.Void">
-                <attributes />
                 <parameters>
                   <parameter name="recipients" position="0" attrib="0" type="System.Security.Cryptography.Pkcs.CmsRecipientCollection" />
                 </parameters>
@@ -619,7 +802,6 @@
             </methods>
           </class>
           <class name="KeyAgreeRecipientInfo" type="class" base="System.Security.Cryptography.Pkcs.RecipientInfo" sealed="true" charset="Ansi" layout="Auto">
-            <attributes />
             <properties>
               <property name="Date" attrib="0" ptype="System.DateTime">
                 <methods>
@@ -894,6 +1076,9 @@
               <property name="Algorithm" attrib="0" ptype="System.Security.Cryptography.Pkcs.AlgorithmIdentifier">
                 <methods>
                   <method name="get_Algorithm()" attrib="2182" returntype="System.Security.Cryptography.Pkcs.AlgorithmIdentifier">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
                     <parameters />
                   </method>
                 </methods>
@@ -901,6 +1086,9 @@
               <property name="KeyValue" attrib="0" ptype="System.Byte[]">
                 <methods>
                   <method name="get_KeyValue()" attrib="2182" returntype="System.Byte[]">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
                     <parameters />
                   </method>
                 </methods>
@@ -933,6 +1121,9 @@
               <property name="Type" attrib="0" ptype="System.Security.Cryptography.Pkcs.RecipientInfoType">
                 <methods>
                   <method name="get_Type()" attrib="2182" returntype="System.Security.Cryptography.Pkcs.RecipientInfoType">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
                     <parameters />
                   </method>
                 </methods>
@@ -1042,11 +1233,331 @@
               <field name="Unknown" attrib="32854" fieldtype="System.Security.Cryptography.Pkcs.RecipientInfoType" value="0" />
             </fields>
           </class>
+          <class name="SignedCms" type="class" base="System.Object" sealed="true" charset="Ansi" layout="Auto">
+            <constructors>
+              <constructor name=".ctor()" attrib="6278">
+                <parameters />
+              </constructor>
+              <constructor name=".ctor(System.Security.Cryptography.Pkcs.ContentInfo)" attrib="6278">
+                <parameters>
+                  <parameter name="contentInfo" position="0" attrib="0" type="System.Security.Cryptography.Pkcs.ContentInfo" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(System.Security.Cryptography.Pkcs.SubjectIdentifierType)" attrib="6278">
+                <parameters>
+                  <parameter name="signerIdentifierType" position="0" attrib="0" type="System.Security.Cryptography.Pkcs.SubjectIdentifierType" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(System.Security.Cryptography.Pkcs.ContentInfo, System.Boolean)" attrib="6278">
+                <parameters>
+                  <parameter name="contentInfo" position="0" attrib="0" type="System.Security.Cryptography.Pkcs.ContentInfo" />
+                  <parameter name="detached" position="1" attrib="0" type="System.Boolean" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(System.Security.Cryptography.Pkcs.SubjectIdentifierType, System.Security.Cryptography.Pkcs.ContentInfo)" attrib="6278">
+                <parameters>
+                  <parameter name="signerIdentifierType" position="0" attrib="0" type="System.Security.Cryptography.Pkcs.SubjectIdentifierType" />
+                  <parameter name="contentInfo" position="1" attrib="0" type="System.Security.Cryptography.Pkcs.ContentInfo" />
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(System.Security.Cryptography.Pkcs.SubjectIdentifierType, System.Security.Cryptography.Pkcs.ContentInfo, System.Boolean)" attrib="6278">
+                <parameters>
+                  <parameter name="signerIdentifierType" position="0" attrib="0" type="System.Security.Cryptography.Pkcs.SubjectIdentifierType" />
+                  <parameter name="contentInfo" position="1" attrib="0" type="System.Security.Cryptography.Pkcs.ContentInfo" />
+                  <parameter name="detached" position="2" attrib="0" type="System.Boolean" />
+                </parameters>
+              </constructor>
+            </constructors>
+            <properties>
+              <property name="Certificates" attrib="0" ptype="System.Security.Cryptography.X509Certificates.X509Certificate2Collection">
+                <methods>
+                  <method name="get_Certificates()" attrib="2182" returntype="System.Security.Cryptography.X509Certificates.X509Certificate2Collection">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="ContentInfo" attrib="0" ptype="System.Security.Cryptography.Pkcs.ContentInfo">
+                <methods>
+                  <method name="get_ContentInfo()" attrib="2182" returntype="System.Security.Cryptography.Pkcs.ContentInfo">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="Detached" attrib="0" ptype="System.Boolean">
+                <methods>
+                  <method name="get_Detached()" attrib="2182" returntype="System.Boolean">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="SignerInfos" attrib="0" ptype="System.Security.Cryptography.Pkcs.SignerInfoCollection">
+                <methods>
+                  <method name="get_SignerInfos()" attrib="2182" returntype="System.Security.Cryptography.Pkcs.SignerInfoCollection">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="Version" attrib="0" ptype="System.Int32">
+                <methods>
+                  <method name="get_Version()" attrib="2182" returntype="System.Int32">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+            </properties>
+            <methods>
+              <method name="CheckHash()" attrib="134" returntype="System.Void">
+                <parameters />
+              </method>
+              <method name="CheckSignature(System.Boolean)" attrib="134" returntype="System.Void">
+                <parameters>
+                  <parameter name="verifySignatureOnly" position="0" attrib="0" type="System.Boolean" />
+                </parameters>
+              </method>
+              <method name="CheckSignature(System.Security.Cryptography.X509Certificates.X509Certificate2Collection, System.Boolean)" attrib="134" returntype="System.Void">
+                <parameters>
+                  <parameter name="extraStore" position="0" attrib="0" type="System.Security.Cryptography.X509Certificates.X509Certificate2Collection" />
+                  <parameter name="verifySignatureOnly" position="1" attrib="0" type="System.Boolean" />
+                </parameters>
+              </method>
+              <method name="ComputeSignature()" attrib="134" returntype="System.Void">
+                <parameters />
+              </method>
+              <method name="ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner)" attrib="134" returntype="System.Void">
+                <parameters>
+                  <parameter name="signer" position="0" attrib="0" type="System.Security.Cryptography.Pkcs.CmsSigner" />
+                </parameters>
+              </method>
+              <method name="ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner, System.Boolean)" attrib="134" returntype="System.Void">
+                <parameters>
+                  <parameter name="signer" position="0" attrib="0" type="System.Security.Cryptography.Pkcs.CmsSigner" />
+                  <parameter name="silent" position="1" attrib="0" type="System.Boolean" />
+                </parameters>
+              </method>
+              <method name="Decode(System.Byte[])" attrib="134" returntype="System.Void">
+                <parameters>
+                  <parameter name="encodedMessage" position="0" attrib="0" type="System.Byte[]" />
+                </parameters>
+              </method>
+              <method name="Encode()" attrib="134" returntype="System.Byte[]">
+                <parameters />
+              </method>
+              <method name="RemoveSignature(System.Int32)" attrib="134" returntype="System.Void">
+                <parameters>
+                  <parameter name="index" position="0" attrib="0" type="System.Int32" />
+                </parameters>
+              </method>
+              <method name="RemoveSignature(System.Security.Cryptography.Pkcs.SignerInfo)" attrib="134" returntype="System.Void">
+                <parameters>
+                  <parameter name="signerInfo" position="0" attrib="0" type="System.Security.Cryptography.Pkcs.SignerInfo" />
+                </parameters>
+              </method>
+            </methods>
+          </class>
+          <class name="SignerInfo" type="class" base="System.Object" sealed="true" charset="Ansi" layout="Auto">
+            <properties>
+              <property name="Certificate" attrib="0" ptype="System.Security.Cryptography.X509Certificates.X509Certificate2">
+                <methods>
+                  <method name="get_Certificate()" attrib="2182" returntype="System.Security.Cryptography.X509Certificates.X509Certificate2">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="CounterSignerInfos" attrib="0" ptype="System.Security.Cryptography.Pkcs.SignerInfoCollection">
+                <methods>
+                  <method name="get_CounterSignerInfos()" attrib="2182" returntype="System.Security.Cryptography.Pkcs.SignerInfoCollection">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="DigestAlgorithm" attrib="0" ptype="System.Security.Cryptography.Oid">
+                <methods>
+                  <method name="get_DigestAlgorithm()" attrib="2182" returntype="System.Security.Cryptography.Oid">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="SignatureAlgorithm" attrib="0" ptype="System.Security.Cryptography.Oid">
+                <methods>
+                  <method name="get_SignatureAlgorithm()" attrib="2182" returntype="System.Security.Cryptography.Oid">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="SignedAttributes" attrib="0" ptype="System.Security.Cryptography.CryptographicAttributeObjectCollection">
+                <methods>
+                  <method name="get_SignedAttributes()" attrib="2182" returntype="System.Security.Cryptography.CryptographicAttributeObjectCollection">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="SignerIdentifier" attrib="0" ptype="System.Security.Cryptography.Pkcs.SubjectIdentifier">
+                <methods>
+                  <method name="get_SignerIdentifier()" attrib="2182" returntype="System.Security.Cryptography.Pkcs.SubjectIdentifier">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="UnsignedAttributes" attrib="0" ptype="System.Security.Cryptography.CryptographicAttributeObjectCollection">
+                <methods>
+                  <method name="get_UnsignedAttributes()" attrib="2182" returntype="System.Security.Cryptography.CryptographicAttributeObjectCollection">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="Version" attrib="0" ptype="System.Int32">
+                <methods>
+                  <method name="get_Version()" attrib="2182" returntype="System.Int32">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+            </properties>
+            <methods>
+              <method name="CheckHash()" attrib="134" returntype="System.Void">
+                <parameters />
+              </method>
+              <method name="CheckSignature(System.Boolean)" attrib="134" returntype="System.Void">
+                <parameters>
+                  <parameter name="verifySignatureOnly" position="0" attrib="0" type="System.Boolean" />
+                </parameters>
+              </method>
+              <method name="CheckSignature(System.Security.Cryptography.X509Certificates.X509Certificate2Collection, System.Boolean)" attrib="134" returntype="System.Void">
+                <parameters>
+                  <parameter name="extraStore" position="0" attrib="0" type="System.Security.Cryptography.X509Certificates.X509Certificate2Collection" />
+                  <parameter name="verifySignatureOnly" position="1" attrib="0" type="System.Boolean" />
+                </parameters>
+              </method>
+              <method name="ComputeCounterSignature()" attrib="134" returntype="System.Void">
+                <parameters />
+              </method>
+              <method name="ComputeCounterSignature(System.Security.Cryptography.Pkcs.CmsSigner)" attrib="134" returntype="System.Void">
+                <parameters>
+                  <parameter name="signer" position="0" attrib="0" type="System.Security.Cryptography.Pkcs.CmsSigner" />
+                </parameters>
+              </method>
+              <method name="GetSignature()" attrib="134" returntype="System.Byte[]">
+                <parameters />
+              </method>
+              <method name="RemoveCounterSignature(System.Int32)" attrib="134" returntype="System.Void">
+                <parameters>
+                  <parameter name="index" position="0" attrib="0" type="System.Int32" />
+                </parameters>
+              </method>
+              <method name="RemoveCounterSignature(System.Security.Cryptography.Pkcs.SignerInfo)" attrib="134" returntype="System.Void">
+                <parameters>
+                  <parameter name="counterSignerInfo" position="0" attrib="0" type="System.Security.Cryptography.Pkcs.SignerInfo" />
+                </parameters>
+              </method>
+            </methods>
+          </class>
+          <class name="SignerInfoCollection" type="class" base="System.Object" sealed="true" charset="Ansi" layout="Auto">
+            <attributes>
+              <attribute name="System.Reflection.DefaultMemberAttribute">
+                <properties>
+                  <property name="MemberName" value="Item" />
+                </properties>
+              </attribute>
+            </attributes>
+            <interfaces>
+              <interface name="System.Collections.ICollection" />
+              <interface name="System.Collections.IEnumerable" />
+            </interfaces>
+            <properties>
+              <property name="Count" attrib="0" ptype="System.Int32">
+                <methods>
+                  <method name="get_Count()" attrib="2534" virtual="true" returntype="System.Int32">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="IsSynchronized" attrib="0" ptype="System.Boolean">
+                <methods>
+                  <method name="get_IsSynchronized()" attrib="2534" virtual="true" returntype="System.Boolean">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="Item" attrib="0" ptype="System.Security.Cryptography.Pkcs.SignerInfo" params="System.Int32">
+                <methods>
+                  <method name="get_Item(System.Int32)" attrib="2182" returntype="System.Security.Cryptography.Pkcs.SignerInfo">
+                    <parameters>
+                      <parameter name="index" position="0" attrib="0" type="System.Int32" />
+                    </parameters>
+                  </method>
+                </methods>
+              </property>
+              <property name="SyncRoot" attrib="0" ptype="System.Object">
+                <methods>
+                  <method name="get_SyncRoot()" attrib="2534" virtual="true" returntype="System.Object">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+            </properties>
+            <methods>
+              <method name="CopyTo(System.Array, System.Int32)" attrib="486" virtual="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="array" position="0" attrib="0" type="System.Array" />
+                  <parameter name="index" position="1" attrib="0" type="System.Int32" />
+                </parameters>
+              </method>
+              <method name="CopyTo(System.Security.Cryptography.Pkcs.SignerInfo[], System.Int32)" attrib="134" returntype="System.Void">
+                <parameters>
+                  <parameter name="array" position="0" attrib="0" type="System.Security.Cryptography.Pkcs.SignerInfo[]" />
+                  <parameter name="index" position="1" attrib="0" type="System.Int32" />
+                </parameters>
+              </method>
+              <method name="GetEnumerator()" attrib="134" returntype="System.Security.Cryptography.Pkcs.SignerInfoEnumerator">
+                <parameters />
+              </method>
+            </methods>
+          </class>
+          <class name="SignerInfoEnumerator" type="class" base="System.Object" sealed="true" charset="Ansi" layout="Auto">
+            <interfaces>
+              <interface name="System.Collections.IEnumerator" />
+            </interfaces>
+            <properties>
+              <property name="Current" attrib="0" ptype="System.Security.Cryptography.Pkcs.SignerInfo">
+                <methods>
+                  <method name="get_Current()" attrib="2182" returntype="System.Security.Cryptography.Pkcs.SignerInfo">
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+            </properties>
+            <methods>
+              <method name="MoveNext()" attrib="486" virtual="true" returntype="System.Boolean">
+                <parameters />
+              </method>
+              <method name="Reset()" attrib="486" virtual="true" returntype="System.Void">
+                <parameters />
+              </method>
+            </methods>
+          </class>
           <class name="SubjectIdentifier" type="class" base="System.Object" sealed="true" charset="Ansi" layout="Auto">
             <properties>
               <property name="Type" attrib="0" ptype="System.Security.Cryptography.Pkcs.SubjectIdentifierType">
                 <methods>
                   <method name="get_Type()" attrib="2182" returntype="System.Security.Cryptography.Pkcs.SubjectIdentifierType">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
                     <parameters />
                   </method>
                 </methods>
@@ -1054,6 +1565,9 @@
               <property name="Value" attrib="0" ptype="System.Object">
                 <methods>
                   <method name="get_Value()" attrib="2182" returntype="System.Object">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
                     <parameters />
                   </method>
                 </methods>
@@ -1065,6 +1579,9 @@
               <property name="Type" attrib="0" ptype="System.Security.Cryptography.Pkcs.SubjectIdentifierOrKeyType">
                 <methods>
                   <method name="get_Type()" attrib="2182" returntype="System.Security.Cryptography.Pkcs.SubjectIdentifierOrKeyType">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
                     <parameters />
                   </method>
                 </methods>
@@ -1072,6 +1589,9 @@
               <property name="Value" attrib="0" ptype="System.Object">
                 <methods>
                   <method name="get_Value()" attrib="2182" returntype="System.Object">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
                     <parameters />
                   </method>
                 </methods>
@@ -1113,9 +1633,15 @@
               <property name="IssuerName" attrib="0" ptype="System.String">
                 <methods>
                   <method name="get_IssuerName()" attrib="2182" returntype="System.String">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
                     <parameters />
                   </method>
                   <method name="set_IssuerName(System.String)" attrib="2182" returntype="System.Void">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
                     <parameters>
                       <parameter name="value" position="0" attrib="0" type="System.String" />
                     </parameters>
@@ -1125,9 +1651,15 @@
               <property name="SerialNumber" attrib="0" ptype="System.String">
                 <methods>
                   <method name="get_SerialNumber()" attrib="2182" returntype="System.String">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
                     <parameters />
                   </method>
                   <method name="set_SerialNumber(System.String)" attrib="2182" returntype="System.Void">
+                    <attributes>
+                      <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                    </attributes>
                     <parameters>
                       <parameter name="value" position="0" attrib="0" type="System.String" />
                     </parameters>

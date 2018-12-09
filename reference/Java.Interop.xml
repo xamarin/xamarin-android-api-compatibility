@@ -4,9 +4,9 @@
     <attributes>
       <attribute name="System.Diagnostics.DebuggableAttribute">
         <properties>
-          <property name="IsJITTrackingEnabled" value="EnableEditAndContinue, IgnoreSymbolStoreSequencePoints, DisableOptimizations, Default" />
-          <property name="IsJITOptimizerDisabled" value="EnableEditAndContinue, IgnoreSymbolStoreSequencePoints, DisableOptimizations, Default" />
-          <property name="DebuggingFlags" value="EnableEditAndContinue, IgnoreSymbolStoreSequencePoints, DisableOptimizations, Default" />
+          <property name="IsJITTrackingEnabled" value="IgnoreSymbolStoreSequencePoints" />
+          <property name="IsJITOptimizerDisabled" value="IgnoreSymbolStoreSequencePoints" />
+          <property name="DebuggingFlags" value="IgnoreSymbolStoreSequencePoints" />
         </properties>
       </attribute>
       <attribute name="System.Reflection.AssemblyCompanyAttribute">
@@ -67,8 +67,8 @@
       </attribute>
       <attribute name="System.Runtime.Versioning.TargetFrameworkAttribute">
         <properties>
-          <property name="FrameworkDisplayName" value=".NET Portable Subset" />
-          <property name="FrameworkName" value=".NETPortable,Version=v4.5,Profile=Profile111" />
+          <property name="FrameworkDisplayName" value="Xamarin.Android Base Class Libraries" />
+          <property name="FrameworkName" value="MonoAndroid,Version=v1.0" />
         </properties>
       </attribute>
     </attributes>
@@ -287,6 +287,12 @@
               <method name="CreateElements()" attrib="196" virtual="true" is-override="true" returntype="Java.Interop.JniArrayElements">
                 <parameters />
               </method>
+              <method name="CreateMarshaledValue(System.IntPtr, System.Type)" attrib="150" static="true" returntype="System.Object">
+                <parameters>
+                  <parameter name="handle" position="0" attrib="0" type="System.IntPtr" />
+                  <parameter name="targetType" position="1" attrib="0" type="System.Type" />
+                </parameters>
+              </method>
               <method name="GetElements()" attrib="134" returntype="Java.Interop.JniBooleanArrayElements">
                 <parameters />
               </method>
@@ -362,6 +368,12 @@
               <method name="CreateElements()" attrib="196" virtual="true" is-override="true" returntype="Java.Interop.JniArrayElements">
                 <parameters />
               </method>
+              <method name="CreateMarshaledValue(System.IntPtr, System.Type)" attrib="150" static="true" returntype="System.Object">
+                <parameters>
+                  <parameter name="handle" position="0" attrib="0" type="System.IntPtr" />
+                  <parameter name="targetType" position="1" attrib="0" type="System.Type" />
+                </parameters>
+              </method>
               <method name="GetElements()" attrib="134" returntype="Java.Interop.JniCharArrayElements">
                 <parameters />
               </method>
@@ -436,6 +448,12 @@
               </method>
               <method name="CreateElements()" attrib="196" virtual="true" is-override="true" returntype="Java.Interop.JniArrayElements">
                 <parameters />
+              </method>
+              <method name="CreateMarshaledValue(System.IntPtr, System.Type)" attrib="150" static="true" returntype="System.Object">
+                <parameters>
+                  <parameter name="handle" position="0" attrib="0" type="System.IntPtr" />
+                  <parameter name="targetType" position="1" attrib="0" type="System.Type" />
+                </parameters>
               </method>
               <method name="GetElements()" attrib="134" returntype="Java.Interop.JniDoubleArrayElements">
                 <parameters />
@@ -639,6 +657,12 @@
               <method name="CreateElements()" attrib="196" virtual="true" is-override="true" returntype="Java.Interop.JniArrayElements">
                 <parameters />
               </method>
+              <method name="CreateMarshaledValue(System.IntPtr, System.Type)" attrib="150" static="true" returntype="System.Object">
+                <parameters>
+                  <parameter name="handle" position="0" attrib="0" type="System.IntPtr" />
+                  <parameter name="targetType" position="1" attrib="0" type="System.Type" />
+                </parameters>
+              </method>
               <method name="GetElements()" attrib="134" returntype="Java.Interop.JniInt16ArrayElements">
                 <parameters />
               </method>
@@ -714,6 +738,12 @@
               <method name="CreateElements()" attrib="196" virtual="true" is-override="true" returntype="Java.Interop.JniArrayElements">
                 <parameters />
               </method>
+              <method name="CreateMarshaledValue(System.IntPtr, System.Type)" attrib="150" static="true" returntype="System.Object">
+                <parameters>
+                  <parameter name="handle" position="0" attrib="0" type="System.IntPtr" />
+                  <parameter name="targetType" position="1" attrib="0" type="System.Type" />
+                </parameters>
+              </method>
               <method name="GetElements()" attrib="134" returntype="Java.Interop.JniInt32ArrayElements">
                 <parameters />
               </method>
@@ -788,6 +818,12 @@
               </method>
               <method name="CreateElements()" attrib="196" virtual="true" is-override="true" returntype="Java.Interop.JniArrayElements">
                 <parameters />
+              </method>
+              <method name="CreateMarshaledValue(System.IntPtr, System.Type)" attrib="150" static="true" returntype="System.Object">
+                <parameters>
+                  <parameter name="handle" position="0" attrib="0" type="System.IntPtr" />
+                  <parameter name="targetType" position="1" attrib="0" type="System.Type" />
+                </parameters>
               </method>
               <method name="GetElements()" attrib="134" returntype="Java.Interop.JniInt64ArrayElements">
                 <parameters />
@@ -1133,6 +1169,12 @@
               <method name="CreateElements()" attrib="196" virtual="true" is-override="true" returntype="Java.Interop.JniArrayElements">
                 <parameters />
               </method>
+              <method name="CreateMarshaledValue(System.IntPtr, System.Type)" attrib="150" static="true" returntype="System.Object">
+                <parameters>
+                  <parameter name="handle" position="0" attrib="0" type="System.IntPtr" />
+                  <parameter name="targetType" position="1" attrib="0" type="System.Type" />
+                </parameters>
+              </method>
               <method name="GetElements()" attrib="134" returntype="Java.Interop.JniSByteArrayElements">
                 <parameters />
               </method>
@@ -1207,6 +1249,12 @@
               </method>
               <method name="CreateElements()" attrib="196" virtual="true" is-override="true" returntype="Java.Interop.JniArrayElements">
                 <parameters />
+              </method>
+              <method name="CreateMarshaledValue(System.IntPtr, System.Type)" attrib="150" static="true" returntype="System.Object">
+                <parameters>
+                  <parameter name="handle" position="0" attrib="0" type="System.IntPtr" />
+                  <parameter name="targetType" position="1" attrib="0" type="System.Type" />
+                </parameters>
               </method>
               <method name="GetElements()" attrib="134" returntype="Java.Interop.JniSingleArrayElements">
                 <parameters />
@@ -4132,6 +4180,24 @@
                       </method>
                     </methods>
                   </property>
+                  <property name="JvmLibraryPath" attrib="0" ptype="System.String">
+                    <methods>
+                      <method name="get_JvmLibraryPath()" attrib="2182" returntype="System.String">
+                        <attributes>
+                          <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                        </attributes>
+                        <parameters />
+                      </method>
+                      <method name="set_JvmLibraryPath(System.String)" attrib="2182" returntype="System.Void">
+                        <attributes>
+                          <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                        </attributes>
+                        <parameters>
+                          <parameter name="value" position="0" attrib="0" type="System.String" />
+                        </parameters>
+                      </method>
+                    </methods>
+                  </property>
                   <property name="MarshalMemberBuilder" attrib="0" ptype="Java.Interop.JniRuntime+JniMarshalMemberBuilder">
                     <methods>
                       <method name="get_MarshalMemberBuilder()" attrib="2182" returntype="Java.Interop.JniRuntime+JniMarshalMemberBuilder">
@@ -4218,6 +4284,24 @@
                         </attributes>
                         <parameters>
                           <parameter name="value" position="0" attrib="0" type="Java.Interop.JniRuntime+JniTypeManager" />
+                        </parameters>
+                      </method>
+                    </methods>
+                  </property>
+                  <property name="UseMarshalMemberBuilder" attrib="0" ptype="System.Boolean">
+                    <methods>
+                      <method name="get_UseMarshalMemberBuilder()" attrib="2182" returntype="System.Boolean">
+                        <attributes>
+                          <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                        </attributes>
+                        <parameters />
+                      </method>
+                      <method name="set_UseMarshalMemberBuilder(System.Boolean)" attrib="2182" returntype="System.Void">
+                        <attributes>
+                          <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+                        </attributes>
+                        <parameters>
+                          <parameter name="value" position="0" attrib="0" type="System.Boolean" />
                         </parameters>
                       </method>
                     </methods>
