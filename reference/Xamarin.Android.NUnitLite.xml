@@ -12690,15 +12690,7 @@
               </constructor>
             </constructors>
             <classes>
-              <class name="Animation" type="class" base="System.Object" charset="Ansi" layout="Auto" />
-              <class name="Animator" type="class" base="System.Object" charset="Ansi" layout="Auto" />
-              <class name="Array" type="class" base="System.Object" charset="Ansi" layout="Auto" />
               <class name="Attribute" type="class" base="System.Object" charset="Ansi" layout="Auto" />
-              <class name="Boolean" type="class" base="System.Object" charset="Ansi" layout="Auto" />
-              <class name="Color" type="class" base="System.Object" charset="Ansi" layout="Auto" />
-              <class name="Dimension" type="class" base="System.Object" charset="Ansi" layout="Auto" />
-              <class name="Drawable" type="class" base="System.Object" charset="Ansi" layout="Auto" />
-              <class name="Font" type="class" base="System.Object" charset="Ansi" layout="Auto" />
               <class name="Id" type="class" base="System.Object" charset="Ansi" layout="Auto">
                 <fields>
                   <field name="OptionHostName" attrib="22" fieldtype="System.Int32" />
@@ -12721,8 +12713,6 @@
                   <field name="TestSuiteListView" attrib="22" fieldtype="System.Int32" />
                 </fields>
               </class>
-              <class name="Integer" type="class" base="System.Object" charset="Ansi" layout="Auto" />
-              <class name="Interpolator" type="class" base="System.Object" charset="Ansi" layout="Auto" />
               <class name="Layout" type="class" base="System.Object" charset="Ansi" layout="Auto">
                 <fields>
                   <field name="options" attrib="22" fieldtype="System.Int32" />
@@ -12731,15 +12721,6 @@
                   <field name="test_suite" attrib="22" fieldtype="System.Int32" />
                 </fields>
               </class>
-              <class name="Menu" type="class" base="System.Object" charset="Ansi" layout="Auto" />
-              <class name="Mipmap" type="class" base="System.Object" charset="Ansi" layout="Auto" />
-              <class name="Plurals" type="class" base="System.Object" charset="Ansi" layout="Auto" />
-              <class name="Raw" type="class" base="System.Object" charset="Ansi" layout="Auto" />
-              <class name="String" type="class" base="System.Object" charset="Ansi" layout="Auto" />
-              <class name="Style" type="class" base="System.Object" charset="Ansi" layout="Auto" />
-              <class name="Styleable" type="class" base="System.Object" charset="Ansi" layout="Auto" />
-              <class name="Transition" type="class" base="System.Object" charset="Ansi" layout="Auto" />
-              <class name="Xml" type="class" base="System.Object" charset="Ansi" layout="Auto" />
             </classes>
           </class>
           <class name="TestSuiteActivity" type="class" base="Android.App.Activity" charset="Ansi" layout="Auto">
