@@ -11,7 +11,7 @@
       </attribute>
       <attribute name="System.Reflection.AssemblyCompanyAttribute">
         <properties>
-          <property name="Company" value="Xamarin Inc." />
+          <property name="Company" value="Microsoft Corporation" />
         </properties>
       </attribute>
       <attribute name="System.Reflection.AssemblyConfigurationAttribute">
@@ -21,7 +21,7 @@
       </attribute>
       <attribute name="System.Reflection.AssemblyCopyrightAttribute">
         <properties>
-          <property name="Copyright" value="Xamarin Inc." />
+          <property name="Copyright" value="Microsoft Corporation" />
         </properties>
       </attribute>
       <attribute name="System.Reflection.AssemblyDescriptionAttribute">
@@ -41,7 +41,7 @@
       </attribute>
       <attribute name="System.Reflection.AssemblyTrademarkAttribute">
         <properties>
-          <property name="Trademark" value="Xamarin" />
+          <property name="Trademark" value="Microsoft Corporation" />
         </properties>
       </attribute>
       <attribute name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute">

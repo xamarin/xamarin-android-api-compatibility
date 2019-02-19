@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <assemblies>
-  <assembly name="Mono.Data.Sqlite" version="4.0.0.0">
+  <assembly name="Mono.Data.Sqlite" version="2.0.5.0">
     <attributes>
       <attribute name="System.CLSCompliantAttribute">
         <properties>
@@ -78,12 +78,6 @@
       <attribute name="System.Runtime.InteropServices.ComVisibleAttribute">
         <properties>
           <property name="Value" value="False" />
-        </properties>
-      </attribute>
-      <attribute name="System.Runtime.Versioning.TargetFrameworkAttribute">
-        <properties>
-          <property name="FrameworkDisplayName" value="Xamarin.Android v9.0 Support" />
-          <property name="FrameworkName" value="MonoAndroid,Version=v9.0" />
         </properties>
       </attribute>
       <attribute name="System.Security.AllowPartiallyTrustedCallersAttribute" />
