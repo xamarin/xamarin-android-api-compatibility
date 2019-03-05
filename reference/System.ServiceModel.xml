@@ -3027,6 +3027,13 @@
                   </parameter>
                 </parameters>
               </constructor>
+              <constructor name=".ctor(System.Object, System.Collections.Generic.List`1[T], System.Boolean)" attrib="6278">
+                <parameters>
+                  <parameter name="syncRoot" position="0" attrib="0" type="System.Object" />
+                  <parameter name="list" position="1" attrib="0" type="System.Collections.Generic.List`1[T]" />
+                  <parameter name="makeCopy" position="2" attrib="0" type="System.Boolean" />
+                </parameters>
+              </constructor>
             </constructors>
             <properties>
               <property name="Count" attrib="0" ptype="System.Int32">
@@ -3090,6 +3097,7 @@
                 </parameters>
               </method>
               <method name="GetEnumerator()" attrib="486" virtual="true" returntype="System.Collections.Generic.IEnumerator`1[T]">
+                <attributes />
                 <parameters />
               </method>
               <method name="IndexOf(T)" attrib="486" virtual="true" returntype="System.Int32">
@@ -3206,6 +3214,7 @@
                 </parameters>
               </method>
               <method name="ClearItems()" attrib="196" virtual="true" is-override="true" returntype="System.Void">
+                <attributes />
                 <parameters />
               </method>
               <method name="Contains(K)" attrib="134" returntype="System.Boolean">
@@ -3219,6 +3228,7 @@
                 </parameters>
               </method>
               <method name="InsertItem(System.Int32, T)" attrib="196" virtual="true" is-override="true" returntype="System.Void">
+                <attributes />
                 <parameters>
                   <parameter name="index" position="0" attrib="0" type="System.Int32" />
                   <parameter name="item" position="1" attrib="0" type="T" />
@@ -3230,11 +3240,13 @@
                 </parameters>
               </method>
               <method name="RemoveItem(System.Int32)" attrib="196" virtual="true" is-override="true" returntype="System.Void">
+                <attributes />
                 <parameters>
                   <parameter name="index" position="0" attrib="0" type="System.Int32" />
                 </parameters>
               </method>
               <method name="SetItem(System.Int32, T)" attrib="196" virtual="true" is-override="true" returntype="System.Void">
+                <attributes />
                 <parameters>
                   <parameter name="index" position="0" attrib="0" type="System.Int32" />
                   <parameter name="item" position="1" attrib="0" type="T" />
@@ -3289,6 +3301,13 @@
                       <attribute name="System.ParamArrayAttribute" />
                     </attributes>
                   </parameter>
+                </parameters>
+              </constructor>
+              <constructor name=".ctor(System.Object, System.Collections.Generic.List`1[T], System.Boolean)" attrib="6278">
+                <parameters>
+                  <parameter name="sync_root" position="0" attrib="0" type="System.Object" />
+                  <parameter name="list" position="1" attrib="0" type="System.Collections.Generic.List`1[T]" />
+                  <parameter name="make_copy" position="2" attrib="0" type="System.Boolean" />
                 </parameters>
               </constructor>
             </constructors>

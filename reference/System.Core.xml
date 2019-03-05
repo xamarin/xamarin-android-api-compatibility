@@ -16199,6 +16199,7 @@
           <class name="ComAwareEventInfo" type="class" base="System.Reflection.EventInfo" charset="Ansi" layout="Auto">
             <interfaces>
               <interface name="System.Reflection.ICustomAttributeProvider" />
+              <interface name="System.Runtime.InteropServices._MemberInfo" />
             </interfaces>
             <constructors>
               <constructor name=".ctor(System.Type, System.String)" attrib="6278">
