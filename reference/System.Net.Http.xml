@@ -733,9 +733,6 @@
                 </parameters>
               </method>
               <method name="SendAsync(System.Net.Http.HttpRequestMessage, System.Threading.CancellationToken)" attrib="197" virtual="true" is-override="true" returntype="System.Threading.Tasks.Task`1[System.Net.Http.HttpResponseMessage]">
-                <attributes>
-                  <attribute name="System.Runtime.CompilerServices.AsyncStateMachineAttribute" />
-                </attributes>
                 <parameters>
                   <parameter name="request" position="0" attrib="0" type="System.Net.Http.HttpRequestMessage" />
                   <parameter name="cancellationToken" position="1" attrib="0" type="System.Threading.CancellationToken" />
