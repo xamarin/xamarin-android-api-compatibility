@@ -18790,6 +18790,27 @@
               <attribute name="System.Runtime.CompilerServices.ExtensionAttribute" />
             </attributes>
             <methods>
+              <method name="ConfigureAwait(System.Collections.Generic.IAsyncEnumerable`1[T], System.Boolean)" attrib="150" static="true" returntype="System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1[T]">
+                <attributes>
+                  <attribute name="System.Runtime.CompilerServices.ExtensionAttribute" />
+                </attributes>
+                <parameters>
+                  <parameter name="source" position="0" attrib="0" type="System.Collections.Generic.IAsyncEnumerable`1[T]" direction="this" />
+                  <parameter name="continueOnCapturedContext" position="1" attrib="0" type="System.Boolean" />
+                </parameters>
+                <generic-parameters>
+                  <generic-parameter name="T" attributes="0" />
+                </generic-parameters>
+              </method>
+              <method name="ConfigureAwait(System.IAsyncDisposable, System.Boolean)" attrib="150" static="true" returntype="System.Runtime.CompilerServices.ConfiguredAsyncDisposable">
+                <attributes>
+                  <attribute name="System.Runtime.CompilerServices.ExtensionAttribute" />
+                </attributes>
+                <parameters>
+                  <parameter name="source" position="0" attrib="0" type="System.IAsyncDisposable" direction="this" />
+                  <parameter name="continueOnCapturedContext" position="1" attrib="0" type="System.Boolean" />
+                </parameters>
+              </method>
               <method name="Unwrap(System.Threading.Tasks.Task`1[System.Threading.Tasks.Task])" attrib="150" static="true" returntype="System.Threading.Tasks.Task">
                 <attributes>
                   <attribute name="System.Runtime.CompilerServices.ExtensionAttribute" />
@@ -18807,6 +18828,18 @@
                 </parameters>
                 <generic-parameters>
                   <generic-parameter name="TResult" attributes="0" />
+                </generic-parameters>
+              </method>
+              <method name="WithCancellation(System.Collections.Generic.IAsyncEnumerable`1[T], System.Threading.CancellationToken)" attrib="150" static="true" returntype="System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1[T]">
+                <attributes>
+                  <attribute name="System.Runtime.CompilerServices.ExtensionAttribute" />
+                </attributes>
+                <parameters>
+                  <parameter name="source" position="0" attrib="0" type="System.Collections.Generic.IAsyncEnumerable`1[T]" direction="this" />
+                  <parameter name="cancellationToken" position="1" attrib="0" type="System.Threading.CancellationToken" />
+                </parameters>
+                <generic-parameters>
+                  <generic-parameter name="T" attributes="0" />
                 </generic-parameters>
               </method>
             </methods>

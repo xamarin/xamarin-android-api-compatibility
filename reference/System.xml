@@ -2,6 +2,16 @@
 <assemblies>
   <assembly name="System" version="2.0.5.0">
     <attributes>
+      <attribute name="System.Runtime.CompilerServices.TypeForwardedToAttribute">
+        <properties>
+          <property name="Destination" value="System.Collections.Generic.Queue`1" />
+        </properties>
+      </attribute>
+      <attribute name="System.Runtime.CompilerServices.TypeForwardedToAttribute">
+        <properties>
+          <property name="Destination" value="System.Collections.Generic.Stack`1" />
+        </properties>
+      </attribute>
       <attribute name="System.CLSCompliantAttribute">
         <properties>
           <property name="IsCompliant" value="True" />
@@ -87,7 +97,17 @@
       </attribute>
       <attribute name="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
         <properties>
+          <property name="AssemblyName" value="System.Data, PublicKey=00000000000000000400000000000000" />
+        </properties>
+      </attribute>
+      <attribute name="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+        <properties>
           <property name="AssemblyName" value="System.Net.Http, PublicKey=002400000480000094000000060200000024000052534131000400000100010007d1fa57c4aed9f0a32e84aa0faefd0de9e8fd6aec8f87fb03766c834c99921eb23be79ad9d5dcc1dd9ad236132102900b723cf980957fc4e177108fc607774f29e8320e92ea05ece4e821c0a5efe8f1645c4c0c93c1ab99285d622caa652c1dfad63d745d6f2de5f17e5eaf0fc4963d261c8a12436518206dc093344d5ad293" />
+        </properties>
+      </attribute>
+      <attribute name="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+        <properties>
+          <property name="AssemblyName" value="System.Net.Http.WebRequest, PublicKey=002400000480000094000000060200000024000052534131000400000100010007d1fa57c4aed9f0a32e84aa0faefd0de9e8fd6aec8f87fb03766c834c99921eb23be79ad9d5dcc1dd9ad236132102900b723cf980957fc4e177108fc607774f29e8320e92ea05ece4e821c0a5efe8f1645c4c0c93c1ab99285d622caa652c1dfad63d745d6f2de5f17e5eaf0fc4963d261c8a12436518206dc093344d5ad293" />
         </properties>
       </attribute>
       <attribute name="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
@@ -98,6 +118,11 @@
       <attribute name="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
         <properties>
           <property name="AssemblyName" value="Mono.Security, PublicKey=002400000480000094000000060200000024000052534131000400000100010079159977d2d03a8e6bea7a2e74e8d1afcc93e8851974952bb480a12c9134474d04062447c37e0e68c080536fcf3c3fbe2ff9c979ce998475e506e8ce82dd5b0f350dc10e93bf2eeecf874b24770c5081dbea7447fddafa277b22de47d6ffea449674a4f9fccf84d15069089380284dbdd35f46cdff12a1bd78e4ef0065d016df" />
+        </properties>
+      </attribute>
+      <attribute name="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+        <properties>
+          <property name="AssemblyName" value="Mono.Android, PublicKey=0024000004800000940000000602000000240000525341310004000011000000438ac2a5acfbf16cbd2b2b47a62762f273df9cb2795ceccdf77d10bf508e69e7a362ea7a45455bbf3ac955e1f2e2814f144e5d817efc4c6502cc012df310783348304e3ae38573c6d658c234025821fda87a0be8a0d504df564e2c93b2b878925f42503e9d54dfef9f9586d9e6f38a305769587b1de01f6c0410328b2c9733db" />
         </properties>
       </attribute>
       <attribute name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute">
@@ -2093,133 +2118,6 @@
               </class>
             </classes>
           </class>
-          <class name="Queue`1" type="class" base="System.Object" serializable="true" charset="Ansi" layout="Auto">
-            <attributes>
-              <attribute name="System.Diagnostics.DebuggerDisplayAttribute">
-                <properties>
-                  <property name="Value" value="Count = {Count}" />
-                </properties>
-              </attribute>
-              <attribute name="System.Diagnostics.DebuggerTypeProxyAttribute">
-                <properties>
-                  <property name="ProxyTypeName" value="System.Collections.Generic.QueueDebugView`1" />
-                </properties>
-              </attribute>
-              <attribute name="System.Runtime.CompilerServices.TypeForwardedFromAttribute">
-                <properties>
-                  <property name="AssemblyFullName" value="System, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                </properties>
-              </attribute>
-            </attributes>
-            <interfaces>
-              <interface name="System.Collections.Generic.IEnumerable`1[T]" />
-              <interface name="System.Collections.Generic.IReadOnlyCollection`1[T]" />
-              <interface name="System.Collections.ICollection" />
-              <interface name="System.Collections.IEnumerable" />
-            </interfaces>
-            <generic-parameters>
-              <generic-parameter name="T" attributes="0" />
-            </generic-parameters>
-            <constructors>
-              <constructor name=".ctor()" attrib="6278">
-                <parameters />
-              </constructor>
-              <constructor name=".ctor(System.Collections.Generic.IEnumerable`1[T])" attrib="6278">
-                <parameters>
-                  <parameter name="collection" position="0" attrib="0" type="System.Collections.Generic.IEnumerable`1[T]" />
-                </parameters>
-              </constructor>
-              <constructor name=".ctor(System.Int32)" attrib="6278">
-                <parameters>
-                  <parameter name="capacity" position="0" attrib="0" type="System.Int32" />
-                </parameters>
-              </constructor>
-            </constructors>
-            <properties>
-              <property name="Count" attrib="0" ptype="System.Int32">
-                <methods>
-                  <method name="get_Count()" attrib="2534" virtual="true" returntype="System.Int32">
-                    <parameters />
-                  </method>
-                </methods>
-              </property>
-            </properties>
-            <methods>
-              <method name="Clear()" attrib="134" returntype="System.Void">
-                <parameters />
-              </method>
-              <method name="Contains(T)" attrib="134" returntype="System.Boolean">
-                <parameters>
-                  <parameter name="item" position="0" attrib="0" type="T" />
-                </parameters>
-              </method>
-              <method name="CopyTo(T[], System.Int32)" attrib="134" returntype="System.Void">
-                <parameters>
-                  <parameter name="array" position="0" attrib="0" type="T[]" />
-                  <parameter name="arrayIndex" position="1" attrib="0" type="System.Int32" />
-                </parameters>
-              </method>
-              <method name="Dequeue()" attrib="134" returntype="T">
-                <parameters />
-              </method>
-              <method name="Enqueue(T)" attrib="134" returntype="System.Void">
-                <parameters>
-                  <parameter name="item" position="0" attrib="0" type="T" />
-                </parameters>
-              </method>
-              <method name="GetEnumerator()" attrib="134" returntype="System.Collections.Generic.Queue`1+Enumerator[T]">
-                <parameters />
-              </method>
-              <method name="Peek()" attrib="134" returntype="T">
-                <parameters />
-              </method>
-              <method name="ToArray()" attrib="134" returntype="T[]">
-                <parameters />
-              </method>
-              <method name="TrimExcess()" attrib="134" returntype="System.Void">
-                <parameters />
-              </method>
-              <method name="TryDequeue(out T&amp;)" attrib="134" returntype="System.Boolean">
-                <parameters>
-                  <parameter name="result" position="0" attrib="2" type="T" direction="out" />
-                </parameters>
-              </method>
-              <method name="TryPeek(out T&amp;)" attrib="134" returntype="System.Boolean">
-                <parameters>
-                  <parameter name="result" position="0" attrib="2" type="T" direction="out" />
-                </parameters>
-              </method>
-            </methods>
-            <classes>
-              <class name="Enumerator" type="struct" base="System.ValueType" sealed="true" serializable="true" charset="Ansi" layout="Sequential">
-                <interfaces>
-                  <interface name="System.Collections.Generic.IEnumerator`1[T]" />
-                  <interface name="System.Collections.IEnumerator" />
-                  <interface name="System.IDisposable" />
-                </interfaces>
-                <generic-parameters>
-                  <generic-parameter name="T" attributes="0" />
-                </generic-parameters>
-                <properties>
-                  <property name="Current" attrib="0" ptype="T">
-                    <methods>
-                      <method name="get_Current()" attrib="2534" virtual="true" returntype="T">
-                        <parameters />
-                      </method>
-                    </methods>
-                  </property>
-                </properties>
-                <methods>
-                  <method name="Dispose()" attrib="486" virtual="true" returntype="System.Void">
-                    <parameters />
-                  </method>
-                  <method name="MoveNext()" attrib="486" virtual="true" returntype="System.Boolean">
-                    <parameters />
-                  </method>
-                </methods>
-              </class>
-            </classes>
-          </class>
           <class name="SortedDictionary`2" type="class" base="System.Object" serializable="true" charset="Ansi" layout="Auto">
             <attributes>
               <attribute name="System.Diagnostics.DebuggerDisplayAttribute">
@@ -2954,133 +2852,6 @@
                   <interface name="System.IDisposable" />
                   <interface name="System.Runtime.Serialization.IDeserializationCallback" />
                   <interface name="System.Runtime.Serialization.ISerializable" />
-                </interfaces>
-                <generic-parameters>
-                  <generic-parameter name="T" attributes="0" />
-                </generic-parameters>
-                <properties>
-                  <property name="Current" attrib="0" ptype="T">
-                    <methods>
-                      <method name="get_Current()" attrib="2534" virtual="true" returntype="T">
-                        <parameters />
-                      </method>
-                    </methods>
-                  </property>
-                </properties>
-                <methods>
-                  <method name="Dispose()" attrib="486" virtual="true" returntype="System.Void">
-                    <parameters />
-                  </method>
-                  <method name="MoveNext()" attrib="486" virtual="true" returntype="System.Boolean">
-                    <parameters />
-                  </method>
-                </methods>
-              </class>
-            </classes>
-          </class>
-          <class name="Stack`1" type="class" base="System.Object" serializable="true" charset="Ansi" layout="Auto">
-            <attributes>
-              <attribute name="System.Diagnostics.DebuggerDisplayAttribute">
-                <properties>
-                  <property name="Value" value="Count = {Count}" />
-                </properties>
-              </attribute>
-              <attribute name="System.Diagnostics.DebuggerTypeProxyAttribute">
-                <properties>
-                  <property name="ProxyTypeName" value="System.Collections.Generic.StackDebugView`1" />
-                </properties>
-              </attribute>
-              <attribute name="System.Runtime.CompilerServices.TypeForwardedFromAttribute">
-                <properties>
-                  <property name="AssemblyFullName" value="System, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                </properties>
-              </attribute>
-            </attributes>
-            <interfaces>
-              <interface name="System.Collections.Generic.IEnumerable`1[T]" />
-              <interface name="System.Collections.Generic.IReadOnlyCollection`1[T]" />
-              <interface name="System.Collections.ICollection" />
-              <interface name="System.Collections.IEnumerable" />
-            </interfaces>
-            <generic-parameters>
-              <generic-parameter name="T" attributes="0" />
-            </generic-parameters>
-            <constructors>
-              <constructor name=".ctor()" attrib="6278">
-                <parameters />
-              </constructor>
-              <constructor name=".ctor(System.Collections.Generic.IEnumerable`1[T])" attrib="6278">
-                <parameters>
-                  <parameter name="collection" position="0" attrib="0" type="System.Collections.Generic.IEnumerable`1[T]" />
-                </parameters>
-              </constructor>
-              <constructor name=".ctor(System.Int32)" attrib="6278">
-                <parameters>
-                  <parameter name="capacity" position="0" attrib="0" type="System.Int32" />
-                </parameters>
-              </constructor>
-            </constructors>
-            <properties>
-              <property name="Count" attrib="0" ptype="System.Int32">
-                <methods>
-                  <method name="get_Count()" attrib="2534" virtual="true" returntype="System.Int32">
-                    <parameters />
-                  </method>
-                </methods>
-              </property>
-            </properties>
-            <methods>
-              <method name="Clear()" attrib="134" returntype="System.Void">
-                <parameters />
-              </method>
-              <method name="Contains(T)" attrib="134" returntype="System.Boolean">
-                <parameters>
-                  <parameter name="item" position="0" attrib="0" type="T" />
-                </parameters>
-              </method>
-              <method name="CopyTo(T[], System.Int32)" attrib="134" returntype="System.Void">
-                <parameters>
-                  <parameter name="array" position="0" attrib="0" type="T[]" />
-                  <parameter name="arrayIndex" position="1" attrib="0" type="System.Int32" />
-                </parameters>
-              </method>
-              <method name="GetEnumerator()" attrib="134" returntype="System.Collections.Generic.Stack`1+Enumerator[T]">
-                <parameters />
-              </method>
-              <method name="Peek()" attrib="134" returntype="T">
-                <parameters />
-              </method>
-              <method name="Pop()" attrib="134" returntype="T">
-                <parameters />
-              </method>
-              <method name="Push(T)" attrib="134" returntype="System.Void">
-                <parameters>
-                  <parameter name="item" position="0" attrib="0" type="T" />
-                </parameters>
-              </method>
-              <method name="ToArray()" attrib="134" returntype="T[]">
-                <parameters />
-              </method>
-              <method name="TrimExcess()" attrib="134" returntype="System.Void">
-                <parameters />
-              </method>
-              <method name="TryPeek(out T&amp;)" attrib="134" returntype="System.Boolean">
-                <parameters>
-                  <parameter name="result" position="0" attrib="2" type="T" direction="out" />
-                </parameters>
-              </method>
-              <method name="TryPop(out T&amp;)" attrib="134" returntype="System.Boolean">
-                <parameters>
-                  <parameter name="result" position="0" attrib="2" type="T" direction="out" />
-                </parameters>
-              </method>
-            </methods>
-            <classes>
-              <class name="Enumerator" type="struct" base="System.ValueType" sealed="true" serializable="true" charset="Ansi" layout="Sequential">
-                <interfaces>
-                  <interface name="System.Collections.Generic.IEnumerator`1[T]" />
-                  <interface name="System.Collections.IEnumerator" />
-                  <interface name="System.IDisposable" />
                 </interfaces>
                 <generic-parameters>
                   <generic-parameter name="T" attributes="0" />
@@ -27010,39 +26781,54 @@
             </interfaces>
             <fields>
               <field name="Accepted" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="202" />
+              <field name="AlreadyReported" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="208" />
               <field name="Ambiguous" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="300" />
               <field name="BadGateway" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="502" />
               <field name="BadRequest" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="400" />
               <field name="Conflict" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="409" />
               <field name="Continue" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="100" />
               <field name="Created" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="201" />
+              <field name="EarlyHints" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="103" />
               <field name="ExpectationFailed" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="417" />
+              <field name="FailedDependency" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="424" />
               <field name="Forbidden" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="403" />
               <field name="Found" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="302" />
               <field name="GatewayTimeout" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="504" />
               <field name="Gone" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="410" />
               <field name="HttpVersionNotSupported" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="505" />
+              <field name="IMUsed" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="226" />
+              <field name="InsufficientStorage" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="507" />
               <field name="InternalServerError" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="500" />
               <field name="LengthRequired" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="411" />
+              <field name="Locked" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="423" />
+              <field name="LoopDetected" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="508" />
               <field name="MethodNotAllowed" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="405" />
+              <field name="MisdirectedRequest" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="421" />
               <field name="Moved" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="301" />
               <field name="MovedPermanently" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="301" />
+              <field name="MultiStatus" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="207" />
               <field name="MultipleChoices" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="300" />
+              <field name="NetworkAuthenticationRequired" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="511" />
               <field name="NoContent" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="204" />
               <field name="NonAuthoritativeInformation" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="203" />
               <field name="NotAcceptable" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="406" />
+              <field name="NotExtended" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="510" />
               <field name="NotFound" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="404" />
               <field name="NotImplemented" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="501" />
               <field name="NotModified" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="304" />
               <field name="OK" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="200" />
               <field name="PartialContent" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="206" />
               <field name="PaymentRequired" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="402" />
+              <field name="PermanentRedirect" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="308" />
               <field name="PreconditionFailed" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="412" />
+              <field name="PreconditionRequired" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="428" />
+              <field name="Processing" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="102" />
               <field name="ProxyAuthenticationRequired" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="407" />
               <field name="Redirect" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="302" />
               <field name="RedirectKeepVerb" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="307" />
               <field name="RedirectMethod" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="303" />
               <field name="RequestEntityTooLarge" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="413" />
+              <field name="RequestHeaderFieldsTooLarge" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="431" />
               <field name="RequestTimeout" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="408" />
               <field name="RequestUriTooLong" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="414" />
               <field name="RequestedRangeNotSatisfiable" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="416" />
@@ -27051,17 +26837,23 @@
               <field name="ServiceUnavailable" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="503" />
               <field name="SwitchingProtocols" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="101" />
               <field name="TemporaryRedirect" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="307" />
+              <field name="TooManyRequests" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="429" />
               <field name="Unauthorized" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="401" />
+              <field name="UnavailableForLegalReasons" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="451" />
+              <field name="UnprocessableEntity" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="422" />
               <field name="UnsupportedMediaType" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="415" />
               <field name="Unused" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="306" />
               <field name="UpgradeRequired" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="426" />
               <field name="UseProxy" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="305" />
+              <field name="VariantAlsoNegotiates" attrib="32854" fieldtype="System.Net.HttpStatusCode" value="506" />
             </fields>
           </class>
           <class name="HttpVersion" type="class" base="System.Object" charset="Ansi" layout="Auto">
             <fields>
+              <field name="Unknown" attrib="54" fieldtype="System.Version" />
               <field name="Version10" attrib="54" fieldtype="System.Version" />
               <field name="Version11" attrib="54" fieldtype="System.Version" />
+              <field name="Version20" attrib="54" fieldtype="System.Version" />
             </fields>
             <constructors>
               <constructor name=".ctor()" attrib="6278">
@@ -28580,7 +28372,6 @@
                 </methods>
               </property>
               <property name="ConnectionLeaseTimeout" attrib="0" ptype="System.Int32">
-                <attributes />
                 <methods>
                   <method name="get_ConnectionLeaseTimeout()" attrib="2182" returntype="System.Int32">
                     <parameters />
@@ -28657,7 +28448,6 @@
                 </methods>
               </property>
               <property name="ReceiveBufferSize" attrib="0" ptype="System.Int32">
-                <attributes />
                 <methods>
                   <method name="get_ReceiveBufferSize()" attrib="2182" returntype="System.Int32">
                     <parameters />
@@ -38813,6 +38603,11 @@
                   <parameter name="buffers" position="0" attrib="0" type="System.Collections.Generic.IList`1[System.ArraySegment`1[System.Byte]]" />
                 </parameters>
               </method>
+              <method name="Receive(System.Span`1[System.Byte])" attrib="134" returntype="System.Int32">
+                <parameters>
+                  <parameter name="buffer" position="0" attrib="0" type="System.Span`1[System.Byte]" />
+                </parameters>
+              </method>
               <method name="Receive(System.Byte[], System.Net.Sockets.SocketFlags)" attrib="134" returntype="System.Int32">
                 <parameters>
                   <parameter name="buffer" position="0" attrib="0" type="System.Byte[]" />
@@ -38942,6 +38737,11 @@
               <method name="Send(System.Collections.Generic.IList`1[System.ArraySegment`1[System.Byte]])" attrib="134" returntype="System.Int32">
                 <parameters>
                   <parameter name="buffers" position="0" attrib="0" type="System.Collections.Generic.IList`1[System.ArraySegment`1[System.Byte]]" />
+                </parameters>
+              </method>
+              <method name="Send(System.ReadOnlySpan`1[System.Byte])" attrib="134" returntype="System.Int32">
+                <parameters>
+                  <parameter name="buffer" position="0" attrib="0" type="System.ReadOnlySpan`1[System.Byte]" />
                 </parameters>
               </method>
               <method name="Send(System.Byte[], System.Net.Sockets.SocketFlags)" attrib="134" returntype="System.Int32">
@@ -39213,6 +39013,13 @@
                     <attributes>
                       <attribute name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
                     </attributes>
+                    <parameters />
+                  </method>
+                </methods>
+              </property>
+              <property name="MemoryBuffer" attrib="0" ptype="System.Memory`1[System.Byte]">
+                <methods>
+                  <method name="get_MemoryBuffer()" attrib="2182" returntype="System.Memory`1[System.Byte]">
                     <parameters />
                   </method>
                 </methods>
@@ -42197,6 +42004,9 @@
               <field name="Md5" attrib="32854" fieldtype="System.Security.Authentication.HashAlgorithmType" value="32771" />
               <field name="None" attrib="32854" fieldtype="System.Security.Authentication.HashAlgorithmType" value="0" />
               <field name="Sha1" attrib="32854" fieldtype="System.Security.Authentication.HashAlgorithmType" value="32772" />
+              <field name="Sha256" attrib="32854" fieldtype="System.Security.Authentication.HashAlgorithmType" value="32780" />
+              <field name="Sha384" attrib="32854" fieldtype="System.Security.Authentication.HashAlgorithmType" value="32781" />
+              <field name="Sha512" attrib="32854" fieldtype="System.Security.Authentication.HashAlgorithmType" value="32782" />
             </fields>
           </class>
           <class name="InvalidCredentialException" type="class" base="System.Security.Authentication.AuthenticationException" serializable="true" charset="Ansi" layout="Auto">
@@ -42654,6 +42464,21 @@
               </method>
             </methods>
           </class>
+          <class name="CryptographicOperations" type="class" base="System.Object" sealed="true" abstract="true" charset="Ansi" layout="Auto">
+            <methods>
+              <method name="FixedTimeEquals(System.ReadOnlySpan`1[System.Byte], System.ReadOnlySpan`1[System.Byte])" attrib="150" static="true" returntype="System.Boolean">
+                <parameters>
+                  <parameter name="left" position="0" attrib="0" type="System.ReadOnlySpan`1[System.Byte]" />
+                  <parameter name="right" position="1" attrib="0" type="System.ReadOnlySpan`1[System.Byte]" />
+                </parameters>
+              </method>
+              <method name="ZeroMemory(System.Span`1[System.Byte])" attrib="150" static="true" returntype="System.Void">
+                <parameters>
+                  <parameter name="buffer" position="0" attrib="0" type="System.Span`1[System.Byte]" />
+                </parameters>
+              </method>
+            </methods>
+          </class>
           <class name="Oid" type="class" base="System.Object" sealed="true" charset="Ansi" layout="Auto">
             <constructors>
               <constructor name=".ctor()" attrib="6278">
@@ -43080,6 +42905,13 @@
                 </parameters>
               </constructor>
               <constructor name=".ctor(System.Byte[], System.Security.SecureString)" attrib="6278">
+                <attributes>
+                  <attribute name="System.CLSCompliantAttribute">
+                    <properties>
+                      <property name="IsCompliant" value="False" />
+                    </properties>
+                  </attribute>
+                </attributes>
                 <parameters>
                   <parameter name="rawData" position="0" attrib="0" type="System.Byte[]" />
                   <parameter name="password" position="1" attrib="0" type="System.Security.SecureString" />
@@ -43110,6 +42942,13 @@
                 </parameters>
               </constructor>
               <constructor name=".ctor(System.Byte[], System.Security.SecureString, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags)" attrib="6278">
+                <attributes>
+                  <attribute name="System.CLSCompliantAttribute">
+                    <properties>
+                      <property name="IsCompliant" value="False" />
+                    </properties>
+                  </attribute>
+                </attributes>
                 <parameters>
                   <parameter name="rawData" position="0" attrib="0" type="System.Byte[]" />
                   <parameter name="password" position="1" attrib="0" type="System.Security.SecureString" />
@@ -43261,27 +43100,17 @@
               </property>
             </properties>
             <methods>
-              <method name="Export(System.Security.Cryptography.X509Certificates.X509ContentType, System.String)" attrib="198" virtual="true" is-override="true" returntype="System.Byte[]">
-                <attributes />
-                <parameters>
-                  <parameter name="contentType" position="0" attrib="0" type="System.Security.Cryptography.X509Certificates.X509ContentType" />
-                  <parameter name="password" position="1" attrib="0" type="System.String" />
-                </parameters>
-              </method>
               <method name="GetCertContentType(System.Byte[])" attrib="150" static="true" returntype="System.Security.Cryptography.X509Certificates.X509ContentType">
-                <attributes />
                 <parameters>
                   <parameter name="rawData" position="0" attrib="0" type="System.Byte[]" />
                 </parameters>
               </method>
               <method name="GetCertContentType(System.String)" attrib="150" static="true" returntype="System.Security.Cryptography.X509Certificates.X509ContentType">
-                <attributes />
                 <parameters>
                   <parameter name="fileName" position="0" attrib="0" type="System.String" />
                 </parameters>
               </method>
               <method name="GetNameInfo(System.Security.Cryptography.X509Certificates.X509NameType, System.Boolean)" attrib="134" returntype="System.String">
-                <attributes />
                 <parameters>
                   <parameter name="nameType" position="0" attrib="0" type="System.Security.Cryptography.X509Certificates.X509NameType" />
                   <parameter name="forIssuer" position="1" attrib="0" type="System.Boolean" />
@@ -43298,6 +43127,13 @@
                 </parameters>
               </method>
               <method name="Import(System.Byte[], System.Security.SecureString, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags)" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <attributes>
+                  <attribute name="System.CLSCompliantAttribute">
+                    <properties>
+                      <property name="IsCompliant" value="False" />
+                    </properties>
+                  </attribute>
+                </attributes>
                 <parameters>
                   <parameter name="rawData" position="0" attrib="0" type="System.Byte[]" />
                   <parameter name="password" position="1" attrib="0" type="System.Security.SecureString" />
@@ -43312,6 +43148,13 @@
                 </parameters>
               </method>
               <method name="Import(System.String, System.Security.SecureString, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags)" attrib="198" virtual="true" is-override="true" returntype="System.Void">
+                <attributes>
+                  <attribute name="System.CLSCompliantAttribute">
+                    <properties>
+                      <property name="IsCompliant" value="False" />
+                    </properties>
+                  </attribute>
+                </attributes>
                 <parameters>
                   <parameter name="fileName" position="0" attrib="0" type="System.String" />
                   <parameter name="password" position="1" attrib="0" type="System.Security.SecureString" />
@@ -43337,7 +43180,6 @@
                 </parameters>
               </method>
               <method name="Verify()" attrib="134" returntype="System.Boolean">
-                <attributes />
                 <parameters />
               </method>
             </methods>
