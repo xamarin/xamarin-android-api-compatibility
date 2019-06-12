@@ -5092,11 +5092,6 @@
             </methods>
           </class>
           <class name="BaseNumberConverter" type="class" base="System.ComponentModel.TypeConverter" abstract="true" charset="Ansi" layout="Auto">
-            <constructors>
-              <constructor name=".ctor()" attrib="6276">
-                <parameters />
-              </constructor>
-            </constructors>
             <methods>
               <method name="CanConvertFrom(System.ComponentModel.ITypeDescriptorContext, System.Type)" attrib="198" virtual="true" is-override="true" returntype="System.Boolean">
                 <parameters>
