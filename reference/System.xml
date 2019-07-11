@@ -23794,33 +23794,6 @@
           </class>
         </classes>
       </namespace>
-      <namespace name="System.IO.Enumeration">
-        <classes>
-          <class name="FileSystemName" type="class" base="System.Object" sealed="true" abstract="true" charset="Ansi" layout="Auto">
-            <methods>
-              <method name="MatchesSimpleExpression(System.ReadOnlySpan`1[System.Char], System.ReadOnlySpan`1[System.Char], System.Boolean)" attrib="150" static="true" returntype="System.Boolean">
-                <parameters>
-                  <parameter name="expression" position="0" attrib="0" type="System.ReadOnlySpan`1[System.Char]" />
-                  <parameter name="name" position="1" attrib="0" type="System.ReadOnlySpan`1[System.Char]" />
-                  <parameter name="ignoreCase" position="2" attrib="4112" type="System.Boolean" optional="true" defaultValue="True" />
-                </parameters>
-              </method>
-              <method name="MatchesWin32Expression(System.ReadOnlySpan`1[System.Char], System.ReadOnlySpan`1[System.Char], System.Boolean)" attrib="150" static="true" returntype="System.Boolean">
-                <parameters>
-                  <parameter name="expression" position="0" attrib="0" type="System.ReadOnlySpan`1[System.Char]" />
-                  <parameter name="name" position="1" attrib="0" type="System.ReadOnlySpan`1[System.Char]" />
-                  <parameter name="ignoreCase" position="2" attrib="4112" type="System.Boolean" optional="true" defaultValue="True" />
-                </parameters>
-              </method>
-              <method name="TranslateWin32Expression(System.String)" attrib="150" static="true" returntype="System.String">
-                <parameters>
-                  <parameter name="expression" position="0" attrib="0" type="System.String" />
-                </parameters>
-              </method>
-            </methods>
-          </class>
-        </classes>
-      </namespace>
       <namespace name="System.Net">
         <classes>
           <class name="AuthenticationManager" type="class" base="System.Object" charset="Ansi" layout="Auto">
@@ -42456,21 +42429,6 @@
               </method>
               <method name="Reset()" attrib="486" virtual="true" returntype="System.Void">
                 <parameters />
-              </method>
-            </methods>
-          </class>
-          <class name="CryptographicOperations" type="class" base="System.Object" sealed="true" abstract="true" charset="Ansi" layout="Auto">
-            <methods>
-              <method name="FixedTimeEquals(System.ReadOnlySpan`1[System.Byte], System.ReadOnlySpan`1[System.Byte])" attrib="150" static="true" returntype="System.Boolean">
-                <parameters>
-                  <parameter name="left" position="0" attrib="0" type="System.ReadOnlySpan`1[System.Byte]" />
-                  <parameter name="right" position="1" attrib="0" type="System.ReadOnlySpan`1[System.Byte]" />
-                </parameters>
-              </method>
-              <method name="ZeroMemory(System.Span`1[System.Byte])" attrib="150" static="true" returntype="System.Void">
-                <parameters>
-                  <parameter name="buffer" position="0" attrib="0" type="System.Span`1[System.Byte]" />
-                </parameters>
               </method>
             </methods>
           </class>
