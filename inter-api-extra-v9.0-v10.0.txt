@@ -1,0 +1,12 @@
+-r "Android.App.ActivityManager.RecentTaskInfo: Modified base type: 'Java.Lang.Object' to 'Android.App.TaskInfo'"
+-r "Android.App.ActivityManager.RecentTaskInfo.RunningTaskInfo: Modified base type: 'Java.Lang.Object' to 'Android.App.TaskInfo'"
+
+-r "Android.Text.SpannableStringInternal: Modified methods: public virtual char CharAt \(int\);"
+-r "Android.Text.SpannableStringInternal: Modified methods: public virtual void GetChars \(int, int, char\[\], int\);"
+-r "Android.Text.SpannableStringInternal: Modified methods: public virtual int Length \(\);"
+-r "Android.Text.SpannableStringInternal: Modified methods: public override string ToString \(\);"
+
+-r "Java.Util.Concurrent.Atomic.DoubleAccumulator: Modified base type: 'Java.Util.Concurrent.Atomic.Striped64' to 'Java.Lang.Number'"
+-r "Java.Util.Concurrent.Atomic.DoubleAdder: Modified base type: 'Java.Util.Concurrent.Atomic.Striped64' to 'Java.Lang.Number'"
+-r "Java.Util.Concurrent.Atomic.LongAccumulator: Modified base type: 'Java.Util.Concurrent.Atomic.Striped64' to 'Java.Lang.Number'"
+-r "Java.Util.Concurrent.Atomic.LongAdder: Modified base type: 'Java.Util.Concurrent.Atomic.Striped64' to 'Java.Lang.Number'"
