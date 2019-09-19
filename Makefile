@@ -82,17 +82,17 @@ define BUILD_API_INFO
 	mkdir -p $(1)
 	for file in $(CORE_ASSEMBLIES); do \
 		$(MONO_API_INFO) $(MONO_API_INFO_LIB_DIRS) \
-			$(2)/v1.0/$$file.dll -o=$(1)/$$file.xml & \
+			"$(2)/v1.0/$$file.dll" -o=$(1)/$$file.xml & \
 	done ; \
 	wait
 	$(MONO_API_INFO) $(MONO_API_INFO_LIB_DIRS) \
-		$(2)/$(LAST_STABLE_FRAMEWORK)/$(TFV_ASSEMBLY).dll -o=$(1)/$(TFV_ASSEMBLY).xml & \
+		"$(2)/$(LAST_STABLE_FRAMEWORK)/$(TFV_ASSEMBLY).dll" -o=$(1)/$(TFV_ASSEMBLY).xml & \
 	for file in $(ACCESSORY_TFV_ASSEMBLIES) ; do \
 		accessoryTfvDir=$(2)/$(FIRST_STABLE_FRAMEWORK); \
 		if [ ! -d $$accessoryTfvDir ]; then \
 			accessoryTfvDir=$(2)/$(LAST_STABLE_FRAMEWORK); \
 		fi; \
-		$(MONO_API_INFO) $(MONO_API_INFO_LIB_DIRS) $$accessoryTfvDir/$$file.dll -o=$(1)/$$file.xml & \
+		$(MONO_API_INFO) $(MONO_API_INFO_LIB_DIRS) "$$accessoryTfvDir/$$file.dll" -o=$(1)/$$file.xml & \
 	done ; \
 	wait
 endef
