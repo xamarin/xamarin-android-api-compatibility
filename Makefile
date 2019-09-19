@@ -18,6 +18,7 @@ endif  # ndef XA_FRAMEWORK_DIR
 
 STABLE_FRAMEWORKS     = $(shell ls -1 "$(XA_FRAMEWORK_DIR)" | sort -n)
 LAST_STABLE_FRAMEWORK = $(lastword $(STABLE_FRAMEWORKS))
+FIRST_STABLE_FRAMEWORK = $(firstword $(STABLE_FRAMEWORKS))
 
 all: check
 
@@ -70,8 +71,9 @@ CORE_ASSEMBLIES = \
 	Java.Interop                                        \
 	Xamarin.Android.NUnitLite
 
-TFV_ASSEMBLIES = \
-	Mono.Android                                        \
+TFV_ASSEMBLY = Mono.Android
+
+ACCESSORY_TFV_ASSEMBLIES = \
 	Mono.Android.Export                                 \
 	OpenTK-1.0
 
@@ -80,12 +82,17 @@ define BUILD_API_INFO
 	mkdir -p $(1)
 	for file in $(CORE_ASSEMBLIES); do \
 		$(MONO_API_INFO) $(MONO_API_INFO_LIB_DIRS) \
-			$(2)/v1.0/$$file.dll -o=$(1)/$$file.xml & \
+			"$(2)/v1.0/$$file.dll" -o=$(1)/$$file.xml & \
 	done ; \
 	wait
-	for file in $(TFV_ASSEMBLIES) ; do \
-		$(MONO_API_INFO) $(MONO_API_INFO_LIB_DIRS) \
-			$(2)/$(LAST_STABLE_FRAMEWORK)/$$file.dll -o=$(1)/$$file.xml & \
+	$(MONO_API_INFO) $(MONO_API_INFO_LIB_DIRS) \
+		"$(2)/$(LAST_STABLE_FRAMEWORK)/$(TFV_ASSEMBLY).dll" "-o=$(1)/$(TFV_ASSEMBLY).xml" & \
+	for file in $(ACCESSORY_TFV_ASSEMBLIES) ; do \
+		accessoryTfvDir="$(2)/$(FIRST_STABLE_FRAMEWORK)"; \
+		if [ ! -d "$$accessoryTfvDir" ]; then \
+			accessoryTfvDir="$(2)/$(LAST_STABLE_FRAMEWORK)"; \
+		fi; \
+		$(MONO_API_INFO) $(MONO_API_INFO_LIB_DIRS) "$$accessoryTfvDir/$$file.dll" "-o=$(1)/$$file.xml" & \
 	done ; \
 	wait
 endef
@@ -93,7 +100,11 @@ endef
 check: check-inter-api-level
 	$(call BUILD_API_INFO,temp,$(XA_FRAMEWORK_DIR))
 	failed=0 ; \
-	for file in $(CORE_ASSEMBLIES) $(TFV_ASSEMBLIES) ; do \
+	for file in $(CORE_ASSEMBLIES) $(TFV_ASSEMBLY) $(ACCESSORY_TFV_ASSEMBLIES); do \
+		if [ ! -s temp/$$file.xml ]; then \
+			echo "temp/$$file.xml was not generated."; \
+			failed=1; \
+		fi; \
 		if $(MONO_API_HTML) $(REFERENCE_DIR)/$$file.xml temp/$$file.xml --ignore-changes-parameter-names --ignore-nonbreaking | grep '\<data-is-breaking>' > /dev/null 2>&1 ; then \
 			echo "ABI BREAK IN: $$file.dll" ; \
 			$(MONO_API_HTML) $(REFERENCE_DIR)/$$file.xml temp/$$file.xml  --ignore-changes-parameter-names --ignore-nonbreaking \
