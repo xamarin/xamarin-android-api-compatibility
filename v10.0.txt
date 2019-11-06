@@ -1,0 +1,14 @@
+Compat issues with assembly Mono.Android:
+MembersMustExist : Member 'Android.Media.AudioRecord.add_RoutingChanged(System.EventHandler<Android.Media.AudioRecord.RoutingChangedEventArgs>)' does not exist in the implementation but it does exist in the contract.
+MembersMustExist : Member 'Android.Media.AudioRecord.remove_RoutingChanged(System.EventHandler<Android.Media.AudioRecord.RoutingChangedEventArgs>)' does not exist in the implementation but it does exist in the contract.
+MembersMustExist : Member 'Android.Media.AudioTrack.add_RoutingChanged(System.EventHandler<Android.Media.AudioTrack.RoutingChangedEventArgs>)' does not exist in the implementation but it does exist in the contract.
+MembersMustExist : Member 'Android.Media.AudioTrack.remove_RoutingChanged(System.EventHandler<Android.Media.AudioTrack.RoutingChangedEventArgs>)' does not exist in the implementation but it does exist in the contract.
+CannotRemoveAttribute : Attribute 'System.ObsoleteAttribute' exists on 'Android.Net.Wifi.WpsInfo' in the contract but not the implementation.
+CannotMakeMemberAbstract : Member 'Android.Text.SpannableStringInternal.CharAt(System.Int32)' is abstract in the implementation but is not abstract in the contract.
+CannotMakeMemberAbstract : Member 'Android.Text.SpannableStringInternal.GetChars(System.Int32, System.Int32, System.Char[], System.Int32)' is abstract in the implementation but is not abstract in the contract.
+CannotMakeMemberAbstract : Member 'Android.Text.SpannableStringInternal.Length()' is abstract in the implementation but is not abstract in the contract.
+CannotMakeMemberAbstract : Member 'Android.Text.SpannableStringInternal.ToString()' is abstract in the implementation but is not abstract in the contract.
+CannotRemoveBaseTypeOrInterface : Type 'Java.Util.Concurrent.Atomic.DoubleAccumulator' does not inherit from base type 'Java.Util.Concurrent.Atomic.Striped64' in the implementation but it does in the contract.
+CannotRemoveBaseTypeOrInterface : Type 'Java.Util.Concurrent.Atomic.DoubleAdder' does not inherit from base type 'Java.Util.Concurrent.Atomic.Striped64' in the implementation but it does in the contract.
+CannotRemoveBaseTypeOrInterface : Type 'Java.Util.Concurrent.Atomic.LongAccumulator' does not inherit from base type 'Java.Util.Concurrent.Atomic.Striped64' in the implementation but it does in the contract.
+CannotRemoveBaseTypeOrInterface : Type 'Java.Util.Concurrent.Atomic.LongAdder' does not inherit from base type 'Java.Util.Concurrent.Atomic.Striped64' in the implementation but it does in the contract.

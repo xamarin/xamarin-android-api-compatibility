@@ -1,0 +1,6 @@
+Compat issues with assembly Mono.Android:
+InterfacesShouldHaveSameMembers : Interface member 'Android.Content.Res.IXmlResourceParser.GetAttributeNamespace(System.Int32)' is present in the implementation but not in the contract.
+TypesMustExist : Type 'Android.Telephony.CellIdentityCdma.InterfaceConsts' does not exist in the implementation but it does exist in the contract.
+TypesMustExist : Type 'Android.Telephony.CellIdentityGsm.InterfaceConsts' does not exist in the implementation but it does exist in the contract.
+TypesMustExist : Type 'Android.Telephony.CellIdentityLte.InterfaceConsts' does not exist in the implementation but it does exist in the contract.
+TypesMustExist : Type 'Android.Telephony.CellIdentityWcdma.InterfaceConsts' does not exist in the implementation but it does exist in the contract.
